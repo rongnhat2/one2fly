@@ -1,0 +1,150 @@
+﻿<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations — Phương Nam</title>
+    <meta name="description" content="Tạp chí du lịch, văn hóa và di sản Phương Nam."> 
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-mask {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.28), rgba(0,0,0,.05)),
+        url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .line-title::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #005BAB;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+  </style>
+<script src="assets/js/aurora-config.js"></script>
+<link rel="stylesheet" href="assets/css/aurora.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-soft text-ink font-sans">
+  <!-- TOP BAR -->
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Luxury Travel • Culture • Lifestyle</p>
+      <p>Vietnam Editorial Journal</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between">
+      <a href="index.html" class="aurora-logo" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[0.16em]">
+        <a class="hover:text-bronze" href="#destinations">Điểm đến</a>
+        <a class="hover:text-bronze" href="#culture">Văn hóa</a>
+        <a class="hover:text-bronze" href="#experience">Trải nghiệm</a>
+        <a class="hover:text-bronze" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-bronze" href="#contact">Liên hệ</a>
+      </nav>
+
+      <button class="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition">
+        Search
+      </button>
+    </div>
+  </header>
+  
+  <section class="pub-screen">
+  <div class="max-w-container mx-auto px-6 lg:px-12 py-16">
+    <h1 class="font-display font-light mb-8" style="font-size:clamp(40px,6vw,72px)">Tìm kiếm</h1>
+    <div class="flex gap-3 max-w-2xl mb-4">
+      <input id="search-input" type="text" value="Hà Giang" class="flex-1 border border-line bg-paper px-5 py-4 text-lg focus:outline-none focus:border-ink" placeholder="Tìm bài viết, điểm đến, tác giả…">
+      <button id="search-btn" class="eyebrow bg-navy text-ivory px-7">Tìm</button>
+    </div>
+    <p id="search-count" class="meta mb-10">Tìm thấy 3 kết quả cho “Hà Giang”</p>
+    <div id="search-results" class="flex flex-col divide-y divide-line max-w-4xl"></div>
+    <!-- empty state (toggled) -->
+    <div id="search-empty" class="hidden max-w-4xl py-20 text-center border border-dashed border-line">
+      <p class="font-display text-3xl mb-3">Không tìm thấy kết quả</p>
+      <p class="text-muted">Hãy thử từ khóa khác, hoặc <a href="../pages/destinations.html" class="text-clay underline">duyệt theo điểm đến</button>.</p>
+    </div>
+  </div>
+</section>
+    
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-navy text-white pt-20">
+    <div class="max-w-[1320px] mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+      <div class="lg:col-span-2">
+        <h2 class="font-serif text-5xl mb-6">Aurora Heritage</h2>
+        <p class="text-white/60 leading-8 max-w-[520px]">Demo single HTML cho website magazine đăng bài đẹp, có thể tách thành React/Next/Tailwind components sau.</p>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Menu</h3>
+        <div class="space-y-3 text-white/60">
+          <p>Điểm đến</p>
+          <p>Văn hóa</p>
+          <p>Trải nghiệm</p>
+          <p>Ấn phẩm</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Contact</h3>
+        <div class="space-y-3 text-white/60">
+          <p>hello@aurora.test</p>
+          <p>+84 000 000 000</p>
+          <p>Hanoi, Vietnam</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 py-6 text-xs uppercase tracking-[0.22em] text-white/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 Aurora Heritage</p>
+        <p>Designed for Tailwind UI Prototype</p>
+      </div>
+    </div>
+  </footer>
+    <script src="assets/js/main.js"></script>
+<script src="assets/js/aurora.js"></script>
+</body>
+
+</html>

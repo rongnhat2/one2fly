@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đọc online — Những cây thuốc và vị thuốc Việt Nam · one2FLY!</title>
+  <link rel="stylesheet" href="../assets/vendor/real3d-flipbook-lite/css/flipbook.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#005BAB',accent:'#00C0F3',navy:'#071B34',ink:'#101827',muted:'#64748B',paper:'#F6FAFD',gold:'#F4B91E'}}}}</script>
+  <link rel="stylesheet" href="assets/simple.css">
+</head>
+<body class="font-sans antialiased bg-paper text-ink min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-[1180px] mx-auto px-5 h-[72px] flex items-center justify-between gap-4">
+      <a href="index.html"><img src="../assets/logo.png" class="h-9 w-auto shrink-0" alt="one2FLY!"></a>
+      <p class="font-display text-base truncate text-center flex-1 hidden md:block">Những cây thuốc và vị thuốc Việt Nam</p>
+      <a href="issue-detail.html" class="bg-gold text-ink px-4 py-2 rounded-full text-[10px] uppercase tracking-[.16em] font-bold shrink-0">Thoát đọc</a>
+    </div>
+  </header>
+  <main class="flex-1">
+    <section class="page-hero text-white py-10">
+      <div class="max-w-[1180px] mx-auto px-5">
+        <nav class="text-xs uppercase tracking-[.16em] text-white/70 mb-4 flex flex-wrap gap-2">
+          <a href="index.html" class="hover:text-accent">Trang chủ</a><span>/</span>
+          <a href="issue.html" class="hover:text-accent">Ấn phẩm</a><span>/</span>
+          <a href="issue-detail.html" class="hover:text-accent">Issue 47</a><span>/</span><span>Đọc online</span>
+        </nav>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="text-xs uppercase tracking-[.22em] text-accent mb-2">Đọc online · Issue 47</p>
+            <h1 class="font-display text-4xl md:text-5xl font-medium">Những cây thuốc và vị thuốc Việt Nam</h1>
+          </div>
+          <p id="page-indicator" class="text-xs uppercase tracking-[.16em] text-white/80">Đang tải…</p>
+        </div>
+      </div>
+    </section>
+    <section class="py-8 bg-white">
+      <div class="max-w-[1180px] mx-auto px-5">
+        <div id="reader-stage" class="reader-stage">
+          <div id="flipbook-container"></div>
+          <button type="button" id="side-prev" class="reader-side reader-side--prev" disabled aria-label="Trang trước">
+            <svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#005BAB" stroke-width="1.5"/><path d="M27 16l-8 8 8 8" stroke="#005BAB" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <button type="button" id="side-next" class="reader-side reader-side--next" disabled aria-label="Trang sau">
+            <svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#005BAB" stroke-width="1.5"/><path d="M21 16l8 8-8 8" stroke="#005BAB" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div id="reader-nav">
+            <button type="button" id="btn-zoom-out" class="reader-nav-btn hidden sm:grid" aria-label="Thu nhỏ">−</button>
+            <button type="button" id="btn-first" class="reader-nav-btn hidden sm:grid" aria-label="Trang đầu">⏮</button>
+            <button type="button" id="btn-prev" class="reader-nav-btn" disabled aria-label="Trước">◀</button>
+            <input id="page-input" type="text" value="1" disabled aria-label="Số trang">
+            <button type="button" id="btn-goto" disabled>GO</button>
+            <button type="button" id="btn-next" class="reader-nav-btn" disabled aria-label="Sau">▶</button>
+            <button type="button" id="btn-last" class="reader-nav-btn hidden sm:grid" aria-label="Cuối">⏭</button>
+            <button type="button" id="btn-zoom-in" class="reader-nav-btn hidden sm:grid" aria-label="Phóng to">+</button>
+          </div>
+        </div>
+        <p class="text-center text-xs uppercase tracking-[.14em] text-muted mt-6">← → lật trang · Home / End</p>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white border-t border-slate-200 py-8">
+    <div class="max-w-[1180px] mx-auto px-5 flex flex-wrap justify-center gap-6 text-xs uppercase tracking-[.14em] text-muted">
+      <a href="issue-detail.html" class="hover:text-brand">Về ấn phẩm</a>
+      <a href="issue.html" class="hover:text-brand">Tất cả số báo</a>
+      <a href="index.html" class="hover:text-brand">Trang chủ</a>
+    </div>
+  </footer>
+  <script src="../assets/vendor/real3d-flipbook-lite/js/flipbook.min.js"></script>
+  <script src="assets/issue-read.js"></script>
+</body>
+</html>

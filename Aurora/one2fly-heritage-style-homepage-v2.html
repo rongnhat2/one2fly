@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>one2FLY! — Tạp chí du lịch thông minh</title>
+  <meta name="description" content="one2FLY! — Tạp chí du lịch số: du lịch thông minh, điểm đến, ẩm thực, săn deal, ấn phẩm và câu chuyện Việt Nam." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#005BAB', accent: '#00C0F3', gold: '#F4B000', ink: '#111827', muted: '#667085',
+            paper: '#F6F2EA', soft: '#FAF8F3', line: '#E8E1D7', navy: '#071B34', cream:'#FBF6E8'
+          },
+          fontFamily: { serif: ['Libre Baskerville','Georgia','serif'], sans: ['Inter','Arial','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth} body{background:#fff;color:#111827}.mag-container{max-width:1180px;margin:0 auto;padding:0 22px}
+    .serif{font-family:'Libre Baskerville',Georgia,serif}.nav-link{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:#B88600}.gold-btn{background:#F4B000;color:#111827;padding:13px 25px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.11em;display:inline-flex;align-items:center;gap:10px}.outline-btn{border:1px solid #111827;color:#111827;padding:12px 24px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.11em;display:inline-flex;align-items:center;gap:10px}.section-title{font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:18px;border-bottom:1px solid #e6ded2;padding-bottom:14px;margin-bottom:24px}.img-cover{width:100%;height:100%;object-fit:cover}.img-wrap{overflow:hidden;background:#eee}.story-card img{transition:transform .65s cubic-bezier(.2,.8,.2,1)}.story-card:hover img{transform:scale(1.055)}
+    .hero-tile{position:relative;min-height:640px;background-size:cover;background-position:center;overflow:hidden}.hero-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.72))}.hero-tile.center:after{background:radial-gradient(circle at 50% 40%,rgba(0,0,0,.05),rgba(0,0,0,.78) 76%)}.hero-meta{position:absolute;z-index:5;left:28px;right:28px;bottom:26px;color:#fff}.hero-line{width:1px;height:120px;background:rgba(255,255,255,.45);margin:22px auto}.cover-title{text-shadow:0 8px 38px rgba(0,0,0,.6)}
+    .ad-banner{background:linear-gradient(100deg,#cde8df 0%,#2eb7aa 46%,#0b6f8d 100%);min-height:150px;position:relative;overflow:hidden}.ad-banner:before{content:"";position:absolute;right:-80px;top:-120px;width:360px;height:360px;background:rgba(255,255,255,.18);border-radius:50%}.issue-card{box-shadow:0 22px 55px rgba(0,0,0,.24);transform:perspective(900px) rotateY(-10deg) rotateZ(2deg)}
+    .soft-shadow{box-shadow:0 18px 45px rgba(17,24,39,.08)}.paper-block{background:#F6F2EA}.quote-mark{font-family:'Libre Baskerville',serif;font-size:120px;line-height:.65;color:#F4B000}.ticker{white-space:nowrap;animation:ticker 28s linear infinite}@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media(max-width:1023px){.hero-tile{min-height:540px}.hero-left,.hero-right{display:none}.cover-title{font-size:46px!important}.mag-container{padding:0 18px}}
+  </style>
+</head>
+<body class="font-sans">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/10">
+    <div class="h-[74px] flex items-center justify-between px-5 lg:px-8">
+      <div class="flex items-center gap-5">
+        <button class="w-9 h-9 flex items-center justify-center" aria-label="Menu"><span class="w-6 h-[2px] bg-black relative before:content-[''] before:absolute before:left-0 before:-top-2 before:w-6 before:h-[2px] before:bg-black after:content-[''] after:absolute after:left-0 after:top-2 after:w-6 after:h-[2px] after:bg-black"></span></button>
+        <a href="#"><img src="assets/logo.png" class="h-11 w-auto" alt="one2FLY!"></a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-8">
+        <a class="nav-link" href="#campaign">Đừng bị chặt chém</a><a class="nav-link" href="#diem-den">Điểm đến</a><a class="nav-link" href="#am-thuc">Ẩm thực</a><a class="nav-link" href="#san-deal">Săn deal</a><a class="nav-link" href="#an-pham">Ấn phẩm</a><a class="nav-link" href="#tin-tuc">Tin tức</a>
+      </nav>
+      <div class="flex items-center gap-4"><button class="hidden md:block text-2xl leading-none">⌕</button><a href="#newsletter" class="gold-btn !py-3 !px-5">Nhận tin</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid lg:grid-cols-[1fr_1.25fr_1fr] bg-black text-white">
+      <div class="hero-tile hero-left" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop')">
+        <div class="hero-meta flex justify-between items-end text-xs"><p>Du lịch xanh miền biển</p><p>01 ↗</p></div>
+      </div>
+      <div class="hero-tile center flex items-center justify-center text-center" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop')">
+        <div class="relative z-10 px-8 max-w-[760px]">
+          <div class="absolute -left-10 top-1/2 -translate-y-1/2 hidden xl:block text-left">
+            <p class="text-xs uppercase tracking-[.25em] text-white/80">Issue</p><p class="serif text-6xl mt-2">01</p><p class="text-xs uppercase tracking-[.18em] mt-2">May 2025</p><div class="hero-line"></div><p class="text-xs uppercase tracking-[.2em] leading-5">Vietnam<br>Travel<br>Magazine</p>
+          </div>
+          <p class="tag text-gold mb-5">Special Campaign / Travel Smart</p>
+          <h1 class="serif cover-title text-[58px] md:text-[82px] lg:text-[76px] leading-[1.02] tracking-[-.06em]">Du lịch<br>đừng để<br><span class="text-gold">bị chặt chém</span></h1>
+          <p class="text-white/90 text-lg md:text-xl leading-8 max-w-[600px] mx-auto mt-6">Cẩm nang vui vẻ, dễ đọc và đủ thông tin để mỗi hành trình đều xứng đáng.</p>
+          <div class="mt-9 flex justify-center gap-4"><a href="#campaign" class="gold-btn">Xem chuyên mục →</a></div>
+          <div class="hidden md:grid grid-cols-3 gap-8 mt-12 text-left border-t border-white/25 pt-7">
+            <div><p class="tag text-gold">Editor's Pick</p><p class="font-bold mt-2">Sapa săn mây trong mùa nước đổ</p></div>
+            <div><p class="tag text-gold">Expert Guide</p><p class="font-bold mt-2">Kinh nghiệm săn vé máy bay giá tốt</p></div>
+            <div><p class="tag text-gold">Local Story</p><p class="font-bold mt-2">Làng chài Nhơn Lý bình yên</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-tile hero-right" style="background-image:url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1200&auto=format&fit=crop')">
+        <div class="hero-meta flex justify-between items-end text-xs"><p>Cẩm nang điểm đến</p><p>03 ↗</p></div>
+      </div>
+    </section>
+
+    <nav class="border-y border-black/10 bg-white overflow-hidden"><div class="ticker py-4 text-xs font-extrabold uppercase tracking-[.18em]"><span class="mx-5">Airlines</span><span class="mx-5">Du lịch - Điểm đến</span><span class="mx-5">Ẩm thực 3 miền</span><span class="mx-5">Săn deal mà shok</span><span class="mx-5">Thời trang</span><span class="mx-5">Ấn phẩm</span><span class="mx-5">Đọc tin rồi đừng tức</span><span class="mx-5">Airlines</span><span class="mx-5">Du lịch - Điểm đến</span><span class="mx-5">Ẩm thực 3 miền</span><span class="mx-5">Săn deal mà shok</span><span class="mx-5">Thời trang</span><span class="mx-5">Ấn phẩm</span></div></nav>
+
+    <section class="mag-container py-12"><div class="ad-banner flex items-center justify-between px-8 md:px-14 text-white"><div class="relative z-10"><p class="tag text-white/90">Guide Special</p><h2 class="serif text-3xl md:text-4xl mt-2">Bí kíp nhỏ xinh<br><span class="italic font-normal">đi nhiều mà vẫn tỉnh</span></h2></div><div class="hidden md:block relative z-10 text-right"><p class="text-sm uppercase tracking-[.2em]">one2FLY Guide</p><p class="text-4xl font-black mt-2">QR</p></div></div></section>
+
+    <section id="campaign" class="mag-container pb-16">
+      <div class="grid lg:grid-cols-[1.35fr_.85fr] gap-9 items-start">
+        <div>
+          <h2 class="section-title">Tiêu điểm</h2>
+          <article class="text-center"><div class="img-wrap"><img class="w-full h-[470px] object-cover" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1500&auto=format&fit=crop" alt="Ẩm thực du lịch"></div><p class="tag mt-7">Du lịch thông minh / Không mất tiền oan</p><h3 class="serif text-3xl md:text-4xl leading-tight max-w-[720px] mx-auto mt-3 tracking-[-.03em]">Món gọi ngon, giá cũng phải ngon: đọc trước để khỏi mất vui</h3><p class="text-muted leading-7 mt-5 max-w-[780px] mx-auto">Một chuyên mục giúp du khách hỏi giá đúng cách, chọn dịch vụ minh bạch và nhận diện các khoản chi phí dễ gây bực mình trong chuyến đi.</p></article>
+          <div class="grid md:grid-cols-4 gap-5 mt-8">
+            <article class="story-card"><div class="img-wrap"><img class="h-24 w-full object-cover" src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=500&auto=format&fit=crop"></div><p class="tag mt-3">Di chuyển</p><h4 class="font-bold leading-snug">Gọi xe sao cho đỡ bị hét giá?</h4></article>
+            <article class="story-card"><div class="img-wrap"><img class="h-24 w-full object-cover" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=500&auto=format&fit=crop"></div><p class="tag mt-3">Ăn uống</p><h4 class="font-bold leading-snug">Nhìn menu trước khi gọi món</h4></article>
+            <article class="story-card"><div class="img-wrap"><img class="h-24 w-full object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop"></div><p class="tag mt-3">Lưu trú</p><h4 class="font-bold leading-snug">Phụ phí khách sạn cần hỏi trước</h4></article>
+            <article class="story-card"><div class="img-wrap"><img class="h-24 w-full object-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=500&auto=format&fit=crop"></div><p class="tag mt-3">Checklist</p><h4 class="font-bold leading-snug">5 câu nên hỏi trước khi mua tour</h4></article>
+          </div>
+        </div>
+        <aside>
+          <h2 class="section-title">one2FLY's Pick</h2>
+          <article class="mb-8 story-card"><div class="img-wrap"><img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=900&auto=format&fit=crop"></div><p class="tag mt-4">Quốc nội</p><h3 class="font-bold text-xl mt-2">Săn mùa rong mơ ở Quy Nhơn</h3><p class="text-muted text-sm leading-6 mt-2">Tất tần tật những góc nhìn, thời điểm và trải nghiệm nên thử khi đến miền biển nắng gió.</p></article>
+          <h2 class="section-title">Có gì mới?</h2>
+          <div class="space-y-5"><article class="border-b border-line pb-4"><p class="tag">Mỗi ngày một câu</p><h4 class="font-bold">Không ngu: Đặt phòng xong nhớ chụp lại điều kiện hoàn hủy</h4></article><article class="border-b border-line pb-4"><p class="tag">Đọc tin rồi đừng tức</p><h4 class="font-bold">Giá dịch vụ mùa cao điểm: vì sao nên hỏi kỹ trước?</h4></article><article><p class="tag">Săn deal</p><h4 class="font-bold">Deal bay cuối tuần cho người thích đi bất chợt</h4></article></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="mag-container py-14"><div class="paper-block grid md:grid-cols-2 min-h-[390px] soft-shadow"><div class="p-10 md:p-20 flex flex-col justify-center"><p class="tag">Editor's Choice</p><h2 class="serif text-4xl mt-3 tracking-[-.04em]">Đi biển như người Cali</h2><p class="text-muted leading-7 mt-6 max-w-[500px]">Biển là một phần không thể thiếu trong cuộc sống thường nhật của người dân vùng ven biển. Đi sao cho chill mà không lãng phí?</p><a class="gold-btn mt-8 w-fit" href="#">Xem chi tiết →</a></div><img class="w-full h-full min-h-[390px] object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"></div></section>
+
+    <section id="diem-den" class="mag-container py-12"><div class="flex items-end justify-between"><h2 class="section-title flex-1">Du lịch - Điểm đến</h2><a class="nav-link mb-6" href="#">Xem tất cả →</a></div><div class="grid lg:grid-cols-[.7fr_1.35fr_.42fr] gap-8"><ul class="space-y-3 text-sm font-bold uppercase tracking-wider text-muted"><li class="text-ink">Biển</li><li>Miền núi</li><li>Đồng bằng</li><li>City break</li><li>Cuối tuần</li></ul><div class="grid sm:grid-cols-3 gap-5"><article class="story-card"><div class="img-wrap"><img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop"></div><p class="tag mt-3">Biển</p><h3 class="font-bold">Nắng – Gió – Biển xanh và những hành trình chill</h3></article><article class="story-card"><div class="img-wrap"><img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600&auto=format&fit=crop"></div><p class="tag mt-3">Miền núi</p><h3 class="font-bold">Trốn nóng, săn mây và tìm lại bình yên</h3></article><article class="story-card"><div class="img-wrap"><img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=600&auto=format&fit=crop"></div><p class="tag mt-3">Đồng bằng</p><h3 class="font-bold">Miền sông nước bình dị và sắc màu văn hóa</h3></article></div><div class="hidden lg:block bg-[#1ba7a5] text-white p-5"><p class="tag text-white">Guide</p><h3 class="serif text-2xl mt-2">Cẩm nang điểm đến</h3><p class="text-sm mt-3">Gợi ý lịch trình ngắn, dễ đi, dễ nhớ.</p></div></div></section>
+
+    <section id="am-thuc" class="mag-container py-12"><div class="flex items-end justify-between"><h2 class="section-title flex-1">Ẩm thực 3 miền</h2><a class="nav-link mb-6" href="#">Xem tất cả →</a></div><div class="grid md:grid-cols-3 gap-6"><article class="story-card relative text-white"><div class="img-wrap"><img class="h-68 min-h-[270px] w-full object-cover brightness-[.68]" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=900&auto=format&fit=crop"></div><div class="absolute left-6 bottom-6"><span class="bg-white text-ink rounded-full px-5 py-4 font-bold">Bắc</span><p class="tag text-gold mt-4">Bắc</p><h3 class="font-bold text-xl">Tinh tế, thanh nhẹ, đậm đà hương vị truyền thống.</h3></div></article><article class="story-card relative text-white"><div class="img-wrap"><img class="h-68 min-h-[270px] w-full object-cover brightness-[.68]" src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?q=80&w=900&auto=format&fit=crop"></div><div class="absolute left-6 bottom-6"><span class="bg-white text-ink rounded-full px-5 py-4 font-bold">Trung</span><p class="tag text-gold mt-4">Trung</p><h3 class="font-bold text-xl">Cay nồng, đậm đà, ăn một lần là nhớ.</h3></div></article><article class="story-card relative text-white"><div class="img-wrap"><img class="h-68 min-h-[270px] w-full object-cover brightness-[.68]" src="https://images.unsplash.com/photo-1559847844-5315695dadae?q=80&w=900&auto=format&fit=crop"></div><div class="absolute left-6 bottom-6"><span class="bg-white text-ink rounded-full px-5 py-4 font-bold">Nam</span><p class="tag text-gold mt-4">Nam</p><h3 class="font-bold text-xl">Ngọt ngào, phóng khoáng, hương vị sông nước.</h3></div></article></div></section>
+
+    <section class="mag-container py-8"><div class="grid md:grid-cols-3 gap-6"><article id="thoi-trang" class="bg-paper p-9 min-h-[230px] relative overflow-hidden"><h2 class="serif text-3xl">Đi chơi mặc gì?</h2><p class="text-muted leading-7 mt-4">Gợi ý trang phục theo điểm đến, thời tiết và phong cách của bạn.</p><a class="nav-link mt-8 inline-block" href="#">Xem ngay →</a></article><article id="san-deal" class="bg-[#FFF2C2] p-9 min-h-[230px] relative overflow-hidden"><h2 class="serif text-3xl">Săn deal</h2><p class="text-muted leading-7 mt-4">Ưu đãi mỗi ngày cho chuyến đi tuyệt vời.</p><a class="nav-link mt-8 inline-block" href="#">Xem ngay →</a><div class="absolute right-5 bottom-3 text-7xl">%</div></article><article class="bg-[#FFE0DA] p-9 min-h-[230px] relative overflow-hidden"><h2 class="serif text-3xl">Săn deal mà shok!</h2><p class="text-muted leading-7 mt-4">Deal hot, giá hời có thể kết thúc bất ngờ.</p><a class="nav-link mt-8 inline-block" href="#">Xem ngay →</a><div class="absolute right-5 bottom-3 text-7xl">⏰</div></article></div></section>
+
+    <section id="an-pham" class="mag-container py-14"><div class="grid lg:grid-cols-[1.3fr_.7fr] gap-8"><div class="bg-paper grid md:grid-cols-2 items-center overflow-hidden"><div class="p-10"><h2 class="serif text-4xl tracking-[-.04em]">Ấn phẩm số mới</h2><p class="font-bold mt-6">one2FLY Magazine</p><p class="mt-3">Issue 01 – May 2025</p><p class="text-muted leading-7 mt-5">Khám phá Việt Nam tươi đẹp qua những câu chuyện chân thực và cảm hứng du lịch bất tận.</p><div class="flex gap-4 mt-8"><a class="gold-btn" href="#">Đọc online</a><a class="outline-btn" href="#">Tải PDF</a></div></div><div class="p-8"><div class="issue-card bg-white p-3"><img class="w-full aspect-[3/4] object-cover" src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=700&auto=format&fit=crop"></div></div></div><aside id="tin-tuc"><h2 class="section-title">Bài viết nổi bật</h2><div class="space-y-4"><article class="flex gap-4 border-b border-line pb-4"><img class="w-28 h-20 object-cover" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=400&auto=format&fit=crop"><div><h4 class="font-bold">Đà Lạt: Những góc nhỏ khiến bạn muốn quay lại</h4><p class="text-xs text-muted mt-1">20/05/2025</p></div></article><article class="flex gap-4 border-b border-line pb-4"><img class="w-28 h-20 object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=400&auto=format&fit=crop"><div><h4 class="font-bold">Quy Nhơn 3N2Đ – lịch trình chuẩn không cần chỉnh</h4><p class="text-xs text-muted mt-1">18/05/2025</p></div></article><article class="flex gap-4"><img class="w-28 h-20 object-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400&auto=format&fit=crop"><div><h4 class="font-bold">10 trải nghiệm nên thử ở Phú Quốc</h4><p class="text-xs text-muted mt-1">16/05/2025</p></div></article></div><a class="nav-link mt-6 inline-block" href="#">Xem thêm bài viết →</a></aside></div></section>
+
+    <section class="mag-container py-12"><div class="bg-paper grid md:grid-cols-[1.1fr_.9fr]"><img class="w-full h-[340px] object-cover" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop"><div class="p-10 flex flex-col justify-center"><p class="tag">Editor's Choice</p><h2 class="serif text-4xl mt-3 tracking-[-.04em]">Nghe sóng biển kể chuyện quê hương</h2><p class="text-muted leading-7 mt-5">Một bài viết nhẹ nhàng về những vùng biển, con người và nếp sống ven bờ.</p><a class="gold-btn mt-7 w-fit" href="#">Đọc câu chuyện →</a></div></div></section>
+
+    <section id="newsletter" class="mag-container py-16 text-center border-t border-line"><div class="text-4xl mb-2">✈</div><h2 class="serif text-3xl">Đăng ký nhận bản tin</h2><p class="text-muted mt-3">Cập nhật điểm đến mới, deal hot và câu chuyện du lịch thú vị mỗi tuần.</p><form class="mt-7 flex max-w-[580px] mx-auto gap-3"><input class="flex-1 border border-line px-5 py-4 outline-none" placeholder="Nhập email của bạn"><button class="gold-btn">Đăng ký</button></form></section>
+  </main>
+  <footer class="border-t border-line py-9 text-center text-sm text-muted"><div class="mag-container"><p class="font-bold text-ink">one2FLY! – Tạp chí du lịch thông minh</p><p class="mt-2">Địa chỉ: Hà Nội, Việt Nam</p><div class="flex justify-center gap-4 mt-5"><span>●</span><span>●</span><span>●</span><span>●</span></div><p class="mt-6 text-xs">© 2025 one2FLY!. All rights reserved.</p></div></footer>
+</body>
+</html>

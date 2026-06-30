@@ -1,0 +1,203 @@
+﻿<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations — Phương Nam</title>
+    <meta name="description" content="Tạp chí du lịch, văn hóa và di sản Phương Nam.">
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-mask {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.28), rgba(0,0,0,.05)),
+        url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .line-title::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #005BAB;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+  </style>
+<script src="assets/js/aurora-config.js"></script>
+<link rel="stylesheet" href="assets/css/aurora.css">
+</head>
+
+<body class="bg-soft text-ink font-sans">
+  <!-- TOP BAR -->
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Luxury Travel • Culture • Lifestyle</p>
+      <p>Vietnam Editorial Journal</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between">
+      <a href="index.html" class="aurora-logo" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[0.16em]">
+        <a class="hover:text-bronze" href="#destinations">Điểm đến</a>
+        <a class="hover:text-bronze" href="#culture">Văn hóa</a>
+        <a class="hover:text-bronze" href="#experience">Trải nghiệm</a>
+        <a class="hover:text-bronze" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-bronze" href="#contact">Liên hệ</a>
+      </nav>
+
+      <button class="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition">
+        Search
+      </button>
+    </div>
+  </header>
+  
+  <section class="pub-screen">
+    <!-- centered header -->
+    <div class="max-w-3xl mx-auto px-6 pt-16 pb-10 text-center">
+      <p class="eyebrow text-clay mb-5">Phóng sự · Vùng cao phía Bắc</p>
+      <h1 class="font-display font-light leading-[1] mb-6" style="font-size:clamp(40px,6.4vw,80px)">Nơi sương mù ở lại lâu nhất</h1>
+      <p class="font-display italic text-muted mb-8" style="font-size:clamp(18px,2.4vw,24px)">Ba tuần trên cao nguyên đá Hà Giang, đi tìm thứ ánh sáng chậm rãi của miền núi.</p>
+      <div class="flex items-center justify-center gap-5 flex-wrap meta">
+        <span class="flex items-center gap-3"><img class="ph w-10 h-10 rounded-full" src="https://picsum.photos/seed/pn-author/100/100" alt=""> Lê Minh Anh</span>
+        <span class="w-1 h-1 rounded-full bg-gold"></span><span>14 · 06 · 2026</span>
+        <span class="w-1 h-1 rounded-full bg-gold"></span><span>18 phút đọc</span>
+      </div>
+    </div>
+    <!-- cover -->
+    <div class="max-w-container mx-auto px-6 lg:px-12">
+      <div class="imgwrap aspect-[16/9]"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-hero-hagiang/1600/900" alt=""></div>
+    </div>
+    <!-- body + TOC -->
+    <div class="max-w-container mx-auto px-6 lg:px-12 py-16 grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-20">
+      <aside class="hidden lg:block">
+        <div class="sticky top-28">
+          <p class="eyebrow text-clay mb-4">Trong bài</p>
+          <a class="block text-sm text-muted py-2 pl-4 border-l border-gold text-ink">Đến nơi bằng đường đèo</a>
+          <a class="block text-sm text-muted py-2 pl-4 border-l border-line hover:text-ink">Ngôi làng không ngủ</a>
+          <a class="block text-sm text-muted py-2 pl-4 border-l border-line hover:text-ink">Điều ánh sáng dạy ta</a>
+          <div class="mt-8 pt-6 border-t border-line">
+            <p class="eyebrow text-clay mb-3">Chia sẻ</p>
+            <div class="flex gap-2">
+              <button class="w-9 h-9 border border-line rounded-full grid place-items-center hover:bg-navy hover:text-ivory"><svg width="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L8 21H5l7.5-8.6L4.5 3h6.6l4.5 5.6L17.5 3z"/></svg></button>
+              <button class="w-9 h-9 border border-line rounded-full grid place-items-center hover:bg-navy hover:text-ivory"><svg width="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg></button>
+              <button class="w-9 h-9 border border-line rounded-full grid place-items-center hover:bg-navy hover:text-ivory"><svg width="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="max-w-[680px]">
+        <p class="drop text-[19px] leading-[1.78] text-[#2a2723] mb-7">Chiếc xe khách bò lên con đèo lúc hai giờ sáng, và bầu trời cư xử như thể nó đã quên mất việc phải tối. Không có đường chân trời thực sự — chỉ có một vệt đồng hun dài nơi đá trả lại ánh sáng cho không khí, và không khí, không biết làm gì với nó, cứ thế giữ lại.</p>
+        <p class="text-[19px] leading-[1.78] text-[#2a2723] mb-7">Ngày đầu tiên tôi liên tục nhìn đồng hồ, chắc mẩm mình đọc nhầm. Đến ngày thứ ba, tôi đã thôi đeo nó. Đây là điều đầu tiên vùng cao dạy bạn: thời gian, ở một độ cao nhất định, chỉ còn là một lời gợi ý.</p>
+        <h2 class="font-display text-3xl lg:text-[38px] leading-tight mt-12 mb-5">Đến nơi bằng đường đèo</h2>
+        <p class="text-[19px] leading-[1.78] text-[#2a2723] mb-7">Cao nguyên hiện ra theo cách một câu văn hiện ra — từng vế một. Trước hết là những mỏm đá tai mèo thấp, sẫm màu. Rồi đến những sườn núi xanh, và cuối cùng là các bản làng, lợp mái nâu trầm của thứ ngói từng là rẻ nhất mà người ta có thể mua.</p>
+        <figure class="my-10">
+          <div class="imgwrap aspect-[16/10]"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-art-village/1000/620" alt=""></div>
+          <figcaption class="meta mt-3 flex gap-2"><b class="text-clay">Đồng Văn</b> Phiên chợ vào giờ mà sách hướng dẫn gọi là đêm, còn người bản địa gọi là chiều.</figcaption>
+        </figure>
+        <blockquote class="my-12 pl-8 border-l-2 border-gold">
+          <p class="font-display italic font-light leading-snug" style="font-size:clamp(24px,3vw,34px)">Có những nơi ta ghé qua. Có những nơi phải được giành lấy, từng giờ chậm rãi một.</p>
+        </blockquote>
+        <h2 class="font-display text-3xl lg:text-[38px] leading-tight mt-12 mb-5">Ngôi làng không ngủ</h2>
+        <p class="text-[19px] leading-[1.78] text-[#2a2723] mb-7">Bà Sùng đã sống ở đây trọn tám mươi mốt năm, và bà ngủ, bà bảo, ngon như nhau cả mùa hè lẫn mùa đông. Bí quyết là đừng chống lại nó. Đói thì ăn. Mệt thì nghỉ. Để mặt trời làm bất cứ điều gì nó muốn làm.</p>
+        <!-- inline gallery -->
+        <div class="grid grid-cols-2 gap-3 my-10">
+          <div class="imgwrap aspect-[4/5]"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-art-g1/600/740" alt=""></div>
+          <div class="imgwrap aspect-[4/5]"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-art-g2/600/740" alt=""></div>
+        </div>
+        <h2 class="font-display text-3xl lg:text-[38px] leading-tight mt-12 mb-5">Điều ánh sáng dạy ta</h2>
+        <p class="text-[19px] leading-[1.78] text-[#2a2723] mb-7">Đêm cuối tôi leo lên dông núi phía trên bản và ngồi cho đến khi mặt trời hoàn tất vòng cung dài, thấp của nó. Dưới kia ngôi làng nín thở, mái nâu hóa vàng, và cuối cùng tôi hiểu vì sao người ta lặn lội đến tận đây vì một thứ bình thường như ánh sáng.</p>
+      </div>
+    </div>
+    <!-- related -->
+    <div class="bg-paper border-t border-line">
+      <div class="max-w-container mx-auto px-6 lg:px-12 py-16">
+        <div class="flex items-end justify-between mb-10"><div><p class="eyebrow text-clay">Đọc tiếp</p><h2 class="font-display text-3xl lg:text-5xl mt-2">Bài viết liên quan</h2></div>
+          <a href="../index.html" class="eyebrow text-clay">← Về trang chủ</button></div>
+        <div class="grid sm:grid-cols-3 gap-8">
+          <a href="../pages/article-detail.html" class="group cursor-pointer block"><div class="imgwrap aspect-[3/4] mb-4"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-r1/600/800" alt=""></div><p class="eyebrow text-clay mb-2">Điểm đến</p><h3 class="font-display text-2xl group-hover:text-clay transition">Sa Pa ngoài mùa khách</h3></a>
+          <a href="../pages/article-detail.html" class="group cursor-pointer block"><div class="imgwrap aspect-[3/4] mb-4"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-r2/600/800" alt=""></div><p class="eyebrow text-clay mb-2">Di sản</p><h3 class="font-display text-2xl group-hover:text-clay transition">Hội An, khi đèn lồng chưa sáng</h3></a>
+          <a href="../pages/article-detail.html" class="group cursor-pointer block"><div class="imgwrap aspect-[3/4] mb-4"><img class="ph w-full h-full" src="https://picsum.photos/seed/pn-r3/600/800" alt=""></div><p class="eyebrow text-clay mb-2">Ẩm thực</p><h3 class="font-display text-2xl group-hover:text-clay transition">Cơm cung đình giản dị ở Huế</h3></a>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-navy text-white pt-20">
+    <div class="max-w-[1320px] mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+      <div class="lg:col-span-2">
+        <h2 class="font-serif text-5xl mb-6">Aurora Heritage</h2>
+        <p class="text-white/60 leading-8 max-w-[520px]">Demo single HTML cho website magazine đăng bài đẹp, có thể tách thành React/Next/Tailwind components sau.</p>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Menu</h3>
+        <div class="space-y-3 text-white/60">
+          <p>Điểm đến</p>
+          <p>Văn hóa</p>
+          <p>Trải nghiệm</p>
+          <p>Ấn phẩm</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Contact</h3>
+        <div class="space-y-3 text-white/60">
+          <p>hello@aurora.test</p>
+          <p>+84 000 000 000</p>
+          <p>Hanoi, Vietnam</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 py-6 text-xs uppercase tracking-[0.22em] text-white/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 Aurora Heritage</p>
+        <p>Designed for Tailwind UI Prototype</p>
+      </div>
+    </div>
+  </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

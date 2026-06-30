@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>one2FLY! — Du lịch thông minh, không bị chặt chém</title>
+  <meta name="description" content="one2FLY! — Nền tảng tri thức du lịch cao cấp, ấn phẩm số và chiến dịch Du lịch thông minh, không bị chặt chém." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          colors: {
+            bg: '#F7F9FC',
+            card: '#FFFFFF',
+            heading: '#0F172A',
+            body: '#475569',
+            border: '#E2E8F0',
+            primary: '#005BAB',
+            accent: '#00C0F3',
+            dark: '#071B34',
+            midnight: '#031020',
+            gold: '#D8B36A'
+          },
+          boxShadow: {
+            editorial: '0 28px 80px rgba(7, 27, 52, 0.14)',
+            cover: '0 40px 120px rgba(0, 0, 0, 0.42)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    .font-display { font-family: "Libre Baskerville", serif; }
+    body { background:#F7F9FC; color:#0F172A; }
+    .cover-hero {
+      background:
+        linear-gradient(90deg, rgba(3,16,32,.96) 0%, rgba(7,27,52,.76) 42%, rgba(0,91,171,.34) 100%),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;
+    }
+    .noise::after {
+      content:""; position:absolute; inset:0; pointer-events:none; opacity:.18;
+      background-image: radial-gradient(rgba(255,255,255,.75) .5px, transparent .5px);
+      background-size:4px 4px;
+    }
+    .editorial-line::before,
+    .editorial-line-light::before {
+      content:""; display:inline-block; width:54px; height:1px; margin-right:16px; vertical-align:middle;
+      background:#005BAB;
+    }
+    .editorial-line-light::before { background:#00C0F3; }
+    .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    .brand-logo-img { height:46px; width:auto; display:block; object-fit:contain; }
+    @media (min-width: 768px) { .brand-logo-img { height:56px; } }
+    .report-card { transition:transform .45s ease, box-shadow .45s ease, border-color .45s ease; }
+    .report-card:hover { transform:translateY(-8px); box-shadow:0 28px 90px rgba(0,91,171,.14); border-color:rgba(0,192,243,.55); }
+    .map-dot { box-shadow:0 0 0 10px rgba(0,192,243,.18), 0 0 34px rgba(0,192,243,.85); }
+    .vietnam-map-shape { clip-path: polygon(48% 0%, 56% 7%, 54% 14%, 65% 19%, 58% 26%, 63% 34%, 56% 43%, 62% 53%, 56% 60%, 64% 69%, 58% 77%, 66% 87%, 56% 100%, 43% 92%, 47% 81%, 39% 72%, 45% 62%, 38% 52%, 45% 43%, 39% 35%, 44% 26%, 37% 17%, 44% 9%); }
+    .mag-cover { transform: perspective(1100px) rotateY(-14deg) rotateZ(-2deg); }
+    .article-img { filter:saturate(.92) contrast(1.05); }
+    .editor-choice-card {
+      position:relative; overflow:hidden;
+      background:linear-gradient(135deg, rgba(255,255,255,.98), rgba(232,247,255,.97));
+      border:1px solid rgba(0,192,243,.46);
+      box-shadow:0 46px 130px rgba(0,0,0,.48), 0 0 0 1px rgba(255,255,255,.45) inset;
+    }
+    .editor-choice-card::before {
+      content:""; position:absolute; inset:0;
+      background:radial-gradient(circle at 84% 8%, rgba(0,192,243,.26), transparent 34%);
+      pointer-events:none;
+    }
+    .editor-choice-card > * { position:relative; z-index:1; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <div class="hidden md:block bg-midnight text-white/60 text-[11px] uppercase tracking-[0.32em]">
+    <div class="max-w-[1440px] mx-auto px-8 py-3 flex items-center justify-between">
+      <p>one2FLY! Tạp chí du lịch</p>
+      <p>Tri thức du lịch an toàn · Việt Nam · 2026</p>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-brand/15 backdrop-blur bg-[#fff]">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-8 h-[76px] flex items-center justify-between">
+      <a href="#" class="flex items-center" aria-label="one2FLY trang chủ">
+        <img class="brand-logo-img" src="assets/logo.png" alt="one2FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-[12px] uppercase tracking-[0.22em] text-white/74">
+        <a class="hover:text-accent transition" href="#intelligence">Cẩm nang</a>
+        <a class="hover:text-accent transition" href="#map">Bản đồ</a>
+        <a class="hover:text-accent transition" href="#about">Giới thiệu</a>
+        <a class="hover:text-accent transition" href="#services">Dịch vụ</a>
+        <a class="hover:text-accent transition" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-accent transition" href="#contact">Liên hệ</a>
+      </nav>
+      <a href="#contact" class="hidden sm:inline-flex border border-white/30 px-5 py-3 text-[11px] uppercase tracking-[0.24em] hover:bg-white hover:text-dark transition">Hợp tác</a>
+    </div>
+  </header>
+
+  <section class="cover-hero noise relative min-h-screen overflow-hidden text-white">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-midnight/92"></div>
+    <div class="absolute left-6 md:left-10 top-[130px] md:top-[168px] hidden md:block text-white/50 text-[11px] uppercase tracking-[.38em] vertical-text">Nền tảng tri thức du lịch cao cấp</div>
+
+    <div class="relative max-w-[1440px] mx-auto px-6 md:px-8 min-h-screen pt-[150px] md:pt-[185px] pb-12 grid lg:grid-cols-[1.12fr_.88fr] gap-10 items-end">
+      <div class="pb-10">
+        <div class="flex flex-wrap gap-3 mb-8 text-[11px] uppercase tracking-[.26em] text-white/78">
+          <span class="border border-white/30 px-4 py-2 bg-white/5 backdrop-blur">Số 01</span>
+          <span class="border border-white/30 px-4 py-2 bg-white/5 backdrop-blur">Tháng 7, 2026</span>
+          <span class="border border-accent/60 px-4 py-2 bg-accent/10 text-accent backdrop-blur">Chuyên đề đặc biệt</span>
+        </div>
+        <p class="editorial-line-light text-[12px] uppercase tracking-[.32em] text-white/72 mb-7">Báo cáo tri thức du lịch</p>
+        <h1 class="font-serif text-[52px] md:text-[80px] leading-[1.1] tracking-[-0.04em]">
+          DU LỊCH<br>THÔNG MINH
+        </h1>
+        <div class="mt-5 md:mt-7 inline-flex bg-white text-dark px-4 md:px-7 py-3 md:py-4 shadow-cover rotate-[-1deg]">
+          <h2 class="font-display tracking-[-.055em] leading-none text-[52px] md:text-[64px] ">KHÔNG BỊ CHẶT CHÉM</h2>
+        </div>
+        <p class="mt-9 max-w-[720px] text-lg md:text-xl leading-8 text-white/80">Một chiến dịch nhận thức du lịch quốc gia, giúp du khách đi đúng nơi, trả đúng giá và nhận diện rủi ro trước mỗi hành trình.</p>
+        <div class="flex flex-wrap gap-4 mt-10">
+          <a href="#intelligence" class="bg-white text-dark px-7 py-4 text-[12px] uppercase tracking-[.24em] font-bold hover:bg-accent transition">Khám phá chiến dịch</a>
+          <a href="#magazine" class="border border-white/45 px-7 py-4 text-[12px] uppercase tracking-[.24em] font-bold hover:bg-white hover:text-dark transition">Xem ấn phẩm</a>
+        </div>
+      </div>
+
+      <aside class="hidden lg:block pb-12">
+        <div class="ml-auto max-w-[455px] editor-choice-card text-heading p-8 xl:p-10 backdrop-blur">
+          <p class="text-[11px] uppercase tracking-[.28em] text-primary font-bold mb-5">Lựa chọn của biên tập</p>
+          <h3 class="font-display text-[42px] leading-[1.02] tracking-[-.045em] mb-6">Top điểm đến minh bạch giá tại Việt Nam</h3>
+          <p class="text-slate-700 leading-7 mb-8 font-medium">Bảng chỉ dẫn biên tập về giá tham khảo, phương tiện, ăn uống và những cảnh báo du lịch đáng chú ý.</p>
+          <div class="grid grid-cols-3 border-t border-border pt-6 text-center">
+            <div><p class="font-display text-4xl text-primary">50</p><p class="text-[10px] uppercase tracking-[.22em] text-body mt-1">Điểm đến</p></div>
+            <div class="border-x border-border"><p class="font-display text-4xl text-primary">04</p><p class="text-[10px] uppercase tracking-[.22em] text-body mt-1">Báo cáo</p></div>
+            <div><p class="font-display text-4xl text-primary">24/7</p><p class="text-[10px] uppercase tracking-[.22em] text-body mt-1">Cảnh báo</p></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="intelligence" class="relative bg-bg py-20 md:py-28">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-8">
+      <div class="grid lg:grid-cols-[.75fr_1.25fr] gap-12 items-end mb-14">
+        <div>
+          <p class="editorial-line text-[12px] uppercase tracking-[.32em] text-primary mb-5">Trung tâm tri thức du lịch</p>
+          <h2 class="font-display text-[48px] md:text-[68px] leading-[.95] tracking-[-.055em] text-heading">Không phải tin tức. Đây là dữ liệu du lịch để ra quyết định.</h2>
+        </div>
+        <p class="text-body text-lg leading-8 max-w-[680px] lg:ml-auto">Các báo cáo được thiết kế như bảng chỉ dẫn nhanh trước chuyến đi: giá nên biết, rủi ro cần tránh, lựa chọn di chuyển và cách tiêu dùng minh bạch tại điểm du lịch.</p>
+      </div>
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <article class="report-card bg-card border border-border p-7 min-h-[340px] flex flex-col justify-between"><div><div class="flex items-start justify-between mb-12"><span class="font-display text-6xl tracking-[-.07em] text-primary">01</span><span class="text-[10px] uppercase tracking-[.24em] text-body border border-border px-3 py-2">Cập nhật</span></div><p class="text-[11px] uppercase tracking-[.28em] text-primary mb-4">Báo cáo giá</p><h3 class="font-display text-[36px] leading-[1.02] tracking-[-.04em] mb-5">Giá tham khảo</h3><p class="text-body leading-7">Mức giá phổ biến cho taxi, tour, vé tham quan, ăn uống và dịch vụ cơ bản.</p></div><a href="#" class="mt-8 text-[12px] uppercase tracking-[.24em] font-bold text-heading">Xem báo cáo →</a></article>
+        <article class="report-card bg-card border border-border p-7 min-h-[340px] flex flex-col justify-between"><div><div class="flex items-start justify-between mb-12"><span class="font-display text-6xl tracking-[-.07em] text-primary">02</span><span class="text-[10px] uppercase tracking-[.24em] text-body border border-border px-3 py-2">Di chuyển</span></div><p class="text-[11px] uppercase tracking-[.28em] text-primary mb-4">Cẩm nang phương tiện</p><h3 class="font-display text-[36px] leading-[1.02] tracking-[-.04em] mb-5">Taxi & Di chuyển</h3><p class="text-body leading-7">Cách chọn phương tiện, kiểm tra tuyến đường, hỏi giá và tránh phụ phí bất thường.</p></div><a href="#" class="mt-8 text-[12px] uppercase tracking-[.24em] font-bold text-heading">Xem báo cáo →</a></article>
+        <article class="report-card bg-card border border-border p-7 min-h-[340px] flex flex-col justify-between"><div><div class="flex items-start justify-between mb-12"><span class="font-display text-6xl tracking-[-.07em] text-primary">03</span><span class="text-[10px] uppercase tracking-[.24em] text-body border border-border px-3 py-2">Tiêu dùng</span></div><p class="text-[11px] uppercase tracking-[.28em] text-primary mb-4">Minh bạch ăn uống</p><h3 class="font-display text-[36px] leading-[1.02] tracking-[-.04em] mb-5">Ăn uống đúng giá</h3><p class="text-body leading-7">Checklist menu, hóa đơn, phụ phí và những dấu hiệu cần hỏi rõ trước khi gọi món.</p></div><a href="#" class="mt-8 text-[12px] uppercase tracking-[.24em] font-bold text-heading">Xem báo cáo →</a></article>
+        <article class="report-card bg-dark text-white border border-white/10 p-7 min-h-[340px] flex flex-col justify-between"><div><div class="flex items-start justify-between mb-12"><span class="font-display text-6xl tracking-[-.07em] text-accent">04</span><span class="text-[10px] uppercase tracking-[.24em] text-white/70 border border-white/20 px-3 py-2">Cảnh báo</span></div><p class="text-[11px] uppercase tracking-[.28em] text-accent mb-4">Bản tin rủi ro</p><h3 class="font-display text-[36px] leading-[1.02] tracking-[-.04em] mb-5">Cảnh báo du lịch</h3><p class="text-white/65 leading-7">Nhận diện điểm nóng, tình huống dễ phát sinh chi phí và cách xử lý an toàn.</p></div><a href="#" class="mt-8 text-[12px] uppercase tracking-[.24em] font-bold text-white">Xem cảnh báo →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="map" class="relative bg-dark text-white py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:72px 72px;"></div>
+    <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-accent/20 blur-[100px]"></div>
+    <div class="relative max-w-[1440px] mx-auto px-6 md:px-8 grid lg:grid-cols-[.8fr_1.2fr] gap-14 items-center">
+      <div><p class="editorial-line-light text-[12px] uppercase tracking-[.32em] text-accent mb-5">Bản đồ cảnh báo du lịch Việt Nam</p><h2 class="font-display text-[52px] md:text-[76px] leading-[.92] tracking-[-.06em] mb-8">Bản đồ du lịch thông minh cho người đi thật.</h2><p class="text-white/68 text-lg leading-8 mb-10">Một lớp dữ liệu thị giác giúp độc giả quan sát các điểm nóng du lịch, mức độ minh bạch giá và khuyến nghị an toàn theo từng khu vực.</p><div class="grid sm:grid-cols-3 gap-4"><div class="border border-white/15 p-5 bg-white/5 backdrop-blur"><p class="font-display text-4xl text-accent">92</p><p class="text-[11px] uppercase tracking-[.22em] text-white/55 mt-2">Điểm an toàn</p></div><div class="border border-white/15 p-5 bg-white/5 backdrop-blur"><p class="font-display text-4xl text-accent">76</p><p class="text-[11px] uppercase tracking-[.22em] text-white/55 mt-2">Minh bạch giá</p></div><div class="border border-white/15 p-5 bg-white/5 backdrop-blur"><p class="font-display text-4xl text-accent">18</p><p class="text-[11px] uppercase tracking-[.22em] text-white/55 mt-2">Cảnh báo hiện hành</p></div></div></div>
+      <div class="relative min-h-[680px] bg-midnight/60 border border-white/10 shadow-cover overflow-hidden"><div class="absolute inset-8 border border-white/10"></div><div class="absolute inset-0 flex items-center justify-center"><div class="relative w-[420px] h-[600px] max-w-[80vw]"><div class="vietnam-map-shape absolute inset-0 bg-gradient-to-b from-white/18 via-accent/25 to-primary/45 border border-accent/30 shadow-[0_0_90px_rgba(0,192,243,.18)]"></div><div class="absolute left-[45%] top-[9%] map-dot w-4 h-4 rounded-full bg-accent"></div><div class="absolute left-[53%] top-[30%] map-dot w-4 h-4 rounded-full bg-accent"></div><div class="absolute left-[48%] top-[47%] map-dot w-4 h-4 rounded-full bg-accent"></div><div class="absolute left-[55%] top-[61%] map-dot w-4 h-4 rounded-full bg-accent"></div><div class="absolute left-[49%] top-[76%] map-dot w-4 h-4 rounded-full bg-accent"></div><div class="absolute left-[58%] top-[88%] map-dot w-4 h-4 rounded-full bg-accent"></div><div class="absolute left-[2%] top-[5%] bg-white text-dark p-4 w-[190px] shadow-editorial"><p class="text-[10px] uppercase tracking-[.2em] text-primary">Hà Nội</p><p class="font-display text-3xl leading-none mt-1">88</p><p class="text-xs text-body mt-1">Điểm minh bạch</p></div><div class="absolute right-[-8%] top-[37%] bg-white text-dark p-4 w-[205px] shadow-editorial"><p class="text-[10px] uppercase tracking-[.2em] text-primary">Đà Nẵng</p><div class="mt-3 space-y-2 text-xs text-body"><p>Taxi · Ổn định</p><p>Ăn uống · Cần lưu ý</p><p>Lưu trú · Rõ giá</p></div></div><div class="absolute left-[-10%] bottom-[12%] bg-accent text-dark p-4 w-[210px] shadow-editorial"><p class="text-[10px] uppercase tracking-[.2em] font-bold">Phú Quốc</p><p class="font-display text-3xl leading-none mt-1">Cảnh báo</p><p class="text-xs mt-1 text-dark/70">Biến động giá theo mùa</p></div></div></div><div class="absolute left-8 bottom-8 right-8 flex flex-wrap gap-3 text-[10px] uppercase tracking-[.22em] text-white/65"><span class="border border-white/15 px-3 py-2 bg-white/5">Điểm nóng du lịch</span><span class="border border-white/15 px-3 py-2 bg-white/5">Minh bạch giá</span><span class="border border-white/15 px-3 py-2 bg-white/5">Gợi ý an toàn</span></div></div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-card py-24 md:py-32">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-8 grid lg:grid-cols-[.95fr_1.05fr] gap-14 items-center">
+      <div class="relative"><img class="w-full h-[620px] object-cover" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1600&auto=format&fit=crop" alt="Hành trình du lịch Việt Nam"><div class="absolute -bottom-8 -right-8 bg-white p-7 shadow-editorial max-w-[320px] hidden md:block"><p class="text-[11px] uppercase tracking-[.24em] text-primary mb-3">Vì sao tồn tại</p><p class="font-display text-3xl leading-tight tracking-[-.04em]">Biến dữ liệu du lịch thành tri thức dễ hiểu.</p></div></div>
+      <div><p class="editorial-line text-[12px] uppercase tracking-[.32em] text-primary mb-5">Giới thiệu one2FLY!</p><h2 class="font-display text-[54px] md:text-[82px] leading-[.9] tracking-[-.065em] mb-8">Một nền tảng xuất bản cho du lịch minh bạch hơn.</h2><p class="text-body text-lg leading-8 mb-6">Mỗi năm, hàng triệu du khách ra quyết định chỉ bằng vài đánh giá rời rạc. one2FLY! được xây dựng như một ấn phẩm du lịch hiện đại: có chiều sâu biên tập, có tính tham khảo và có khả năng hỗ trợ hành trình thực tế.</p><p class="text-body text-lg leading-8 mb-10">Chúng tôi kết nối nội dung điểm đến, ấn phẩm số, truyền thông thương hiệu và chiến dịch nhận thức cộng đồng trong cùng một trải nghiệm cao cấp.</p><a href="#contact" class="inline-flex bg-dark text-white px-8 py-4 text-[12px] uppercase tracking-[.24em] font-bold hover:bg-primary transition">Liên hệ hợp tác</a></div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-bg py-24 md:py-32">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-8"><div class="max-w-[860px] mb-14"><p class="editorial-line text-[12px] uppercase tracking-[.32em] text-primary mb-5">Dịch vụ</p><h2 class="font-display text-[50px] md:text-[72px] leading-[.95] tracking-[-.06em]">Sản phẩm nội dung dành cho du lịch, văn hóa và thương hiệu điểm đến.</h2></div><div class="grid lg:grid-cols-4 auto-rows-[260px] gap-5"><article class="lg:col-span-2 lg:row-span-2 relative overflow-hidden group bg-dark text-white p-8 flex flex-col justify-end"><img class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1400&auto=format&fit=crop" alt="Ấn phẩm du lịch"><div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/35 to-transparent"></div><div class="relative"><p class="text-[11px] uppercase tracking-[.28em] text-accent mb-4">01 · Chủ lực</p><h3 class="font-display text-[54px] leading-[.98] tracking-[-.055em] mb-4">Ấn phẩm du lịch</h3><p class="text-white/70 leading-7 max-w-[560px]">Ấn phẩm PDF/online, chuyên đề điểm đến, số đặc biệt theo mùa và tạp chí du lịch thương hiệu.</p></div></article><article class="lg:col-span-2 bg-card border border-border p-8 flex flex-col justify-between"><p class="text-[11px] uppercase tracking-[.28em] text-primary">02 · Thương hiệu</p><div><h3 class="font-display text-[40px] leading-tight tracking-[-.045em] mb-4">Truyền thông thương hiệu</h3><p class="text-body leading-7">Tư vấn nội dung, concept campaign và truyền thông cho doanh nghiệp du lịch.</p></div></article><article class="bg-card border border-border p-8 flex flex-col justify-between"><p class="text-[11px] uppercase tracking-[.28em] text-primary">03 · Chuyên ngành</p><div><h3 class="font-display text-[34px] leading-tight tracking-[-.04em] mb-4">Nội dung chuyên ngành</h3><p class="text-body leading-7">Bài phân tích, phỏng vấn, cẩm nang và chuyên đề chuyên ngành.</p></div></article><article class="bg-primary text-white p-8 flex flex-col justify-between"><p class="text-[11px] uppercase tracking-[.28em] text-white/75">04 · Thương mại</p><div><h3 class="font-display text-[34px] leading-tight tracking-[-.04em] mb-4">Giải pháp quảng cáo</h3><p class="text-white/70 leading-7">Gói quảng cáo trong ấn phẩm, bài tài trợ, landing campaign và hợp tác nội dung.</p></div></article></div></div>
+  </section>
+
+  <section id="magazine" class="relative bg-midnight text-white py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-[.08]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 18px 18px;"></div>
+    <div class="relative max-w-[1440px] mx-auto px-6 md:px-8 grid lg:grid-cols-[.95fr_1.05fr] gap-14 items-center"><div class="flex justify-center lg:justify-start"><div class="mag-cover relative w-[330px] md:w-[420px] aspect-[3/4] bg-white shadow-cover p-5"><div class="absolute -right-8 top-14 w-8 h-[82%] bg-slate-300/50 skew-y-6"></div><div class="relative h-full bg-dark overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover opacity-75" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1000&auto=format&fit=crop" alt="Bìa ấn phẩm số"><div class="absolute inset-0 bg-gradient-to-b from-midnight/20 via-transparent to-midnight/90"></div><div class="absolute inset-x-0 top-0 p-6 flex justify-between text-[10px] uppercase tracking-[.24em] text-white/80"><span>Số 08</span><span>2026</span></div><div class="absolute left-6 right-6 bottom-7"><p class="text-[10px] uppercase tracking-[.28em] text-accent mb-3">Ấn bản đặc biệt</p><h3 class="font-display text-[44px] leading-[.9] tracking-[-.055em]">Cẩm nang du lịch thông minh Việt Nam</h3></div></div></div></div><div><p class="editorial-line-light text-[12px] uppercase tracking-[.32em] text-accent mb-6">Ấn phẩm số</p><h2 class="font-display text-[54px] md:text-[82px] leading-[.9] tracking-[-.065em] mb-8">Ấn phẩm số cho thế hệ du khách thông minh.</h2><p class="text-white/68 text-lg leading-8 max-w-[720px] mb-10">Hiển thị ấn phẩm PDF mới nhất như một bìa tạp chí cao cấp, cho phép độc giả đọc online hoặc tải về nhanh chóng.</p><div class="grid sm:grid-cols-3 gap-4 mb-10 max-w-[680px]"><div class="border border-white/15 p-5"><p class="font-display text-4xl text-accent">120</p><p class="text-[11px] uppercase tracking-[.22em] text-white/50 mt-2">Trang</p></div><div class="border border-white/15 p-5"><p class="font-display text-4xl text-accent">18</p><p class="text-[11px] uppercase tracking-[.22em] text-white/50 mt-2">Bài viết</p></div><div class="border border-white/15 p-5"><p class="font-display text-4xl text-accent">PDF</p><p class="text-[11px] uppercase tracking-[.22em] text-white/50 mt-2">Ấn phẩm</p></div></div><div class="flex flex-wrap gap-4"><a href="#" class="bg-white text-dark px-8 py-4 text-[12px] uppercase tracking-[.24em] font-bold hover:bg-accent transition">Đọc online</a><a href="#" class="border border-white/35 px-8 py-4 text-[12px] uppercase tracking-[.24em] font-bold hover:bg-white hover:text-dark transition">Tải PDF</a></div></div></div>
+  </section>
+
+  <section id="articles" class="bg-card py-24 md:py-32"><div class="max-w-[1440px] mx-auto px-6 md:px-8"><div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14"><div><p class="editorial-line text-[12px] uppercase tracking-[.32em] text-primary mb-5">Bài viết nổi bật</p><h2 class="font-display text-[50px] md:text-[72px] leading-[.95] tracking-[-.06em]">Những câu chuyện có chiều sâu, gu biên tập và giá trị thực địa.</h2></div><a href="#" class="text-[12px] uppercase tracking-[.24em] font-bold border-b border-heading pb-2 w-fit">Xem tất cả</a></div><div class="grid lg:grid-cols-12 gap-6"><article class="lg:col-span-7 bg-bg"><img class="article-img w-full h-[560px] object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop" alt="Du lịch biển"><div class="pt-7 pr-4"><p class="text-[11px] uppercase tracking-[.28em] text-primary mb-4">Du lịch thông minh</p><h3 class="font-display text-[48px] md:text-[60px] leading-[.96] tracking-[-.055em] mb-5">Đi biển mùa cao điểm: những khoản phí nên hỏi trước.</h3><p class="text-body text-lg leading-8 max-w-[720px]">Một checklist biên tập giúp du khách chủ động trước các chi phí ghế, tắm nước ngọt, gửi xe, hải sản và dịch vụ thuê tại bãi biển.</p></div></article><div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-6"><article class="grid md:grid-cols-[220px_1fr] gap-6 border-t border-border pt-6"><img class="article-img w-full h-[170px] object-cover" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=900&auto=format&fit=crop" alt="Lên kế hoạch du lịch"><div><p class="text-[10px] uppercase tracking-[.24em] text-primary mb-3">Cẩm nang</p><h3 class="font-display text-[31px] leading-tight tracking-[-.04em]">Checklist trước khi đặt tour du lịch.</h3></div></article><article class="grid md:grid-cols-[220px_1fr] gap-6 border-t border-border pt-6"><img class="article-img w-full h-[170px] object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop" alt="Văn hóa du lịch"><div><p class="text-[10px] uppercase tracking-[.24em] text-primary mb-3">Góc nhìn</p><h3 class="font-display text-[31px] leading-tight tracking-[-.04em]">Du lịch văn minh bắt đầu từ thông tin minh bạch.</h3></div></article><article class="grid md:grid-cols-[220px_1fr] gap-6 border-t border-border pt-6"><img class="article-img w-full h-[170px] object-cover" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=900&auto=format&fit=crop" alt="Du lịch thành phố"><div><p class="text-[10px] uppercase tracking-[.24em] text-primary mb-3">Báo cáo đô thị</p><h3 class="font-display text-[31px] leading-tight tracking-[-.04em]">Một ngày ở thành phố du lịch: đi đâu để không trả giá sai.</h3></div></article></div></div></div></section>
+
+  <section class="bg-bg py-24 md:py-32"><div class="max-w-[1180px] mx-auto px-6 md:px-8 text-center"><p class="text-[12px] uppercase tracking-[.32em] text-primary mb-8">Cảm nhận</p><div class="font-display text-[82px] md:text-[140px] leading-none text-primary/15">“</div><blockquote class="font-display text-[42px] md:text-[72px] leading-[1.02] tracking-[-.055em] text-heading mt-[-35px]">Một nền tảng mà mọi du khách Việt Nam nên biết trước khi lên đường.</blockquote><p class="mt-10 text-[12px] uppercase tracking-[.28em] text-body">Đối tác truyền thông du lịch</p></div></section>
+
+  <section id="contact" class="bg-card py-24 md:py-32"><div class="max-w-[1440px] mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-10"><div class="bg-bg p-8 md:p-12"><p class="editorial-line text-[12px] uppercase tracking-[.32em] text-primary mb-5">Liên hệ</p><h2 class="font-display text-[52px] md:text-[76px] leading-[.92] tracking-[-.06em] mb-8">Hợp tác nội dung, quảng cáo và ấn phẩm.</h2><div class="grid md:grid-cols-2 gap-4"><input class="bg-white border border-border px-4 py-4 outline-none focus:border-primary" placeholder="Họ tên"><input class="bg-white border border-border px-4 py-4 outline-none focus:border-primary" placeholder="Số điện thoại"></div><input class="w-full bg-white border border-border px-4 py-4 mt-4 outline-none focus:border-primary" placeholder="Email"><textarea class="w-full h-36 bg-white border border-border px-4 py-4 mt-4 outline-none focus:border-primary" placeholder="Nội dung cần tư vấn"></textarea><button class="mt-4 bg-primary text-white px-8 py-4 text-[12px] uppercase tracking-[.24em] font-bold hover:bg-dark transition">Gửi thông tin</button></div><div class="relative min-h-[520px] bg-dark text-white overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover opacity-45" src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1400&auto=format&fit=crop" alt="Bản đồ liên hệ"><div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/20 to-transparent"></div><div class="absolute left-8 bottom-8 right-8"><p class="text-[11px] uppercase tracking-[.28em] text-accent mb-5">Thông tin liên hệ</p><div class="grid sm:grid-cols-2 gap-4"><div class="border border-white/15 bg-white/5 p-5"><p class="text-white/50 text-sm mb-2">Email</p><p class="font-display text-2xl tracking-[-.035em]">hello@one2fly.vn</p></div><div class="border border-white/15 bg-white/5 p-5"><p class="text-white/50 text-sm mb-2">Hotline</p><p class="font-display text-2xl tracking-[-.035em]">+84 000 000 000</p></div><div class="border border-white/15 bg-white/5 p-5 sm:col-span-2"><p class="text-white/50 text-sm mb-2">Địa chỉ</p><p class="font-display text-2xl tracking-[-.035em]">Hà Nội, Việt Nam</p></div></div></div></div></div></section>
+
+  <footer class="bg-midnight text-white pt-20"><div class="max-w-[1440px] mx-auto px-6 md:px-8 pb-16 grid lg:grid-cols-[1.2fr_.8fr_.8fr_.8fr] gap-12"><div><img class="brand-logo-img mb-6" src="assets/logo.png" alt="one2FLY! — Ấn phẩm của Báo Văn hóa"><p class="text-white/55 leading-7 max-w-[420px]">Nền tảng xuất bản cao cấp dành cho tri thức du lịch, ấn phẩm du lịch và kể chuyện điểm đến.</p></div><div><h4 class="text-[11px] uppercase tracking-[.28em] text-accent mb-5">Biên tập</h4><ul class="space-y-3 text-white/55"><li>Bài nổi bật</li><li>Báo cáo du lịch</li><li>Câu chuyện văn hóa</li><li>Cẩm nang</li></ul></div><div><h4 class="text-[11px] uppercase tracking-[.28em] text-accent mb-5">Nền tảng</h4><ul class="space-y-3 text-white/55"><li>Tri thức du lịch</li><li>Bản đồ cảnh báo</li><li>Ấn phẩm số</li><li>Thư viện PDF</li></ul></div><div><h4 class="text-[11px] uppercase tracking-[.28em] text-accent mb-5">Thương mại</h4><ul class="space-y-3 text-white/55"><li>Quảng cáo</li><li>Nội dung thương hiệu</li><li>Hợp tác</li><li>Liên hệ</li></ul></div></div><div class="border-t border-white/10"><div class="max-w-[1440px] mx-auto px-6 md:px-8 py-7 text-[11px] uppercase tracking-[.24em] text-white/35 flex flex-col md:flex-row gap-4 justify-between"><p>© 2026 one2FLY!</p><p>Tri thức du lịch an toàn · Trang chủ phong cách tạp chí cao cấp</p></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #f5f9fd;
+  color: #172033;
+  font-family: Inter, Arial, sans-serif;
+}
+::selection {
+  background: #00c0f3;
+  color: #ffffff;
+}
+.font-display {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.meta {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5c6d80;
+}
+.ph {
+  filter: grayscale(0.12) sepia(0.04) contrast(1.04) saturate(1.02);
+  object-fit: cover;
+}
+.imgwrap {
+  overflow: hidden;
+}
+.imgwrap img {
+  transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.group:hover .imgwrap img,
+.imgwrap:hover img {
+  transform: scale(1.05);
+}
+.underline-grow {
+  position: relative;
+}
+.underline-grow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  background: #005bab;
+  transition: width 0.35s;
+}
+.underline-grow:hover::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: #005bab;
+}
+.drop::first-letter {
+  font-family: Georgia, serif;
+  float: left;
+  font-size: 78px;
+  line-height: 0.72;
+  padding: 8px 12px 0 0;
+  color: #005bab;
+  font-weight: 700;
+}
+.adm-link.active {
+  background: rgba(0, 192, 243, 0.14);
+  color: #005bab;
+}
+.scroll-cue {
+  animation: cue 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+@keyframes cue {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 91, 171, 0.2);
+  border-radius: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+:focus-visible {
+  outline: 2px solid #00c0f3;
+  outline-offset: 2px;
+}
+input,
+textarea,
+select {
+  font-family: Inter, Arial, sans-serif;
+}
+.aurora-logo {
+  display: block;
+  line-height: 0;
+  flex-shrink: 0;
+  height: 46px;
+  overflow: hidden;
+}
+.aurora-logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+@media (max-width: 640px) {
+  .aurora-logo {
+    height: 30px;
+    max-height: 30px;
+  }
+  .aurora-logo img {
+    height: 100%;
+    max-height: 30px;
+  }
+}

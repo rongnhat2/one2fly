@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>one2FLY! — Draft Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#005BAB',accent:'#00C0F3',navy:'#071B34',ink:'#101827',muted:'#64748B',paper:'#F6FAFD',gold:'#F4B91E'},boxShadow:{soft:'0 24px 70px rgba(7,27,52,.12)',card:'0 14px 40px rgba(7,27,52,.10)'}}}}</script>
+  <link rel="stylesheet" href="assets/simple.css">
+</head>
+<body class="font-sans antialiased bg-paper text-ink">
+  <header class="fixed top-0 left-0 right-0 z-50 text-white">
+    <div class="max-w-[1180px] mx-auto px-5 h-[76px] flex items-center justify-between">
+      <a href="index.html"><img src="../assets/logo.png" class="h-10 w-auto brightness-0 invert" alt="one2FLY!"></a>
+      <nav class="hidden lg:flex items-center gap-8 text-[12px] uppercase tracking-[.18em] font-semibold">
+        <a class="nav-link" href="index-draft.html#smart-travel">Du lịch thông minh</a>
+        <a class="nav-link" href="destinations.html">Điểm đến</a>
+        <a class="nav-link" href="issue.html">Ấn phẩm</a>
+        <a class="nav-link" href="about.html">Giới thiệu</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero min-h-[720px] text-white flex items-center" style="--hero-img:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2200&auto=format&fit=crop')">
+    <div class="max-w-[1180px] mx-auto px-5 pt-20">
+      <p class="text-xs uppercase tracking-[.22em] text-accent mb-4">Featured Story</p>
+      <h1 class="font-display text-[64px] md:text-[96px] leading-[.92] font-medium mb-6">Những miền di sản nhìn từ nhịp sống hiện đại</h1>
+      <p class="text-lg text-white/85 max-w-xl mb-8">Magazine du lịch, văn hóa và lifestyle — hình ảnh lớn, khoảng thở rộng, trải nghiệm đọc giàu cảm xúc.</p>
+      <a href="#latest" class="bg-gold text-ink px-6 py-3 rounded-full text-xs uppercase tracking-[.16em] font-bold">Khám phá bài viết</a>
+    </div>
+  </section>
+  <main>
+    <section id="smart-travel" class="py-16 bg-white">
+      <div class="max-w-[1180px] mx-auto px-5 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[.22em] text-brand mb-3">Du lịch thông minh</p>
+          <h2 class="font-display text-4xl font-medium mb-4">Không bị chặt chém</h2>
+          <p class="text-muted leading-7">Giá tham khảo, địa điểm uy tín, cảnh báo rủi ro — cẩm nang giúp bạn đi an toàn và minh bạch hơn.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="glass rounded-xl p-5"><p class="text-brand font-bold text-2xl">120+</p><p class="text-sm text-muted">Bài cẩm nang</p></div>
+          <div class="glass rounded-xl p-5"><p class="text-brand font-bold text-2xl">35</p><p class="text-sm text-muted">Tỉnh thành</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="latest" class="py-16">
+      <div class="max-w-[1180px] mx-auto px-5">
+        <h2 class="font-display text-4xl font-medium title-mark text-center mb-10">Bài viết mới</h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="image-card relative h-[320px] rounded-xl overflow-hidden bg-cover bg-center col-span-2" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop')"><div class="absolute bottom-0 p-6 text-white"><h3 class="font-display text-3xl">Sa Pa ngoài mùa khách</h3></div></article>
+          <article class="bg-white rounded-xl p-6 shadow-card"><p class="text-xs uppercase text-brand mb-2">Culture</p><h3 class="font-display text-2xl">Hội An khi đèn lồng chưa sáng</h3></article>
+          <article class="bg-white rounded-xl p-6 shadow-card"><p class="text-xs uppercase text-brand mb-2">Lifestyle</p><h3 class="font-display text-2xl">Đà Lạt và những căn nhà biết thở</h3></article>
+        </div>
+      </div>
+    </section>
+    <section id="magazine" class="py-16 bg-white">
+      <div class="max-w-[960px] mx-auto px-5 text-center">
+        <h2 class="font-display text-4xl font-medium title-mark mb-8">Ấn phẩm tháng này</h2>
+        <div class="flex justify-center gap-3">
+          <a href="issue-read.html" class="bg-gold text-ink px-6 py-3 rounded-full text-xs uppercase tracking-[.16em] font-bold">Đọc online</a>
+          <a href="issue-detail.html" class="border border-slate-300 px-6 py-3 rounded-full text-xs uppercase tracking-[.16em] font-bold">Chi tiết</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white border-t border-slate-200 py-12">
+    <div class="max-w-[1180px] mx-auto px-5 text-center">
+      <img src="../assets/logo.png" class="h-9 mx-auto mb-6" alt="one2FLY!">
+      <p class="text-xs text-muted">© 2026 one2FLY!. Draft homepage.</p>
+    </div>
+  </footer>
+</body>
+</html>

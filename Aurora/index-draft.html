@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Heritage Magazine</title>
+  <meta name="description" content="Demo UI magazine du lịch - văn hóa - lifestyle, inspired by premium editorial style." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-mask {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.28), rgba(0,0,0,.05)),
+        url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .line-title::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #005BAB;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+  </style>
+<script src="assets/js/aurora-config.js"></script>
+<link rel="stylesheet" href="assets/css/aurora.css">
+</head>
+
+<body class="bg-soft text-ink font-sans">
+  <!-- TOP BAR -->
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Luxury Travel • Culture • Lifestyle</p>
+      <p>Vietnam Editorial Journal</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between">
+      <a href="index.html" class="aurora-logo" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[0.16em]">
+        <a class="hover:text-bronze" href="index.html">Trang chủ</a> 
+        <a class="hover:text-bronze" href="#culture">Về chúng tôi</a> 
+        <a class="hover:text-bronze" href="#smart-travel">Du lịch thông minh</a>
+        <a class="hover:text-bronze" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-bronze" href="#experience">Liên hệ</a>
+      </nav>
+
+      <button class="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition">
+        Search
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-mask min-h-[720px] relative text-white">
+    <div class="absolute inset-0 grain opacity-30"></div>
+    <div class="relative max-w-[1320px] mx-auto px-6 min-h-[720px] flex items-center">
+      <div class="max-w-[760px] pt-14">
+        <p class="line-title text-sm uppercase tracking-[0.28em] text-white/80 mb-8">Featured Story</p>
+        <h1 class="font-serif text-[54px] md:text-[86px] leading-[0.95] tracking-[-0.04em] mb-8">
+          Những miền di sản nhìn từ nhịp sống hiện đại
+        </h1>
+        <p class="text-lg md:text-xl leading-8 text-white/78 max-w-[620px] mb-10">
+          Một giao diện magazine cao cấp dành cho thương hiệu du lịch, văn hóa và lifestyle — tập trung vào hình ảnh lớn, khoảng thở rộng và trải nghiệm đọc giàu cảm xúc.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#latest" class="bg-white text-ink px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-sand transition">Khám phá bài viết</a>
+          <a href="#magazine" class="border border-white/60 px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-white hover:text-ink transition">Xem ấn phẩm</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 right-0 hidden xl:block w-[420px] bg-soft text-ink p-8">
+      <p class="text-xs uppercase tracking-[0.24em] text-bronze mb-3">Editor Pick</p>
+      <h3 class="font-serif text-3xl leading-tight mb-3">Sài Gòn trong một buổi sáng tháng sáu</h3>
+      <p class="text-sm leading-6 text-black/60">Một lát cắt nhẹ nhàng về kiến trúc, cà phê và ký ức đô thị.</p>
+    </div>
+  </section>
+
+  <!-- CATEGORY STRIP -->
+  <section class="bg-navy text-white">
+    <div class="max-w-[1320px] mx-auto px-6 py-7 overflow-x-auto">
+      <div class="flex gap-8 min-w-max text-sm uppercase tracking-[0.22em]">
+        <a class="text-sand" href="#">Hà Nội</a>
+        <a href="#smart-travel">Du lịch thông minh</a>
+        <a href="#">Huế</a>
+        <a href="#">Đà Nẵng</a>
+        <a href="#">Hội An</a>
+        <a href="#">Phú Quốc</a>
+        <a href="#">Tokyo</a>
+        <a href="#">Seoul</a>
+        <a href="#">Paris</a>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- SMART TRAVEL / ANTI-OVERCHARGING -->
+  <section id="smart-travel" class="bg-sky/70 border-y border-brand/10">
+    <div class="max-w-[1320px] mx-auto px-6 py-24">
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-stretch">
+        <div class="bg-navy text-white p-8 md:p-12 flex flex-col justify-between min-h-[520px] relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-accent/20 blur-3xl"></div>
+          <div class="relative">
+            <p class="line-title text-sm uppercase tracking-[0.28em] text-sand mb-6">Travel Smart</p>
+            <h2 class="font-serif text-5xl md:text-6xl leading-[0.98] tracking-[-0.04em] mb-7">
+              Du lịch thông minh<br>
+              <span class="text-sand">không bị chặt chém</span>
+            </h2>
+            <p class="text-white/70 leading-8 max-w-[560px] mb-8">
+              Cẩm nang giúp du khách tham khảo mức giá, chọn dịch vụ uy tín,
+              nhận biết rủi ro và tránh các tình huống bị nâng giá khi đi du lịch.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" class="bg-white text-ink px-6 py-3 text-xs uppercase tracking-[0.2em] hover:bg-sand transition">Xem cẩm nang</a>
+              <a href="#" class="border border-white/40 px-6 py-3 text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-ink transition">Gửi cảnh báo</a>
+            </div>
+          </div>
+          <div class="relative grid grid-cols-3 gap-5 pt-10 mt-10 border-t border-white/15">
+            <div>
+              <p class="font-serif text-4xl text-sand">120+</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-white/50 mt-1">Điểm giá</p>
+            </div>
+            <div>
+              <p class="font-serif text-4xl text-sand">35</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-white/50 mt-1">Cảnh báo</p>
+            </div>
+            <div>
+              <p class="font-serif text-4xl text-sand">24/7</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-white/50 mt-1">Cập nhật</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="group bg-white p-6 border border-brand/10 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M6 12h12M8 18h8"/></svg>
+            </div>
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Bảng giá tham khảo</p>
+            <h3 class="font-serif text-3xl leading-tight mb-3 group-hover:text-brand transition">Biết trước mức giá phổ biến</h3>
+            <p class="text-black/60 leading-7">Tổng hợp giá vé, dịch vụ, tour, thuê xe và các khoản phí thường gặp tại từng điểm đến.</p>
+          </article>
+
+          <article class="group bg-white p-6 border border-brand/10 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-full bg-accent/15 text-brand flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 17h16l-2-7H6l-2 7Z"/><path d="M7 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/><path d="M8 10V6h8v4"/></svg>
+            </div>
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Taxi & di chuyển</p>
+            <h3 class="font-serif text-3xl leading-tight mb-3 group-hover:text-brand transition">Đi đúng tuyến, trả đúng giá</h3>
+            <p class="text-black/60 leading-7">Gợi ý hãng xe uy tín, app nên dùng, khoảng giá hợp lý và các mẹo tránh bị nâng giá.</p>
+          </article>
+
+          <article class="group bg-white p-6 border border-brand/10 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-full bg-brand/10 text-brand flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Địa điểm uy tín</p>
+            <h3 class="font-serif text-3xl leading-tight mb-3 group-hover:text-brand transition">Ăn, ở, chơi có chọn lọc</h3>
+            <p class="text-black/60 leading-7">Danh sách nhà hàng, khách sạn, điểm mua sắm và dịch vụ được đề xuất theo từng khu vực.</p>
+          </article>
+
+          <article class="group bg-white p-6 border border-brand/10 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-full bg-accent/15 text-brand flex items-center justify-center mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 2 21h20L12 3Z"/><path d="M12 9v5M12 17h.01"/></svg>
+            </div>
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Cảnh báo du lịch</p>
+            <h3 class="font-serif text-3xl leading-tight mb-3 group-hover:text-brand transition">Nhận biết rủi ro thường gặp</h3>
+            <p class="text-black/60 leading-7">Các tình huống lừa đảo, chèo kéo, nâng giá và kinh nghiệm xử lý khi gặp vấn đề.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST -->
+  <section id="latest" class="max-w-[1320px] mx-auto px-6 py-24">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div>
+        <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Latest Journal</p>
+        <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em]">Bài viết mới</h2>
+      </div>
+      <a href="#" class="text-sm uppercase tracking-[0.22em] border-b border-ink pb-2 w-fit">Xem tất cả</a>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <article class="lg:col-span-2 bg-white">
+        <img class="w-full h-[520px] object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop" alt="">
+        <div class="p-8 md:p-10">
+          <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-4">Destination</p>
+          <h3 class="font-serif text-4xl md:text-5xl leading-tight mb-4">Biển xanh, kiến trúc trắng và những ngày chậm lại</h3>
+          <p class="text-black/60 leading-7 max-w-[720px]">Layout card lớn tạo điểm nhấn thị giác cho bài quan trọng nhất trong danh sách.</p>
+        </div>
+      </article>
+
+      <div class="grid gap-8">
+        <article class="bg-white">
+          <img class="w-full h-[250px] object-cover" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=900&auto=format&fit=crop" alt="">
+          <div class="p-7">
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Culture</p>
+            <h3 class="font-serif text-3xl leading-tight">Một chiều trong khu phố cổ</h3>
+          </div>
+        </article>
+        <article class="bg-white">
+          <img class="w-full h-[250px] object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop" alt="">
+          <div class="p-7">
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Lifestyle</p>
+            <h3 class="font-serif text-3xl leading-tight">Nghệ thuật sống tinh giản giữa thiên nhiên</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="bg-white py-24">
+    <div class="max-w-[1320px] mx-auto px-6">
+      <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center mb-16">
+        <div>
+          <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Destinations</p>
+          <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em] mb-6">Điểm đến được kể bằng hình ảnh</h2>
+          <p class="text-black/60 leading-8">Mỗi destination có thể là một category hoặc taxonomy riêng: ảnh cover, mô tả, danh sách bài viết và các bài nổi bật.</p>
+        </div>
+        <img class="w-full h-[460px] object-cover rounded-tl-[120px]" src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=700&auto=format&fit=crop" alt="">
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group relative h-[420px] overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=800&auto=format&fit=crop" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="text-xs uppercase tracking-[0.22em] text-sand mb-2">Vietnam</p>
+            <h3 class="font-serif text-3xl">Hội An</h3>
+          </div>
+        </div>
+        <div class="group relative h-[420px] overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?q=80&w=800&auto=format&fit=crop" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="text-xs uppercase tracking-[0.22em] text-sand mb-2">Japan</p>
+            <h3 class="font-serif text-3xl">Kyoto</h3>
+          </div>
+        </div>
+        <div class="group relative h-[420px] overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1538485399081-7c8edcb0eb8e?q=80&w=800&auto=format&fit=crop" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="text-xs uppercase tracking-[0.22em] text-sand mb-2">Korea</p>
+            <h3 class="font-serif text-3xl">Seoul</h3>
+          </div>
+        </div>
+        <div class="group relative h-[420px] overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="text-xs uppercase tracking-[0.22em] text-sand mb-2">France</p>
+            <h3 class="font-serif text-3xl">Paris</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="bg-navy text-white py-24 overflow-hidden">
+    <div class="max-w-[1320px] mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
+        <div>
+          <p class="line-title text-sm uppercase tracking-[0.28em] text-sand mb-5">Experience</p>
+          <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em]">Trải nghiệm chọn lọc</h2>
+        </div>
+        <p class="max-w-[420px] text-white/60 leading-7">Một section nền tối để tạo nhịp thị giác, khác biệt với nền sáng phía trên.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <article class="border border-white/15 p-5">
+          <img class="w-full h-[360px] object-cover mb-6" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=900&auto=format&fit=crop" alt="">
+          <p class="text-xs uppercase tracking-[0.22em] text-sand mb-3">Resort</p>
+          <h3 class="font-serif text-3xl leading-tight">Một cuối tuần giữa rừng và biển</h3>
+        </article>
+        <article class="border border-white/15 p-5">
+          <img class="w-full h-[360px] object-cover mb-6" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=900&auto=format&fit=crop" alt="">
+          <p class="text-xs uppercase tracking-[0.22em] text-sand mb-3">Hotel</p>
+          <h3 class="font-serif text-3xl leading-tight">Những khách sạn kể chuyện bằng thiết kế</h3>
+        </article>
+        <article class="border border-white/15 p-5">
+          <img class="w-full h-[360px] object-cover mb-6" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=900&auto=format&fit=crop" alt="">
+          <p class="text-xs uppercase tracking-[0.22em] text-sand mb-3">Dining</p>
+          <h3 class="font-serif text-3xl leading-tight">Bữa tối trong một căn nhà cổ</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- MAGAZINE -->
+  <section id="magazine" class="max-w-[1320px] mx-auto px-6 py-24">
+    <div class="bg-white grid lg:grid-cols-2">
+      <div class="p-8 md:p-16 flex flex-col justify-center">
+        <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Digital Issue</p>
+        <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em] mb-6">Ấn phẩm tháng này</h2>
+        <p class="text-black/60 leading-8 mb-8">
+          Module này có thể dùng cho PDF magazine, brochure, lookbook hoặc collection bài viết. Bản MVP chỉ cần upload cover + file PDF + nút đọc.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="bg-navy text-white px-8 py-4 text-xs uppercase tracking-[0.22em]">Đọc online</button>
+          <button class="border border-ink px-8 py-4 text-xs uppercase tracking-[0.22em]">Tải PDF</button>
+        </div>
+      </div>
+      <div class="bg-mist p-10 flex items-center justify-center">
+        <div class="w-[330px] aspect-[3/4] bg-white shadow-2xl p-5 rotate-2">
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=900&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-navy text-white pt-20">
+    <div class="max-w-[1320px] mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+      <div class="lg:col-span-2">
+        <h2 class="font-serif text-5xl mb-6">Aurora Heritage</h2>
+        <p class="text-white/60 leading-8 max-w-[520px]">Demo single HTML cho website magazine đăng bài đẹp, có thể tách thành React/Next/Tailwind components sau.</p>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Menu</h3>
+        <div class="space-y-3 text-white/60">
+          <p>Điểm đến</p>
+          <p>Du lịch thông minh</p>
+          <p>Văn hóa</p>
+          <p>Trải nghiệm</p>
+          <p>Ấn phẩm</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Contact</h3>
+        <div class="space-y-3 text-white/60">
+          <p>hello@aurora.test</p>
+          <p>+84 000 000 000</p>
+          <p>Hanoi, Vietnam</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 py-6 text-xs uppercase tracking-[0.22em] text-white/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 Aurora Heritage</p>
+        <p>Designed for Tailwind UI Prototype</p>
+      </div>
+    </div>
+  </footer>
+</body>

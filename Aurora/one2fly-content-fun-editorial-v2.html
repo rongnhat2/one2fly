@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>one2FLY! — Du lịch đừng để bị chặt chém</title>
+  <meta name="description" content="one2FLY! — Nền tảng nội dung du lịch vui vẻ, thông minh, đúng và đủ thông tin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Noto+Serif:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Noto Serif', 'serif'],
+            sans: ['Be Vietnam Pro', 'Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            bg: '#F7F9FC',
+            paper: '#FFFFFF',
+            ink: '#0F172A',
+            body: '#475569',
+            border: '#E2E8F0',
+            primary: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#071B34',
+            lemon: '#FFE66D',
+            coral: '#FF6B5F',
+            mint: '#CFFAE7'
+          },
+          boxShadow: {
+            editorial: '0 30px 90px rgba(7, 27, 52, .14)',
+            cover: '0 40px 120px rgba(0, 0, 0, .35)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#F7F9FC; color:#0F172A; }
+    .hero-cover {
+      background:
+        linear-gradient(90deg, rgba(7,27,52,.96) 0%, rgba(7,27,52,.74) 34%, rgba(0,91,171,.30) 68%, rgba(0,0,0,.18) 100%),
+        url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2200&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain:before {
+      content:""; position:absolute; inset:0; pointer-events:none; opacity:.22;
+      background-image: radial-gradient(rgba(255,255,255,.34) .7px, transparent .7px);
+      background-size: 5px 5px;
+    }
+    .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+    .clip-card { clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%); }
+    .marker { background: linear-gradient(180deg, transparent 48%, rgba(255,230,109,.95) 48%); }
+    .logo img { height: 54px; width:auto; object-fit:contain; display:block; }
+    .section-label:before { content:""; width:48px; height:1px; background:#005BAB; display:inline-block; margin-right:14px; vertical-align:middle; }
+    .section-label-light:before { content:""; width:48px; height:1px; background:#00C0F3; display:inline-block; margin-right:14px; vertical-align:middle; }
+    .map-pin { position:absolute; width:14px; height:14px; border-radius:999px; background:#00C0F3; box-shadow:0 0 0 8px rgba(0,192,243,.16), 0 0 0 16px rgba(0,192,243,.06); }
+    .map-line { position:absolute; height:1px; background:rgba(255,255,255,.22); transform-origin:left; }
+    .story-card { transition: transform .35s ease, box-shadow .35s ease; }
+    .story-card:hover { transform: translateY(-6px); box-shadow: 0 24px 70px rgba(7,27,52,.12); }
+    @media (max-width: 768px) { .vertical-text { writing-mode: horizontal-tb; transform:none; } }
+  </style>
+</head>
+<body class="font-sans bg-bg text-ink">
+  <div class="bg-navy text-white/70 text-[11px] uppercase tracking-[.26em] hidden md:block">
+    <div class="max-w-[1440px] mx-auto px-6 py-3 flex justify-between gap-6">
+      <span>Travel intelligence · vui vẻ · đúng và đủ thông tin</span>
+      <span>one2FLY! editorial magazine</span>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white/92 backdrop-blur-xl border-b border-border">
+    <div class="max-w-[1440px] mx-auto px-6 h-[82px] flex items-center justify-between gap-6">
+      <a class="logo" href="#" aria-label="one2FLY"><img src="assets/logo.png" alt="one2FLY!"></a>
+      <nav class="hidden xl:flex items-center gap-7 text-[12px] uppercase tracking-[.18em] font700">
+        <a href="#campaign" class="hover:text-primary">Không chặt chém</a>
+        <a href="#daily" class="hover:text-primary">Mỗi ngày một câu</a>
+        <a href="#destinations" class="hover:text-primary">Điểm đến</a>
+        <a href="#food" class="hover:text-primary">Ẩm thực</a>
+        <a href="#fashion" class="hover:text-primary">Thời trang</a>
+        <a href="#deals" class="hover:text-primary">Săn deal</a>
+        <a href="#magazine" class="hover:text-primary">Ấn phẩm</a>
+      </nav>
+      <a href="#contact" class="hidden md:inline-flex bg-navy text-white px-5 py-3 text-[11px] uppercase tracking-[.2em] hover:bg-primary transition">Liên hệ</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-cover grain relative min-h-[calc(100vh-82px)] text-white overflow-hidden">
+      <div class="absolute left-6 top-10 hidden lg:flex flex-col items-center gap-6 text-white/55">
+        <span class="vertical-text text-[11px] uppercase tracking-[.32em]">Travel Safety Intelligence</span>
+        <span class="w-px h-32 bg-white/25"></span>
+      </div>
+
+      <div class="relative max-w-[1440px] mx-auto px-6 py-10 min-h-[calc(100vh-82px)] grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
+        <div class="pt-8 lg:pl-16">
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="border border-white/30 bg-white/10 backdrop-blur px-4 py-2 text-[11px] uppercase tracking-[.24em]">Issue 01</span>
+            <span class="border border-white/30 bg-white/10 backdrop-blur px-4 py-2 text-[11px] uppercase tracking-[.24em]">Travel Report</span>
+            <span class="border border-accent/70 bg-accent/15 backdrop-blur px-4 py-2 text-[11px] uppercase tracking-[.24em] text-accent">Special Feature</span>
+          </div>
+
+          <p class="section-label-light text-sm uppercase tracking-[.28em] text-white/80 mb-8">Chiến dịch nổi bật</p>
+          <h1 class="font-serif font-black text-[56px] sm:text-[78px] lg:text-[108px] xl:text-[126px] leading-[.9] tracking-[-.055em] max-w-[980px]">
+            Du lịch<br>
+            <span class="text-accent">đừng để</span><br>
+            bị chặt chém
+          </h1>
+          <p class="mt-8 text-lg md:text-xl leading-9 text-white/78 max-w-[760px]">
+            Đi chơi là để vui. one2FLY! giúp bạn biết giá trước, né bẫy sau, đọc thông tin gọn gàng mà vẫn đủ dùng cho mỗi chuyến đi.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#campaign" class="bg-white text-ink px-8 py-4 text-xs uppercase tracking-[.22em] hover:bg-accent transition">Xem chuyên mục</a>
+            <a href="#map" class="border border-white/55 px-8 py-4 text-xs uppercase tracking-[.22em] hover:bg-white hover:text-ink transition">Bản đồ cảnh báo</a>
+          </div>
+        </div>
+
+        <aside class="lg:self-end lg:pb-10">
+          <div class="relative bg-white text-ink p-8 md:p-10 max-w-[520px] lg:ml-auto shadow-cover border-t-[8px] border-accent">
+            <div class="absolute -top-5 left-8 bg-lemon text-ink px-4 py-2 rotate-[-2deg] text-[11px] uppercase tracking-[.2em] font-extrabold shadow-lg">Editor's Choice</div>
+            <p class="mt-3 text-[12px] uppercase tracking-[.26em] text-primary font-bold mb-5">Đọc trước khi lên đường</p>
+            <h2 class="font-serif text-4xl md:text-5xl leading-tight tracking-[-.035em] mb-5">Không phải cảnh báo cho sợ. Là cẩm nang để khỏi mất tiền oan.</h2>
+            <div class="grid grid-cols-3 gap-3 pt-5 border-t border-border">
+              <div>
+                <strong class="block text-3xl font-serif">50+</strong>
+                <span class="text-xs text-body">điểm đến</span>
+              </div>
+              <div>
+                <strong class="block text-3xl font-serif">3</strong>
+                <span class="text-xs text-body">miền ẩm thực</span>
+              </div>
+              <div>
+                <strong class="block text-3xl font-serif">24h</strong>
+                <span class="text-xs text-body">cập nhật</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CAMPAIGN + TWO SMALL COLUMNS -->
+    <section id="campaign" class="relative bg-white py-20 md:py-28">
+      <div class="max-w-[1440px] mx-auto px-6">
+        <div class="grid lg:grid-cols-[1.35fr_.65fr] gap-7 items-stretch">
+          <article class="relative overflow-hidden bg-navy text-white min-h-[560px] p-8 md:p-12 xl:p-16 flex flex-col justify-between clip-card">
+            <div class="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/92 to-primary/25"></div>
+            <div class="relative">
+              <p class="section-label-light text-sm uppercase tracking-[.28em] text-white/75 mb-8">Chuyên mục quan trọng nhất</p>
+              <h2 class="font-serif text-[48px] md:text-[78px] xl:text-[98px] leading-[.92] tracking-[-.05em] max-w-[900px]">
+                Du lịch đừng để bị <span class="text-accent">chặt chém</span>
+              </h2>
+              <p class="text-white/72 text-lg leading-9 max-w-[690px] mt-8">
+                Cập nhật giá tham khảo, tình huống dễ bị hét giá, kinh nghiệm hỏi trước khi dùng dịch vụ và danh sách nơi nên chọn để chuyến đi vui hơn, tỉnh hơn.
+              </p>
+            </div>
+            <div class="relative grid md:grid-cols-4 gap-4 mt-12">
+              <div class="bg-white/10 backdrop-blur border border-white/15 p-5"><b class="block text-3xl font-serif">01</b><span class="text-sm text-white/70">Giá tham khảo</span></div>
+              <div class="bg-white/10 backdrop-blur border border-white/15 p-5"><b class="block text-3xl font-serif">02</b><span class="text-sm text-white/70">Taxi & di chuyển</span></div>
+              <div class="bg-white/10 backdrop-blur border border-white/15 p-5"><b class="block text-3xl font-serif">03</b><span class="text-sm text-white/70">Ăn uống đúng giá</span></div>
+              <div class="bg-accent text-ink p-5"><b class="block text-3xl font-serif">04</b><span class="text-sm font-bold">Né mất tiền oan</span></div>
+            </div>
+          </article>
+
+          <div id="daily" class="grid gap-7">
+            <article class="bg-lemon p-8 md:p-10 min-h-[265px] flex flex-col justify-between shadow-editorial rotate-[1deg]">
+              <p class="text-[12px] uppercase tracking-[.24em] font-extrabold text-primary">Mục nhỏ mỗi ngày</p>
+              <h3 class="font-serif text-4xl md:text-5xl leading-tight tracking-[-.04em]">Mỗi ngày một câu...<br>không ngu.</h3>
+              <p class="text-ink/70 leading-7">Một câu ngắn, dễ nhớ, đọc xong đi chơi khôn hơn một chút.</p>
+            </article>
+            <article class="bg-white p-8 md:p-10 min-h-[265px] border border-border shadow-editorial rotate-[-1deg]">
+              <p class="text-[12px] uppercase tracking-[.24em] font-extrabold text-coral">Mục nhỏ mỗi ngày</p>
+              <h3 class="font-serif text-4xl md:text-5xl leading-tight tracking-[-.04em]">Đọc tin rồi...<br>đừng tức.</h3>
+              <p class="text-body leading-7 mt-6">Tin nóng, chuyện lạ, cảnh báo nhẹ nhàng. Vui thôi nhưng thông tin phải đúng.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP WOW -->
+    <section id="map" class="bg-navy text-white py-24 md:py-32 overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-6">
+        <div class="grid lg:grid-cols-[.72fr_1.28fr] gap-14 items-center">
+          <div>
+            <p class="section-label-light text-sm uppercase tracking-[.28em] text-white/70 mb-6">Bản đồ du lịch thông minh</p>
+            <h2 class="font-serif text-5xl md:text-7xl leading-[.95] tracking-[-.05em] mb-7">Điểm nóng du lịch, giá cả và cảnh báo.</h2>
+            <p class="text-white/65 text-lg leading-9 mb-8">Một bản đồ trực quan cho các điểm đến nổi bật: nơi nào nên hỏi giá trước, nơi nào nên đặt sớm, khu nào dễ phát sinh chi phí.</p>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-white/12 pb-4"><span>Minh bạch giá</span><b class="text-accent">87%</b></div>
+              <div class="flex items-center justify-between border-b border-white/12 pb-4"><span>Khuyến nghị an toàn</span><b class="text-accent">92%</b></div>
+              <div class="flex items-center justify-between border-b border-white/12 pb-4"><span>Cảnh báo đang cập nhật</span><b class="text-accent">18 điểm</b></div>
+            </div>
+          </div>
+
+          <div class="relative min-h-[680px] bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden p-8 md:p-12">
+            <div class="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_center,rgba(0,192,243,.5)_0,transparent_40%)]"></div>
+            <svg class="absolute left-1/2 top-1/2 w-[420px] md:w-[560px] -translate-x-1/2 -translate-y-1/2 opacity-90" viewBox="0 0 360 700" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Stylized Vietnam map">
+              <path d="M190 20C148 55 165 103 199 121C238 142 242 182 205 205C174 225 165 262 194 289C232 325 225 365 185 382C144 399 136 435 166 464C199 496 192 530 157 548C116 569 116 612 159 648C175 661 192 672 213 684" stroke="rgba(255,255,255,.82)" stroke-width="46" stroke-linecap="round"/>
+              <path d="M190 20C148 55 165 103 199 121C238 142 242 182 205 205C174 225 165 262 194 289C232 325 225 365 185 382C144 399 136 435 166 464C199 496 192 530 157 548C116 569 116 612 159 648C175 661 192 672 213 684" stroke="#00C0F3" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+            <div class="map-pin left-[52%] top-[15%]"></div>
+            <div class="map-pin left-[60%] top-[35%]"></div>
+            <div class="map-pin left-[48%] top-[52%]"></div>
+            <div class="map-pin left-[57%] top-[68%]"></div>
+            <div class="map-pin left-[44%] top-[80%]"></div>
+
+            <div class="absolute left-8 top-10 bg-white text-ink p-5 w-[230px] shadow-cover">
+              <p class="text-[11px] uppercase tracking-[.22em] text-primary font-bold">Hà Nội</p>
+              <h3 class="font-serif text-2xl mt-2">Ăn gì cho đáng?</h3>
+              <p class="text-sm text-body mt-2">Giá tham khảo · quán uy tín · tuyến đi bộ</p>
+            </div>
+            <div class="absolute right-8 top-48 bg-lemon text-ink p-5 w-[240px] shadow-cover rotate-2">
+              <p class="text-[11px] uppercase tracking-[.22em] font-extrabold">Né gấp</p>
+              <h3 class="font-serif text-2xl mt-2">Hỏi giá trước khi thuê xe</h3>
+            </div>
+            <div class="absolute left-10 bottom-12 bg-white/95 text-ink p-5 w-[260px] shadow-cover">
+              <p class="text-[11px] uppercase tracking-[.22em] text-coral font-bold">Phú Quốc</p>
+              <h3 class="font-serif text-2xl mt-2">Đi biển đừng mất tiền oan</h3>
+              <p class="text-sm text-body mt-2">Tour đảo · hải sản · phụ phí</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="py-24 md:py-32 bg-bg">
+      <div class="max-w-[1440px] mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <p class="section-label text-sm uppercase tracking-[.28em] text-primary mb-5">Điểm đến</p>
+            <h2 class="font-serif text-5xl md:text-7xl leading-none tracking-[-.05em]">Đi đâu cho vui?</h2>
+          </div>
+          <p class="max-w-[520px] text-body leading-8">Chia điểm đến theo cách dễ chọn: biển để xả hơi, miền núi để đổi gió, đồng bằng để sống chậm.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-7">
+          <article class="story-card bg-white border border-border overflow-hidden">
+            <img class="h-[430px] w-full object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Biển Việt Nam">
+            <div class="p-8">
+              <p class="text-[12px] uppercase tracking-[.24em] text-primary font-bold mb-4">Biển</p>
+              <h3 class="font-serif text-4xl leading-tight mb-4">Đi biển cho mát, nhưng ví cũng phải mát.</h3>
+              <p class="text-body leading-7">Gợi ý bãi biển, giá dịch vụ, mùa đẹp và checklist tránh phụ phí.</p>
+            </div>
+          </article>
+          <article class="story-card bg-white border border-border overflow-hidden lg:mt-16">
+            <img class="h-[430px] w-full object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Miền núi Việt Nam">
+            <div class="p-8">
+              <p class="text-[12px] uppercase tracking-[.24em] text-primary font-bold mb-4">Miền núi</p>
+              <h3 class="font-serif text-4xl leading-tight mb-4">Lên núi chill, xuống núi vẫn tỉnh.</h3>
+              <p class="text-body leading-7">Lịch trình, homestay, xe di chuyển và những điểm nên đặt trước.</p>
+            </div>
+          </article>
+          <article class="story-card bg-white border border-border overflow-hidden">
+            <img class="h-[430px] w-full object-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop" alt="Đồng bằng Việt Nam">
+            <div class="p-8">
+              <p class="text-[12px] uppercase tracking-[.24em] text-primary font-bold mb-4">Đồng bằng</p>
+              <h3 class="font-serif text-4xl leading-tight mb-4">Đi chậm một chút, hiểu Việt Nam nhiều hơn.</h3>
+              <p class="text-body leading-7">Chợ nổi, làng nghề, văn hóa bản địa và kinh nghiệm đi nhẹ nhàng.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD -->
+    <section id="food" class="bg-white py-24 md:py-32">
+      <div class="max-w-[1440px] mx-auto px-6">
+        <div class="grid lg:grid-cols-[.72fr_1.28fr] gap-12">
+          <div>
+            <p class="section-label text-sm uppercase tracking-[.28em] text-primary mb-5">Ẩm thực</p>
+            <h2 class="font-serif text-5xl md:text-7xl leading-none tracking-[-.05em] mb-6">Ăn gì cho đáng?</h2>
+            <p class="text-body leading-8">Không chỉ ngon. Phải rõ giá, đúng chỗ, đúng khẩu vị và không biến bữa ăn thành bài học tài chính.</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="bg-bg p-7 border border-border">
+              <span class="text-5xl font-serif text-primary">Bắc</span>
+              <h3 class="font-serif text-3xl mt-8 mb-4">Thanh, tinh tế, ăn là nhớ.</h3>
+              <p class="text-body leading-7">Phở, bún, cốm, món mùa lạnh và quán nên đặt trước.</p>
+            </article>
+            <article class="bg-navy text-white p-7 border border-navy md:-mt-10">
+              <span class="text-5xl font-serif text-accent">Trung</span>
+              <h3 class="font-serif text-3xl mt-8 mb-4">Đậm, cay, nhỏ mà có võ.</h3>
+              <p class="text-white/65 leading-7">Bún bò, mì Quảng, hải sản, món cung đình và giá nên biết.</p>
+            </article>
+            <article class="bg-bg p-7 border border-border">
+              <span class="text-5xl font-serif text-primary">Nam</span>
+              <h3 class="font-serif text-3xl mt-8 mb-4">Rộng rãi, ngọt ngào, dễ thương.</h3>
+              <p class="text-body leading-7">Cơm tấm, hủ tiếu, chợ đêm, món đường phố và deal đáng thử.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FOOD FEATURE: STREET FOOD GUIDE -->
+    <section id="food-guide" class="bg-bg py-20 md:py-28">
+      <div class="max-w-[1440px] mx-auto px-6">
+        <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-8 items-stretch">
+          <article class="relative overflow-hidden bg-white border border-border shadow-editorial min-h-[620px]">
+            <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1800&auto=format&fit=crop" alt="Ẩm thực đường phố Việt Nam">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/58 to-transparent"></div>
+            <div class="relative h-full min-h-[620px] p-8 md:p-12 flex flex-col justify-end text-white">
+              <p class="section-label-light text-sm uppercase tracking-[.28em] text-white/75 mb-6">Ẩm thực nổi bật</p>
+              <h2 class="font-serif text-5xl md:text-7xl leading-[.95] tracking-[-.05em] max-w-[760px]">Ăn ngon, hỏi giá trước, khỏi quê sau.</h2>
+              <p class="text-white/72 text-lg leading-9 max-w-[640px] mt-6">Một khối nội dung riêng cho các món nên thử, quán đáng ghé, mức giá tham khảo và vài dấu hiệu nên né khi ăn uống ở điểm du lịch.</p>
+            </div>
+          </article>
+
+          <div class="grid gap-6">
+            <article class="bg-lemon p-8 md:p-10 border border-ink/5 rotate-[1deg] shadow-editorial">
+              <p class="text-[12px] uppercase tracking-[.24em] font-extrabold text-primary mb-5">Ăn gì cho đáng?</p>
+              <h3 class="font-serif text-4xl md:text-5xl leading-tight tracking-[-.04em]">Menu có giá, bụng mới yên.</h3>
+              <p class="text-ink/70 leading-8 mt-5">Gợi ý cách xem menu, hỏi khẩu phần, kiểm tra phụ phí và giữ hóa đơn khi đi ăn ở khu du lịch.</p>
+            </article>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <article class="bg-white p-7 border border-border">
+                <span class="inline-flex w-12 h-12 items-center justify-center rounded-full bg-primary text-white font-serif text-2xl mb-6">01</span>
+                <h3 class="font-serif text-3xl leading-tight mb-4">Món nên thử</h3>
+                <p class="text-body leading-7">Danh sách món đặc sản theo vùng, đi kèm mức giá tham khảo để dễ chọn.</p>
+              </article>
+              <article class="bg-white p-7 border border-border">
+                <span class="inline-flex w-12 h-12 items-center justify-center rounded-full bg-coral text-white font-serif text-2xl mb-6">02</span>
+                <h3 class="font-serif text-3xl leading-tight mb-4">Quán nên ghé</h3>
+                <p class="text-body leading-7">Ưu tiên địa điểm rõ giá, đông khách thật, đánh giá ổn và phục vụ tử tế.</p>
+              </article>
+            </div>
+
+            <article class="bg-navy text-white p-8 md:p-10 border border-navy">
+              <p class="text-[12px] uppercase tracking-[.24em] font-extrabold text-accent mb-5">Né mất tiền oan</p>
+              <h3 class="font-serif text-4xl leading-tight tracking-[-.04em] mb-5">Thấy “giá theo thời điểm” thì hỏi kỹ trước khi gọi.</h3>
+              <p class="text-white/65 leading-8">Khối này có thể dùng để đăng các cảnh báo nhẹ nhàng về hải sản, chợ đêm, quán gần điểm du lịch và những tình huống dễ bị tính thêm tiền.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASHION + DEALS -->
+    <section class="py-24 md:py-32 bg-bg">
+      <div class="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-[.9fr_1.1fr] gap-8 items-stretch">
+        <article id="fashion" class="bg-white border border-border overflow-hidden shadow-editorial">
+          <img class="w-full h-[390px] object-cover" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1400&auto=format&fit=crop" alt="Thời trang du lịch">
+          <div class="p-8 md:p-10">
+            <p class="text-[12px] uppercase tracking-[.24em] text-primary font-bold mb-5">Thời trang</p>
+            <h2 class="font-serif text-5xl md:text-6xl leading-none tracking-[-.05em] mb-5">Đi chơi mặc gì?</h2>
+            <p class="text-body leading-8">Gợi ý mặc đẹp theo điểm đến, khí hậu, lịch trình và ảnh check-in. Đẹp nhưng vẫn phải đi bộ được.</p>
+          </div>
+        </article>
+
+        <div id="deals" class="grid md:grid-cols-2 gap-8">
+          <article class="bg-lemon p-8 md:p-10 flex flex-col justify-between min-h-[520px]">
+            <div>
+              <p class="text-[12px] uppercase tracking-[.24em] font-extrabold text-primary mb-5">Săn deal</p>
+              <h2 class="font-serif text-5xl md:text-6xl leading-none tracking-[-.05em]">Rẻ nhưng phải tỉnh.</h2>
+              <p class="text-ink/70 leading-8 mt-6">Vé máy bay, phòng nghỉ, combo du lịch và ưu đãi đáng cân nhắc.</p>
+            </div>
+            <a href="#" class="mt-10 inline-flex w-fit border-b-2 border-ink pb-2 text-sm uppercase tracking-[.2em] font-bold">Xem deal</a>
+          </article>
+          <article class="bg-coral text-white p-8 md:p-10 flex flex-col justify-between min-h-[520px] rotate-[1deg] shadow-editorial">
+            <div>
+              <p class="text-[12px] uppercase tracking-[.24em] font-extrabold text-white/75 mb-5">Săn deal mà shok</p>
+              <h2 class="font-serif text-5xl md:text-6xl leading-none tracking-[-.05em]">Thấy giá là tỉnh ngủ.</h2>
+              <p class="text-white/78 leading-8 mt-6">Những deal thật sự nổi bật, số lượng có hạn, kiểm tra nhanh trước khi mất.</p>
+            </div>
+            <a href="#" class="mt-10 inline-flex w-fit border-b-2 border-white pb-2 text-sm uppercase tracking-[.2em] font-bold">Săn ngay</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAGAZINE -->
+    <section id="magazine" class="bg-white py-24 md:py-32">
+      <div class="max-w-[1440px] mx-auto px-6">
+        <div class="bg-navy text-white grid lg:grid-cols-2 overflow-hidden">
+          <div class="p-8 md:p-14 xl:p-20 flex flex-col justify-center">
+            <p class="section-label-light text-sm uppercase tracking-[.28em] text-white/70 mb-6">Ấn phẩm số</p>
+            <h2 class="font-serif text-5xl md:text-7xl leading-none tracking-[-.05em] mb-7">one2FLY! Digital Magazine</h2>
+            <p class="text-white/68 text-lg leading-9 mb-9">Khu vực đăng ấn phẩm PDF, tạp chí theo tháng, chuyên đề du lịch và bộ cẩm nang đọc online.</p>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-white text-ink px-8 py-4 text-xs uppercase tracking-[.22em]">Đọc online</button>
+              <button class="border border-white/45 px-8 py-4 text-xs uppercase tracking-[.22em]">Tải PDF</button>
+            </div>
+          </div>
+          <div class="relative min-h-[620px] bg-gradient-to-br from-primary/35 via-white/5 to-accent/20 flex items-center justify-center p-12">
+            <div class="absolute w-[380px] h-[500px] bg-accent/20 blur-3xl rounded-full"></div>
+            <div class="relative w-[330px] aspect-[3/4] bg-white text-ink p-5 shadow-cover rotate-3">
+              <img class="w-full h-[68%] object-cover" src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1000&auto=format&fit=crop" alt="Bìa tạp chí one2FLY">
+              <p class="text-[11px] uppercase tracking-[.24em] text-primary font-bold mt-5">Special Issue</p>
+              <h3 class="font-serif text-4xl leading-none mt-3">Travel Smart Vietnam</h3>
+              <p class="text-sm text-body mt-3">Du lịch vui hơn, tỉnh hơn, bớt mất tiền oan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-bg py-24">
+      <div class="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-2 gap-8">
+        <div class="bg-white p-8 md:p-12 border border-border">
+          <p class="section-label text-sm uppercase tracking-[.28em] text-primary mb-6">Liên hệ</p>
+          <h2 class="font-serif text-5xl md:text-6xl leading-none tracking-[-.05em] mb-6">Muốn hợp tác, quảng cáo hoặc gửi nội dung?</h2>
+          <p class="text-body leading-8 mb-8">Gửi thông tin cho one2FLY!, đội ngũ sẽ phản hồi để tư vấn hình thức xuất hiện phù hợp trên nền tảng.</p>
+          <div class="space-y-3 text-body">
+            <p><b class="text-ink">Hotline:</b> +84 000 000 000</p>
+            <p><b class="text-ink">Email:</b> hello@one2fly.vn</p>
+            <p><b class="text-ink">Hỗ trợ:</b> Tư vấn nội dung, quảng cáo, ấn phẩm PDF</p>
+          </div>
+        </div>
+        <form class="bg-navy text-white p-8 md:p-12">
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <input class="bg-white/10 border border-white/15 px-4 py-4 outline-none placeholder:text-white/45" placeholder="Họ tên">
+            <input class="bg-white/10 border border-white/15 px-4 py-4 outline-none placeholder:text-white/45" placeholder="Số điện thoại">
+          </div>
+          <input class="w-full bg-white/10 border border-white/15 px-4 py-4 outline-none placeholder:text-white/45 mb-4" placeholder="Email">
+          <textarea class="w-full h-36 bg-white/10 border border-white/15 px-4 py-4 outline-none placeholder:text-white/45 mb-5" placeholder="Nội dung cần trao đổi"></textarea>
+          <button type="button" class="bg-accent text-ink px-8 py-4 text-xs uppercase tracking-[.22em] font-extrabold">Gửi thông tin</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-white pt-16">
+    <div class="max-w-[1440px] mx-auto px-6 grid md:grid-cols-[1.1fr_.9fr_.9fr_.9fr] gap-10 pb-14">
+      <div>
+        <img src="assets/logo.png" alt="one2FLY" class="h-14 bg-white p-2 mb-6">
+        <p class="text-white/58 leading-8 max-w-[360px]">Nền tảng nội dung du lịch vui vẻ, thông minh, đúng và đủ thông tin.</p>
+      </div>
+      <div>
+        <h4 class="text-sm uppercase tracking-[.22em] text-accent mb-5">Nội dung</h4>
+        <div class="space-y-3 text-white/62"><p>Không bị chặt chém</p><p>Mỗi ngày một câu</p><p>Đọc tin rồi đừng tức</p></div>
+      </div>
+      <div>
+        <h4 class="text-sm uppercase tracking-[.22em] text-accent mb-5">Chuyên mục</h4>
+        <div class="space-y-3 text-white/62"><p>Điểm đến</p><p>Ẩm thực</p><p>Thời trang</p><p>Săn deal</p></div>
+      </div>
+      <div>
+        <h4 class="text-sm uppercase tracking-[.22em] text-accent mb-5">Hợp tác</h4>
+        <div class="space-y-3 text-white/62"><p>Ấn phẩm PDF</p><p>Quảng cáo</p><p>Truyền thông thương hiệu</p></div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-[1440px] mx-auto px-6 py-6 text-[11px] uppercase tracking-[.22em] text-white/40 flex flex-col md:flex-row gap-3 justify-between">
+        <p>© 2026 one2FLY!</p>
+        <p>Travel Intelligence Editorial Platform</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,323 @@
+﻿<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations — Phương Nam</title>
+    <meta name="description" content="Tạp chí du lịch, văn hóa và di sản Phương Nam."> 
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-mask {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.28), rgba(0,0,0,.05)),
+        url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .line-title::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #005BAB;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+  </style>
+<script src="assets/js/aurora-config.js"></script>
+<link rel="stylesheet" href="assets/css/aurora.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-soft text-ink font-sans">
+  <!-- TOP BAR -->
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Luxury Travel • Culture • Lifestyle</p>
+      <p>Vietnam Editorial Journal</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between">
+      <a href="index.html" class="aurora-logo" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[0.16em]">
+        <a class="hover:text-bronze" href="#destinations">Điểm đến</a>
+        <a class="hover:text-bronze" href="#culture">Văn hóa</a>
+        <a class="hover:text-bronze" href="#experience">Trải nghiệm</a>
+        <a class="hover:text-bronze" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-bronze" href="#contact">Liên hệ</a>
+      </nav>
+
+      <button class="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition">
+        Search
+      </button>
+    </div>
+  </header>
+  
+  
+    <!-- <section class="hero" style="min-height:68vh"><img class="ph" src="https://picsum.photos/seed/pn-dest-hero/1600/900"
+            alt="">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow title-line" style="color:var(--gold);margin-bottom:24px">Destination Directory</p>
+                <h1 class="h1">Điểm đến</h1>
+                <p class="lead" style="max-width:720px;margin:28px 0 34px">Danh mục điểm đến chọn lọc theo vùng, quốc
+                    gia và phong cách trải nghiệm.</p>
+            </div>
+        </div>
+    </section> -->
+    
+    <section class="section">
+        <div class="container">
+          <!-- HERO -->
+          <div class="mx-auto grid grid-cols-[minmax(0,2.1fr)_minmax(0,1fr)] gap-9">
+          <div class="w-full">
+              <img
+              src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop"
+              alt="LA Stories and Art — điện ảnh và nghệ thuật"
+              class="w-full h-[560px] object-cover block"
+              width="840"
+              height="560">
+          </div>
+          <div class="flex flex-col justify-start pt-1">
+              <h1 class="text-[62px] font-normal leading-[1.05] tracking-[-1px] text-ink max-w-[520px]">
+              LA Stories and Art: Hành trình của ký ức, điện ảnh và nghệ thuật
+              </h1>
+              <p class="mt-6 text-[13px] font-medium tracking-[2px] uppercase text-[#555555]">
+              Đăng ngày 20/06/2026
+              </p>
+              <p class="mt-6 text-[18px] font-light leading-[1.7] text-[#333333] max-w-[500px]">
+              Từ những phim tài liệu đen trắng đến không gian triển lãm đương đại, Los Angeles không chỉ là thành phố
+              của giấc mơ Mỹ — mà còn là nơi ký ức được tái hiện qua ánh sáng, bóng tối và những câu chuyện được kể
+              bằng hình ảnh.
+              </p>
+          </div>
+          </div>
+
+          <!-- ARTICLE GRID -->
+          <div class="mx-auto mt-7 pb-16 grid grid-cols-4 gap-[18px]">
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Du lịch - Điểm đến</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Sa Pa khi sương mù chưa tan — một buổi sáng trên đỉnh Fansipan</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">18/06/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Quốc nội</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Hội An lúc bình minh — khi phố cổ còn im lặng</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">15/06/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Quốc tế</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Kyoto và nghệ thuật trà đạo — một buổi chiều trong vườn thiền</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">12/06/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1476514529935-07fa3c4a5c88?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Du lịch - Điểm đến</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Geneva — hành trình qua những hồ nước và dãy Alps</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">08/06/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Quốc tế</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Route 66 — con đường huyền thoại xuyên nước Mỹ</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">05/06/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1552465011-b85e45754688?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Quốc nội</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Phú Quốc ngoài mùa du lịch — biển xanh và rừng nguyên sinh</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">02/06/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Du lịch - Điểm đến</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Santorini lúc hoàng hôn — những mái vòm trắng giữa biển Aegean</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">28/05/2026</p>
+              </a>
+          </article>
+          <article>
+              <a href="#" class="block">
+              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" alt="" class="w-full h-[165px] object-cover block">
+              <p class="mt-[14px] text-[12px] font-semibold tracking-[1.5px] uppercase text-[#005BAB]">Quốc nội</p>
+              <h2 class="mt-2 text-[18px] font-medium leading-[1.35] text-ink line-clamp-2">Mù Cang Chải mùa lúa chín — bức tranh vàng trên cao nguyên</h2>
+              <p class="mt-4 text-[12px] tracking-[2px] uppercase text-[#8A8A8A]">24/05/2026</p>
+              </a>
+          </article>
+          </div>
+        </div>
+    </section>
+    <section class="section paper">
+        <div class="container">
+            <div class="split" style="margin-bottom:42px"><input class="form-control"
+                    placeholder="Tìm thành phố, quốc gia, vùng đất…">
+                <div class="filter-bar" data-filter-group=""><button class="filter active"
+                        data-filter="">Vietnam</button><button class="filter " data-filter="">Asia</button><button
+                        class="filter " data-filter="">Europe</button><button class="filter "
+                        data-filter="">Americas</button><button class="filter " data-filter="">Oceania</button></div>
+            </div>
+            <div class="destination-grid"><a class="destination-card group" href="destination-detail.html"><img
+                        class="ph" src="https://picsum.photos/seed/dest-hagiang/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Việt Nam · Đông Bắc</p>
+                        <h3 class="h4">Hà Giang</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">24 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-hoian/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Việt Nam · Miền Trung</p>
+                        <h3 class="h4">Hội An</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">31 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-hue/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Việt Nam · Miền Trung</p>
+                        <h3 class="h4">Huế</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">28 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-condao/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Việt Nam · Nam Bộ</p>
+                        <h3 class="h4">Côn Đảo</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">12 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-kyoto/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Japan · Kansai</p>
+                        <h3 class="h4">Kyoto</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">19 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-seoul/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Korea</p>
+                        <h3 class="h4">Seoul</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">22 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-paris/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">France</p>
+                        <h3 class="h4">Paris</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">30 bài viết</p>
+                    </div>
+                </a><a class="destination-card group" href="destination-detail.html"><img class="ph"
+                        src="https://picsum.photos/seed/dest-bali/700/950">
+                    <div class="destination-card-content">
+                        <p class="eyebrow" style="color:var(--gold);margin-bottom:8px">Indonesia</p>
+                        <h3 class="h4">Bali</h3>
+                        <p class="meta" style="color:#d9cfbf;margin-top:6px">17 bài viết</p>
+                    </div>
+                </a></div>
+        </div>
+    </section>
+    <section class="section ">
+        <div class="container split">
+            <div>
+                <p class="eyebrow" style="color:var(--clay);margin-bottom:14px">Featured Destination</p>
+                <h2 class="h2">Hội An sau những lớp thời gian</h2>
+                <p class="lead" style="margin:24px 0">Một đô thị cổ, một bến sông và những con ngõ chỉ đẹp nhất trước
+                    khi thành phố thức giấc.</p><a class="btn dark" href="destination-detail.html">Xem guide</a>
+            </div>
+            <div class="imgwrap" style="aspect-ratio:4/3"><img class="ph" style="width:100%;height:100%"
+                    src="https://picsum.photos/seed/pn-hoian-feature/1000/750"></div>
+        </div>
+    </section>
+    
+    
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-navy text-white pt-20">
+    <div class="max-w-[1320px] mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+      <div class="lg:col-span-2">
+        <h2 class="font-serif text-5xl mb-6">Aurora Heritage</h2>
+        <p class="text-white/60 leading-8 max-w-[520px]">Demo single HTML cho website magazine đăng bài đẹp, có thể tách thành React/Next/Tailwind components sau.</p>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Menu</h3>
+        <div class="space-y-3 text-white/60">
+          <p>Điểm đến</p>
+          <p>Văn hóa</p>
+          <p>Trải nghiệm</p>
+          <p>Ấn phẩm</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Contact</h3>
+        <div class="space-y-3 text-white/60">
+          <p>hello@aurora.test</p>
+          <p>+84 000 000 000</p>
+          <p>Hanoi, Vietnam</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 py-6 text-xs uppercase tracking-[0.22em] text-white/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 Aurora Heritage</p>
+        <p>Designed for Tailwind UI Prototype</p>
+      </div>
+    </div>
+  </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

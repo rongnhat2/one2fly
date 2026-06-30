@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đọc online — Những cây thuốc và vị thuốc Việt Nam · Aurora</title>
+  <meta name="description" content="Đọc trực tuyến ấn phẩm Những cây thuốc và vị thuốc Việt Nam trên Aurora Heritage Magazine.">
+
+  <link rel="stylesheet" href="assets/vendor/real3d-flipbook-lite/css/flipbook.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="assets/js/aurora-config.js"></script>
+  <link rel="stylesheet" href="assets/css/aurora.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-soft text-ink font-sans">
+
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Luxury Travel • Culture • Lifestyle</p>
+      <p>Vietnam Editorial Journal</p>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between gap-4">
+      <a href="index.html" class="aurora-logo shrink-0" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <p class="font-serif text-sm md:text-base truncate text-center flex-1 px-2 hidden md:block">
+        Những cây thuốc và vị thuốc Việt Nam
+      </p>
+
+      <a href="issue-detail.html"
+        class="border border-ink px-4 md:px-5 py-2 text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition shrink-0">
+        Thoát đọc
+      </a>
+    </div>
+  </header>
+
+  <section class="reader-intro">
+    <div class="container">
+      <nav class="reader-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span class="sep">/</span>
+        <a href="issue.html">Ấn phẩm</a>
+        <span class="sep">/</span>
+        <a href="issue-detail.html">Issue 47</a>
+        <span class="sep">/</span>
+        <span aria-current="page">Đọc online</span>
+      </nav>
+
+      <div class="reader-head">
+        <div>
+          <p class="eyebrow title-line" style="color:var(--clay);margin-bottom:18px">Đọc online · Issue 47</p>
+          <h1 class="h3">Những cây thuốc và vị thuốc Việt Nam</h1>
+        </div>
+        <p id="page-indicator" class="meta shrink-0">Đang tải…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reader-body paper">
+    <div class="container">
+      <div id="reader-stage" class="reader-stage">
+        <div id="flipbook-container"></div>
+
+        <button type="button" id="side-prev" class="reader-side reader-side--prev" disabled aria-label="Trang trước">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" stroke="#005BAB" stroke-width="1.5"/>
+            <path d="M27 16l-8 8 8 8" stroke="#005BAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" id="side-next" class="reader-side reader-side--next" disabled aria-label="Trang sau">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" stroke="#005BAB" stroke-width="1.5"/>
+            <path d="M21 16l8 8-8 8" stroke="#005BAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div id="reader-nav">
+          <button type="button" id="btn-zoom-out" class="reader-nav-btn hidden sm:grid" title="Thu nhỏ" aria-label="Thu nhỏ">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M8 11h6"/></svg>
+          </button>
+          <button type="button" id="btn-first" class="reader-nav-btn hidden sm:grid" title="Trang đầu" aria-label="Trang đầu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16M19 19V5L9 12z"/></svg>
+          </button>
+          <button type="button" id="btn-prev" class="reader-nav-btn" disabled title="Trang trước" aria-label="Trang trước">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20V4L5 12z"/></svg>
+          </button>
+          <input id="page-input" type="text" inputmode="numeric" value="1" disabled aria-label="Số trang">
+          <button type="button" id="btn-goto" disabled>GO</button>
+          <button type="button" id="btn-next" class="reader-nav-btn" disabled title="Trang sau" aria-label="Trang sau">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 20V4l12 8z"/></svg>
+          </button>
+          <button type="button" id="btn-last" class="reader-nav-btn hidden sm:grid" title="Trang cuối" aria-label="Trang cuối">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 4v16M5 5v14l10-7z"/></svg>
+          </button>
+          <button type="button" id="btn-zoom-in" class="reader-nav-btn hidden sm:grid" title="Phóng to" aria-label="Phóng to">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="reader-hint">← → lật trang · Home / End đầu cuối · Vuốt trên mobile</p>
+    </div>
+  </section>
+
+  <footer class="bg-navy text-white border-t border-white/10">
+    <div class="max-w-[1320px] mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-serif text-xl">Aurora Heritage</p>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-[0.18em] text-white/50">
+        <a href="issue-detail.html" class="hover:text-sand transition">Về ấn phẩm</a>
+        <a href="issue.html" class="hover:text-sand transition">Tất cả số báo</a>
+        <a href="index.html" class="hover:text-sand transition">Trang chủ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/real3d-flipbook-lite/js/flipbook.min.js"></script>
+  <script src="assets/js/issue-read.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/aurora.js"></script>
+</body>
+</html>

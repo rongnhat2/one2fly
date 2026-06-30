@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>one2FLY! — Du lịch thông minh</title>
+  <meta name="description" content="one2FLY! — Cẩm nang du lịch thông minh, không bị chặt chém, ấn phẩm và bài viết chuyên ngành." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #F5F9FD; }
+    .hero-smart {
+      background:
+        linear-gradient(90deg, rgba(10,37,64,.92), rgba(0,91,171,.58), rgba(0,0,0,.18)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .line-title::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #005BAB;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+    .line-title-white::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #00C0F3;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+    .aurora-logo img {
+      height: 54px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .smart-card {
+      transition: transform .45s ease, box-shadow .45s ease, border-color .45s ease;
+    }
+    .smart-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 70px rgba(0, 91, 171, .16);
+      border-color: rgba(0, 192, 243, .55);
+    }
+  </style>
+</head>
+
+<body class="bg-soft text-ink font-sans">
+  <!-- TOP BAR -->
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Cẩm nang du lịch • Ấn phẩm • Truyền thông</p>
+      <p>one2FLY! Editorial Journal</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between">
+      <a href="index-1.html" class="aurora-logo" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm uppercase tracking-[0.16em]">
+        <a class="hover:text-bronze" href="#smart-travel">Du lịch thông minh</a>
+        <a class="hover:text-bronze" href="#about">Giới thiệu</a>
+        <a class="hover:text-bronze" href="#services">Dịch vụ</a>
+        <a class="hover:text-bronze" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-bronze" href="#latest">Tin tức</a>
+        <a class="hover:text-bronze" href="#contact">Liên hệ</a>
+      </nav>
+
+      <button class="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition">
+        Search
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO: SMART TRAVEL FOCUS -->
+  <section class="hero-smart min-h-[760px] relative text-white overflow-hidden">
+    <div class="absolute inset-0 grain opacity-35"></div>
+
+    <div class="relative max-w-[1320px] mx-auto px-6 min-h-[760px] grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      <div class="pt-14">
+        <p class="line-title-white text-sm uppercase tracking-[0.28em] text-white/80 mb-8">
+          Chuyên mục nổi bật
+        </p>
+
+        <h1 class="font-serif text-[52px] md:text-[86px] leading-[0.95] tracking-[-0.04em] mb-8">
+          Du lịch thông minh,<br>
+          <span class="text-accent">không bị chặt chém</span>
+        </h1>
+
+        <p class="text-lg md:text-xl leading-8 text-white/82 max-w-[680px] mb-10">
+          Cẩm nang giúp du khách tham khảo giá, chọn dịch vụ uy tín, nhận diện rủi ro và tận hưởng hành trình an toàn, minh bạch hơn tại Việt Nam.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#smart-travel" class="bg-white text-ink px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-accent transition">
+            Xem cẩm nang
+          </a>
+          <a href="#latest" class="border border-white/60 px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-white hover:text-ink transition">
+            Tin mới nhất
+          </a>
+        </div>
+      </div>
+
+      <div class="hidden lg:block">
+        <div class="bg-white/95 text-ink p-8 xl:p-10 max-w-[460px] ml-auto shadow-2xl">
+          <p class="text-xs uppercase tracking-[0.24em] text-brand mb-4">Travel Smart Checklist</p>
+          <h2 class="font-serif text-4xl leading-tight mb-6">Đi đúng chỗ, trả đúng giá, trải nghiệm đúng nghĩa</h2>
+
+          <div class="space-y-4">
+            <div class="flex gap-4 border-t border-brand/10 pt-4">
+              <span class="w-10 h-10 shrink-0 rounded-full bg-sky text-brand flex items-center justify-center font-serif text-xl">1</span>
+              <div>
+                <h3 class="font-serif text-2xl leading-tight">Giá tham khảo</h3>
+                <p class="text-sm text-black/60 leading-6">Cập nhật mức giá phổ biến cho di chuyển, ăn uống, vé tham quan.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 border-t border-brand/10 pt-4">
+              <span class="w-10 h-10 shrink-0 rounded-full bg-sky text-brand flex items-center justify-center font-serif text-xl">2</span>
+              <div>
+                <h3 class="font-serif text-2xl leading-tight">Địa điểm uy tín</h3>
+                <p class="text-sm text-black/60 leading-6">Gợi ý điểm đến, nhà hàng, dịch vụ đáng tin cậy cho du khách.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 border-t border-brand/10 pt-4">
+              <span class="w-10 h-10 shrink-0 rounded-full bg-sky text-brand flex items-center justify-center font-serif text-xl">3</span>
+              <div>
+                <h3 class="font-serif text-2xl leading-tight">Cảnh báo rủi ro</h3>
+                <p class="text-sm text-black/60 leading-6">Nhận diện tình huống dễ bị “chặt chém”, chèo kéo hoặc phát sinh chi phí.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 right-0 hidden xl:block w-[420px] bg-soft text-ink p-8">
+      <p class="text-xs uppercase tracking-[0.24em] text-bronze mb-3">Editor Pick</p>
+      <h3 class="font-serif text-3xl leading-tight mb-3">5 mẹo tránh bị hét giá khi du lịch mùa cao điểm</h3>
+      <p class="text-sm leading-6 text-black/60">Một checklist ngắn giúp du khách chủ động hơn trước mỗi chuyến đi.</p>
+    </div>
+  </section>
+
+  <!-- CATEGORY STRIP -->
+  <section class="bg-navy text-white">
+    <div class="max-w-[1320px] mx-auto px-6 py-7 overflow-x-auto">
+      <div class="flex gap-8 min-w-max text-sm uppercase tracking-[0.22em]">
+        <a class="text-sand" href="#smart-travel">Không bị chặt chém</a>
+        <a href="#smart-travel">Giá tham khảo</a>
+        <a href="#smart-travel">Taxi & di chuyển</a>
+        <a href="#smart-travel">Ăn uống đúng giá</a>
+        <a href="#smart-travel">Lưu trú uy tín</a>
+        <a href="#smart-travel">Cảnh báo du lịch</a>
+        <a href="#smart-travel">Mẹo tiết kiệm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART TRAVEL FEATURE -->
+  <section id="smart-travel" class="bg-white py-24">
+    <div class="max-w-[1320px] mx-auto px-6">
+      <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-16 items-end mb-14">
+        <div>
+          <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Travel Smart</p>
+          <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em] mb-6">
+            Cẩm nang chống “chặt chém”
+          </h2>
+          <p class="text-black/60 leading-8">
+            Một chuyên mục nổi bật giúp du khách tìm hiểu kinh nghiệm thực tế, giá tham khảo và các địa chỉ uy tín trước khi lên đường.
+          </p>
+        </div>
+
+        <div class="bg-sky border border-brand/10 p-8">
+          <p class="text-xs uppercase tracking-[0.24em] text-brand mb-3">SEO Content Pillar</p>
+          <h3 class="font-serif text-4xl leading-tight mb-3">Du lịch an toàn, minh bạch và chủ động hơn</h3>
+          <p class="text-black/60 leading-7">
+            Chuyên mục này có thể dùng làm landing page SEO cho các từ khóa: du lịch thông minh, du lịch không bị chặt chém, kinh nghiệm du lịch, giá du lịch tham khảo.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-4 gap-6">
+        <article class="smart-card lg:col-span-2 bg-soft border border-brand/10">
+          <img class="w-full h-[420px] object-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1300&auto=format&fit=crop" alt="">
+          <div class="p-8">
+            <p class="text-xs uppercase tracking-[0.22em] text-brand mb-4">Featured Guide</p>
+            <h3 class="font-serif text-4xl md:text-5xl leading-tight mb-4">
+              Bảng giá nên biết trước khi đi du lịch Việt Nam
+            </h3>
+            <p class="text-black/60 leading-7 max-w-[720px]">
+              Tổng hợp các mức giá phổ biến về di chuyển, ăn uống, điểm tham quan và dịch vụ cơ bản để du khách có thêm cơ sở so sánh.
+            </p>
+          </div>
+        </article>
+
+        <article class="smart-card bg-soft border border-brand/10 p-7">
+          <div class="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center font-serif text-2xl mb-8">01</div>
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-3">Taxi & Di chuyển</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Cách tránh bị nâng giá khi gọi xe ở điểm du lịch</h3>
+          <p class="text-black/60 leading-7">Gợi ý cách hỏi giá, chọn phương tiện và kiểm tra tuyến đường.</p>
+        </article>
+
+        <article class="smart-card bg-soft border border-brand/10 p-7">
+          <div class="w-14 h-14 rounded-full bg-accent text-ink flex items-center justify-center font-serif text-2xl mb-8">02</div>
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-3">Ăn uống đúng giá</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Nên xem gì trước khi gọi món tại khu du lịch</h3>
+          <p class="text-black/60 leading-7">Checklist menu, giá niêm yết, hóa đơn và những dấu hiệu cần lưu ý.</p>
+        </article>
+
+        <article class="smart-card bg-soft border border-brand/10 p-7">
+          <div class="w-14 h-14 rounded-full bg-accent text-ink flex items-center justify-center font-serif text-2xl mb-8">03</div>
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-3">Lưu trú uy tín</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Chọn nơi ở minh bạch giá và dịch vụ</h3>
+          <p class="text-black/60 leading-7">Cách đọc đánh giá, kiểm tra phụ phí và điều kiện hoàn hủy.</p>
+        </article>
+
+        <article class="smart-card bg-navy text-white p-7">
+          <div class="w-14 h-14 rounded-full bg-white text-brand flex items-center justify-center font-serif text-2xl mb-8">04</div>
+          <p class="text-xs uppercase tracking-[0.22em] text-accent mb-3">Cảnh báo du lịch</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Những tình huống dễ phát sinh chi phí</h3>
+          <p class="text-white/65 leading-7">Cập nhật các tình huống phổ biến để du khách chủ động phòng tránh.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-[1320px] mx-auto px-6 py-24">
+    <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
+      <div>
+        <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">About</p>
+        <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em] mb-6">Giới thiệu tóm tắt về one2FLY!</h2>
+        <p class="text-black/60 leading-8 mb-8">
+          one2FLY! là nền tảng nội dung và ấn phẩm đồng hành cùng du khách, cung cấp thông tin du lịch, văn hóa, trải nghiệm và các cẩm nang hữu ích trước mỗi hành trình.
+        </p>
+        <a href="#contact" class="bg-navy text-white px-8 py-4 text-xs uppercase tracking-[0.22em] inline-flex">Liên hệ hợp tác</a>
+      </div>
+
+      <img class="w-full h-[460px] object-cover rounded-tl-[120px]" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1300&auto=format&fit=crop" alt="">
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="bg-sky py-24">
+    <div class="max-w-[1320px] mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div>
+          <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Services</p>
+          <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em]">Sản phẩm & dịch vụ nổi bật</h2>
+        </div>
+        <a href="#" class="text-sm uppercase tracking-[0.22em] border-b border-ink pb-2 w-fit">Xem tất cả</a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="bg-white p-7 border border-brand/10">
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-5">01</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Ấn phẩm du lịch</h3>
+          <p class="text-black/60 leading-7">Phát hành ấn phẩm PDF/online về du lịch, trải nghiệm, điểm đến và văn hóa.</p>
+        </article>
+        <article class="bg-white p-7 border border-brand/10">
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-5">02</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Truyền thông thương hiệu</h3>
+          <p class="text-black/60 leading-7">Giải pháp nội dung cho doanh nghiệp du lịch, khách sạn, dịch vụ và điểm đến.</p>
+        </article>
+        <article class="bg-white p-7 border border-brand/10">
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-5">03</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Bài viết chuyên ngành</h3>
+          <p class="text-black/60 leading-7">Sản xuất nội dung, phỏng vấn, bài PR, bài phân tích và chuyên đề du lịch.</p>
+        </article>
+        <article class="bg-white p-7 border border-brand/10">
+          <p class="text-xs uppercase tracking-[0.22em] text-brand mb-5">04</p>
+          <h3 class="font-serif text-3xl leading-tight mb-4">Quảng cáo & hợp tác</h3>
+          <p class="text-black/60 leading-7">Kết nối thương hiệu với độc giả thông qua ấn phẩm và nền tảng nội dung.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST -->
+  <section id="latest" class="max-w-[1320px] mx-auto px-6 py-24">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div>
+        <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Latest Journal</p>
+        <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em]">Tin tức & bài viết chuyên ngành</h2>
+      </div>
+      <a href="#" class="text-sm uppercase tracking-[0.22em] border-b border-ink pb-2 w-fit">Xem tất cả</a>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <article class="lg:col-span-2 bg-white">
+        <img class="w-full h-[520px] object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop" alt="">
+        <div class="p-8 md:p-10">
+          <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-4">Travel Smart</p>
+          <h3 class="font-serif text-4xl md:text-5xl leading-tight mb-4">Đi biển mùa cao điểm: những khoản phí nên hỏi trước</h3>
+          <p class="text-black/60 leading-7 max-w-[720px]">Các khoản phí thường gặp khi đi du lịch biển và cách hỏi thông tin rõ ràng trước khi sử dụng dịch vụ.</p>
+        </div>
+      </article>
+
+      <div class="grid gap-8">
+        <article class="bg-white">
+          <img class="w-full h-[250px] object-cover" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=900&auto=format&fit=crop" alt="">
+          <div class="p-7">
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Guide</p>
+            <h3 class="font-serif text-3xl leading-tight">Checklist trước khi đặt tour du lịch</h3>
+          </div>
+        </article>
+        <article class="bg-white">
+          <img class="w-full h-[250px] object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop" alt="">
+          <div class="p-7">
+            <p class="text-xs uppercase tracking-[0.22em] text-bronze mb-3">Opinion</p>
+            <h3 class="font-serif text-3xl leading-tight">Du lịch văn minh bắt đầu từ thông tin minh bạch</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-white py-24">
+    <div class="max-w-[1320px] mx-auto px-6">
+      <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Testimonials</p>
+      <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em] mb-12">Cảm nhận của khách hàng</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-soft p-8 border border-brand/10">
+          <p class="font-serif text-2xl leading-tight mb-6">“Thông tin rõ ràng, dễ đọc và rất hữu ích cho du khách trước chuyến đi.”</p>
+          <p class="text-sm uppercase tracking-[0.2em] text-brand">Đối tác du lịch</p>
+        </div>
+        <div class="bg-soft p-8 border border-brand/10">
+          <p class="font-serif text-2xl leading-tight mb-6">“Nội dung chuyên nghiệp, hình ảnh đẹp và phù hợp với nhóm khách hàng cao cấp.”</p>
+          <p class="text-sm uppercase tracking-[0.2em] text-brand">Doanh nghiệp dịch vụ</p>
+        </div>
+        <div class="bg-soft p-8 border border-brand/10">
+          <p class="font-serif text-2xl leading-tight mb-6">“Chuyên mục du lịch thông minh giúp tăng niềm tin cho độc giả.”</p>
+          <p class="text-sm uppercase tracking-[0.2em] text-brand">Bạn đọc</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAGAZINE -->
+  <section id="magazine" class="max-w-[1320px] mx-auto px-6 py-24">
+    <div class="bg-white grid lg:grid-cols-2">
+      <div class="p-8 md:p-16 flex flex-col justify-center">
+        <p class="line-title text-sm uppercase tracking-[0.28em] text-bronze mb-5">Digital Issue</p>
+        <h2 class="font-serif text-5xl md:text-6xl tracking-[-0.04em] mb-6">Ấn phẩm tháng này</h2>
+        <p class="text-black/60 leading-8 mb-8">
+          Khu vực hiển thị các ấn phẩm PDF/online mới nhất, cho phép độc giả đọc trực tuyến hoặc tải xuống.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="bg-navy text-white px-8 py-4 text-xs uppercase tracking-[0.22em]">Đọc online</button>
+          <button class="border border-ink px-8 py-4 text-xs uppercase tracking-[0.22em]">Tải PDF</button>
+        </div>
+      </div>
+      <div class="bg-mist p-10 flex items-center justify-center">
+        <div class="w-[330px] aspect-[3/4] bg-white shadow-2xl p-5 rotate-2">
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=900&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-navy text-white pt-20">
+    <div class="max-w-[1320px] mx-auto px-6 grid lg:grid-cols-[1fr_1fr] gap-12 pb-16">
+      <div>
+        <h2 class="font-serif text-5xl mb-6">Liên hệ</h2>
+        <p class="text-white/60 leading-8 max-w-[520px] mb-8">
+          Gửi thông tin hợp tác, quảng cáo hoặc yêu cầu tư vấn nội dung du lịch.
+        </p>
+
+        <div class="space-y-3 text-white/70">
+          <p>Email: hello@one2fly.vn</p>
+          <p>Hotline: +84 000 000 000</p>
+          <p>Địa chỉ: Hà Nội, Việt Nam</p>
+        </div>
+      </div>
+
+      <div class="bg-white text-ink p-8">
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <input class="border border-brand/15 px-4 py-3 outline-none" placeholder="Họ tên">
+          <input class="border border-brand/15 px-4 py-3 outline-none" placeholder="Số điện thoại">
+        </div>
+        <input class="w-full border border-brand/15 px-4 py-3 outline-none mb-4" placeholder="Email">
+        <textarea class="w-full h-32 border border-brand/15 px-4 py-3 outline-none mb-4" placeholder="Nội dung cần tư vấn"></textarea>
+        <button class="bg-brand text-white px-8 py-4 text-xs uppercase tracking-[0.22em]">Gửi thông tin</button>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 py-6 text-xs uppercase tracking-[0.22em] text-white/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 one2FLY!</p>
+        <p>Designed for Travel Smart Editorial Website</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

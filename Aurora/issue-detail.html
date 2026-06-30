@@ -1,0 +1,244 @@
+﻿<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations — Phương Nam</title>
+    <meta name="description" content="Tạp chí du lịch, văn hóa và di sản Phương Nam."> 
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            ink: '#172033',
+            soft: '#F5F9FD',
+            cloud: '#FFFFFF',
+            sky: '#E8F7FF',
+            brand: '#005BAB',
+            accent: '#00C0F3',
+            navy: '#0A2540',
+            'brand-dark': '#004484',
+            bronze: '#005BAB',
+            sand: '#00C0F3',
+            paper: '#FFFFFF',
+            ivory: '#F5F9FD',
+            mist: '#E8F7FF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-mask {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.28), rgba(0,0,0,.05)),
+        url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(0,0,0,.06) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .line-title::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: #005BAB;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+  </style>
+<script src="assets/js/aurora-config.js"></script>
+<link rel="stylesheet" href="assets/css/aurora.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-soft text-ink font-sans">
+  <!-- TOP BAR -->
+  <div class="hidden md:block bg-brand text-white/70 text-xs tracking-[0.28em] uppercase">
+    <div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between">
+      <p>Luxury Travel • Culture • Lifestyle</p>
+      <p>Vietnam Editorial Journal</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-cloud/95 backdrop-blur border-b border-brand/15">
+    <div class="max-w-[1320px] mx-auto px-6 h-[78px] flex items-center justify-between">
+      <a href="index.html" class="aurora-logo" aria-label="one 2 FLY!">
+        <img src="assets/logo.png" alt="one 2 FLY! — Ấn phẩm của Báo Văn hóa">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[0.16em]">
+        <a class="hover:text-bronze" href="#destinations">Điểm đến</a>
+        <a class="hover:text-bronze" href="#culture">Văn hóa</a>
+        <a class="hover:text-bronze" href="#experience">Trải nghiệm</a>
+        <a class="hover:text-bronze" href="#magazine">Ấn phẩm</a>
+        <a class="hover:text-bronze" href="#contact">Liên hệ</a>
+      </nav>
+
+      <button class="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition">
+        Search
+      </button>
+    </div>
+  </header>
+  
+  
+    <section class="hero" style="min-height:68vh"><img class="ph"
+            src="https://picsum.photos/seed/pn-issue-detail-hero/1600/900" alt="">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow title-line" style="color:var(--gold);margin-bottom:24px">Issue 47 · Hè 2026</p>
+                <h1 class="h1">Những vĩ độ lặng lẽ</h1>
+                <p class="lead" style="max-width:720px;margin:28px 0 34px">Ấn bản đặc biệt về những nơi chậm rãi nhất
+                    mùa hè này.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container split">
+            <div class="issue-cover" style="max-width:390px;margin:auto"><img class="ph"
+                    src="https://picsum.photos/seed/pn-issue47/700/940"></div>
+            <div>
+                <p class="eyebrow" style="color:var(--clay);margin-bottom:16px">Editor Letter</p>
+                <h2 class="h2">Một mùa hè đi chậm</h2>
+                <p class="lead" style="margin:24px 0">Trong số này, chúng tôi đi qua những nơi không cần vội: cao nguyên
+                    đá, biển đảo và các khu vườn biết im lặng.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="issue-read.html" class="btn dark">Đọc online</a><button
+                        class="btn" type="button">Download PDF</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="section paper">
+        <div class="container">
+            <p class="eyebrow title-line" style="color:var(--clay);margin-bottom:18px">Table of contents</p>
+            <div class="table-like">
+                <div class="table-row">
+                    <div>Page 12</div>
+                    <div>Nơi sương mù ở lại lâu nhất</div>
+                </div>
+                <div class="table-row">
+                    <div>Page 38</div>
+                    <div>Hội An khi đèn lồng chưa sáng</div>
+                </div>
+                <div class="table-row">
+                    <div>Page 64</div>
+                    <div>The Gardeners of Kyoto</div>
+                </div>
+            </div>
+            <h2 class="h2" style="margin:70px 0 42px">Featured articles</h2>
+            <div class="article-grid">
+                <article class="group card"><a href="article-detail.html" class="imgwrap card-img"><img class="ph"
+                            style="width:100%;height:100%" src="https://picsum.photos/seed/pn-hoian/900/680" alt=""></a>
+                    <div class="card-body">
+                        <p class="eyebrow" style="color:var(--clay);margin-bottom:12px">Di sản</p>
+                        <h3 class="h4 group-hover:text-[var(--clay)] transition">Hội An, khi đèn lồng chưa kịp sáng</h3>
+                        <p class="muted" style="line-height:1.7;margin:12px 0">Những người thợ làm đèn và buổi sáng tinh
+                            mơ của phố cổ.</p>
+                        <p class="meta">Trần Quốc Bảo · 11 phút</p>
+                    </div>
+                </article>
+                <article class="group card"><a href="article-detail.html" class="imgwrap card-img"><img class="ph"
+                            style="width:100%;height:100%" src="https://picsum.photos/seed/pn-sapa/900/680" alt=""></a>
+                    <div class="card-body">
+                        <p class="eyebrow" style="color:var(--clay);margin-bottom:12px">Điểm đến</p>
+                        <h3 class="h4 group-hover:text-[var(--clay)] transition">Sa Pa ngoài mùa khách</h3>
+                        <p class="muted" style="line-height:1.7;margin:12px 0">Sương, đá và những ngày không cần lịch
+                            trình.</p>
+                        <p class="meta">Phạm Thu Hà · 9 phút</p>
+                    </div>
+                </article>
+                <article class="group card"><a href="article-detail.html" class="imgwrap card-img"><img class="ph"
+                            style="width:100%;height:100%" src="https://picsum.photos/seed/pn-hue/900/680" alt=""></a>
+                    <div class="card-body">
+                        <p class="eyebrow" style="color:var(--clay);margin-bottom:12px">Ẩm thực</p>
+                        <h3 class="h4 group-hover:text-[var(--clay)] transition">Một bữa cơm cung đình giản dị ở Huế
+                        </h3>
+                        <p class="muted" style="line-height:1.7;margin:12px 0">Cách một mâm cơm kể về ký ức của kinh
+                            thành.</p>
+                        <p class="meta">Nguyễn Lan Hương · 7 phút</p>
+                    </div>
+                </article>
+                <article class="group card"><a href="article-detail.html" class="imgwrap card-img"><img class="ph"
+                            style="width:100%;height:100%" src="https://picsum.photos/seed/pn-condao/900/680"
+                            alt=""></a>
+                    <div class="card-body">
+                        <p class="eyebrow" style="color:var(--clay);margin-bottom:12px">Biển đảo</p>
+                        <h3 class="h4 group-hover:text-[var(--clay)] transition">Côn Đảo lúc bình minh chưa lên</h3>
+                        <p class="muted" style="line-height:1.7;margin:12px 0">Một hành trình đi bộ qua ký ức và rừng
+                            xanh.</p>
+                        <p class="meta">Lê Minh Anh · 13 phút</p>
+                    </div>
+                </article>
+                <article class="group card"><a href="article-detail.html" class="imgwrap card-img"><img class="ph"
+                            style="width:100%;height:100%" src="https://picsum.photos/seed/pn-dalat/900/680" alt=""></a>
+                    <div class="card-body">
+                        <p class="eyebrow" style="color:var(--clay);margin-bottom:12px">Lifestyle</p>
+                        <h3 class="h4 group-hover:text-[var(--clay)] transition">Đà Lạt và những căn nhà biết thở</h3>
+                        <p class="muted" style="line-height:1.7;margin:12px 0">Khi kiến trúc học cách lắng nghe khí hậu.
+                        </p>
+                        <p class="meta">Mai An · 8 phút</p>
+                    </div>
+                </article>
+                <article class="group card"><a href="article-detail.html" class="imgwrap card-img"><img class="ph"
+                            style="width:100%;height:100%" src="https://picsum.photos/seed/pn-kyoto/900/680" alt=""></a>
+                    <div class="card-body">
+                        <p class="eyebrow" style="color:var(--clay);margin-bottom:12px">Quốc tế</p>
+                        <h3 class="h4 group-hover:text-[var(--clay)] transition">The Gardeners of Kyoto</h3>
+                        <p class="muted" style="line-height:1.7;margin:12px 0">Những khu vườn được chăm sóc như một
+                            triết lý.</p>
+                        <p class="meta">Marco Reyes · 14 phút</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-navy text-white pt-20">
+    <div class="max-w-[1320px] mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+      <div class="lg:col-span-2">
+        <h2 class="font-serif text-5xl mb-6">Aurora Heritage</h2>
+        <p class="text-white/60 leading-8 max-w-[520px]">Demo single HTML cho website magazine đăng bài đẹp, có thể tách thành React/Next/Tailwind components sau.</p>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Menu</h3>
+        <div class="space-y-3 text-white/60">
+          <p>Điểm đến</p>
+          <p>Văn hóa</p>
+          <p>Trải nghiệm</p>
+          <p>Ấn phẩm</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="uppercase tracking-[0.22em] text-sm text-sand mb-5">Contact</h3>
+        <div class="space-y-3 text-white/60">
+          <p>hello@aurora.test</p>
+          <p>+84 000 000 000</p>
+          <p>Hanoi, Vietnam</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-[1320px] mx-auto px-6 py-6 text-xs uppercase tracking-[0.22em] text-white/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© 2026 Aurora Heritage</p>
+        <p>Designed for Tailwind UI Prototype</p>
+      </div>
+    </div>
+  </footer>
+    <script src="assets/js/main.js"></script>
+<script src="assets/js/aurora.js"></script>
+</body>
+
+</html>
