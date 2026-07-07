@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
@@ -12,49 +12,57 @@
   <script>
     tailwind.config = { theme: { extend: {
       fontFamily: { display: ['Cormorant Garamond','serif'], sans: ['Inter','sans-serif'] },
-      colors: { brand:'#005BAB', accent:'#00C0F3', navy:'#071B34', ink:'#101827', muted:'#64748B', paper:'#F6FAFD', gold:'#F4B91E' },
-      boxShadow: { soft:'0 24px 70px rgba(7,27,52,.12)', card:'0 14px 40px rgba(7,27,52,.10)' }
+      colors: { brand:'#0368B4', brandHover:'#025A9B', dark:'#081A2A', canvas:'#F8FBFD', surface:'#FFFFFF', ink:'#081A2A', muted:'#61758A', line:'#E7EEF4', paper:'#F8FBFD', navy:'#081A2A', accent:'#0368B4' },
+      boxShadow: { soft:'0 8px 32px rgba(8, 26, 42, 0.06)', card:'0 4px 24px rgba(8, 26, 42, 0.05)' }
     }}}
   </script>
-  <link rel="stylesheet" href="assets/simple.css">
+  <link rel="stylesheet" href="assets/index.css">
 </head>
-<body class="font-sans antialiased bg-paper text-ink min-h-screen flex flex-col">
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 text-ink">
-    <div class="max-w-[1180px] mx-auto px-5 h-[72px] flex items-center justify-between">
-      <a href="index.html"><img src="../assets/logo.png" class="h-9 w-auto" alt="one2FLY!"></a>
-      <nav class="hidden lg:flex items-center gap-8 text-[12px] uppercase tracking-[.18em] font-semibold">
-        <a class="nav-link-dark active" href="destinations.html">Điểm đến</a>
-        <a class="nav-link-dark" href="gallery.html">Gallery</a>
-        <a class="nav-link-dark" href="issue.html">Ấn phẩm</a>
-        <a class="nav-link-dark" href="about.html">Giới thiệu</a>
+<body class="font-sans antialiased bg-canvas text-muted min-h-screen flex flex-col has-fixed-header">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 border-b border-line backdrop-blur-sm">
+    <div class="max-w-[1440px] mx-auto px-6 h-[76px] flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="../assets/logo.png" class="h-8 w-auto" alt="one2FLY!">
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 text-[12px] uppercase tracking-[.18em] font-semibold text-dark">
+        <a class="nav-link active" href="destinations.html">Điểm đến</a>
+        <a class="nav-link" href="index.html#food">Ẩm thực</a>
+        <a class="nav-link" href="index.html#deals">Săn deal</a>
+        <a class="nav-link" href="index.html#stories">Tin tức</a>
+        <a class="nav-link" href="issue.html">Ấn phẩm</a>
+        <a class="nav-link" href="about.html">Giới thiệu</a>
       </nav>
-      <a href="issue.html" class="hidden md:inline-flex bg-gold text-ink px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[.16em] font-bold">Ấn phẩm mới</a>
+      <div class="flex items-center gap-5">
+        <button type="button" class="hidden md:inline-flex bg-brand text-white px-5 py-3 rounded-2xl text-[11px] uppercase tracking-[.16em] font-semibold transition-colors hover:bg-brandHover">Đăng ký nhận tin</button>
+        <button type="button" class="text-2xl leading-none text-dark" aria-label="Menu">☰</button>
+      </div>
     </div>
   </header>
   <main class="flex-1">
     <section class="page-hero text-white py-16 md:py-20">
-      <div class="max-w-[1180px] mx-auto px-5">
+      <div class="max-w-[1440px] mx-auto px-6">
         <p class="text-xs uppercase tracking-[.22em] text-accent mb-3">Hà Giang</p>
         <h1 class="font-display text-5xl md:text-6xl font-medium leading-tight">Nơi sương mù ở lại lâu nhất</h1>
         <p class="text-white/80 text-lg max-w-2xl mt-4">Lê Minh Anh · 14/06/2026</p>
       </div>
     </section>
     <section class="py-10">
-      <div class="max-w-[800px] mx-auto px-5">
+      <div class="max-w-[800px] mx-auto px-6">
         <img class="w-full rounded-xl shadow-card mb-10" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop" alt="">
         <p class="text-lg leading-8 text-muted mb-6">Đường đèo uốn quanh vách đá, sương trôi chậm qua mái nhà gỗ — Hà Giang không vội để bạn nhìn thấy hết ngay lần đầu.</p>
         <blockquote class="border-l-4 border-brand pl-6 my-8 font-display text-2xl italic">"Ở đây, thời gian đi chậm hơn."</blockquote>
       </div>
     </section>
   </main>
-  <footer class="bg-white border-t border-slate-200 py-12">
-    <div class="max-w-[1180px] mx-auto px-5 text-center">
-      <img src="../assets/logo.png" class="h-9 mx-auto mb-6" alt="one2FLY!">
-      <p class="text-muted mb-6">Tạp chí du lịch số — vui vẻ, dễ đọc, đúng và đủ thông tin.</p>
-      <div class="flex justify-center gap-5 text-sm text-muted mb-6">
-        <a href="destinations.html">Điểm đến</a><a href="gallery.html">Gallery</a><a href="issue.html">Ấn phẩm</a><a href="about.html">Giới thiệu</a>
+  <footer class="bg-dark text-white py-14">
+    <div class="max-w-[1440px] mx-auto px-6 text-center">
+      <img src="../assets/logo.png" class="h-10 mx-auto mb-6 brightness-0 invert" alt="one2FLY!">
+      <p class="text-white/70 mb-6">Tạp chí du lịch số — vui vẻ, dễ đọc, đúng và đủ thông tin.</p>
+      <div class="flex justify-center gap-5 text-sm text-white/70 mb-8">
+        <a href="destinations.html" class="hover:text-brand transition-colors">Điểm đến</a><a href="gallery.html" class="hover:text-brand transition-colors">Gallery</a><a href="issue.html" class="hover:text-brand transition-colors">Ấn phẩm</a><a href="about.html" class="hover:text-brand transition-colors">Giới thiệu</a>
       </div>
-      <p class="text-xs text-muted">© 2026 one2FLY!. All rights reserved.</p>
+      <div class="max-w-[520px] mx-auto flex gap-2"><input class="flex-1 border border-white/20 bg-white/10 text-white placeholder:text-white/50 rounded-2xl px-5 py-3 outline-none focus:border-brand" placeholder="Nhập email của bạn"><button type="button" class="bg-brand text-white px-6 py-3 rounded-2xl text-xs uppercase tracking-[.16em] font-semibold hover:bg-brandHover transition-colors">Đăng ký</button></div>
+      <p class="text-xs text-white/50 mt-10">© 2026 one2FLY!. All rights reserved.</p>
     </div>
   </footer>
 </body>

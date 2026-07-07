@@ -1,7 +1,8 @@
 (function () {
   var flipbook = null;
-  var ROOT = '../assets/vendor/real3d-flipbook-lite/';
-  var PDF = '../nhung-cay-thuoc-va-vi-thuoc-viet-nam-vnras.pdf';
+  var stage = document.getElementById('reader-stage');
+  var ROOT = (stage && stage.dataset.flipbookRoot) || '../assets/vendor/real3d-flipbook-lite/';
+  var PDF = (stage && stage.dataset.pdfUrl) || '../nhung-cay-thuoc-va-vi-thuoc-viet-nam-vnras.pdf';
 
   function setContainerHeight(container) {
     var width = container.getBoundingClientRect().width;
