@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one2FLY! — Digital Travel Magazine · Du lịch thông minh</title>
+    <meta name="description" content="one2FLY! — Tạp chí du lịch số cao cấp. Săn deal, đọc tin mà tức, cẩm nang chống chặt chém và ấn phẩm du lịch thông minh.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        brand: '#00C1F4',
+                        dark: '#081A2A',
+                        canvas: '#F8FBFD',
+                        muted: '#61758A',
+                        line: '#E7EEF4'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header has-hero-header">
+
+    <!-- HEADER -->
+    <header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+            <a href="index.html" class="flex items-center shrink-0">
+                <img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!">
+            </a>
+            <nav class="site-header-nav hidden xl:flex items-center gap-10 text-[11px] uppercase tracking-[0.2em] font-medium">
+                <a href="san-deal.html">Săn Deal</a>
+                <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+                <a href="du-lich-dung-de-chat-chem.html" class="is-active">Du lịch đừng để chặt chém</a>
+                <a href="an-pham.html">Ấn phẩm</a>
+                <a href="gioi-thieu.html">Giới thiệu</a>
+            </nav>
+            <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium xl:hidden" aria-label="Menu">Menu</button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+        <a href="san-deal.html">Săn Deal</a>
+        <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+        <a href="du-lich-dung-de-chat-chem.html">Du lịch đừng để chặt chém</a>
+        <a href="an-pham.html">Ấn phẩm</a>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+    </div>
+
+    <!-- HERO — Brand Campaign -->
+    <section class="brand-hero text-white flex items-end">
+        <div class="relative z-10 max-w-[1440px] mx-auto px-6 w-full pt-[120px] pb-16 md:pb-24">
+            <div class="max-w-[820px]">
+                <p class="text-[11px] uppercase tracking-[0.28em] text-white/70 mb-6 section-label">Chiến dịch thương hiệu one2FLY!</p>
+                <h1 class="font-display text-[64px] md:text-[108px] lg:text-[128px] leading-[0.9] font-medium tracking-[-0.03em] text-white mb-4">
+                    DU LỊCH<br>THÔNG MINH
+                </h1>
+                <p class="font-display text-[32px] md:text-[48px] leading-tight text-brand font-medium tracking-[-0.02em] mb-8">
+                    ĐỪNG ĐỂ BỊ CHẶT CHÉM
+                </p>
+                <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-[580px] mb-10">
+                    Giúp du khách lựa chọn dịch vụ uy tín, tham khảo mức giá, tránh lừa đảo và tận hưởng hành trình an toàn hơn.
+                </p>
+                <a href="#chat-chem" class="brand-hero-cta">
+                    Khám phá ngay
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="flex flex-wrap gap-3 mt-12 md:mt-16">
+                <span class="brand-hero-badge">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    Giá tham khảo
+                </span>
+                <span class="brand-hero-badge">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Địa điểm uy tín
+                </span>
+                <span class="brand-hero-badge">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Cảnh báo
+                </span>
+                <span class="brand-hero-badge">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2z"/></svg>
+                    Mẹo du lịch
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- SECTION 1 — Quick Navigation -->
+        <section id="quick-nav" class="py-16 md:py-24 bg-white border-b border-line">
+            <div class="max-w-[1440px] mx-auto px-6">
+                <header class="mb-10 md:mb-14">
+                    <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3 section-label">Điều hướng nhanh</p>
+                    <h2 class="font-display text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium text-dark tracking-[-0.02em]">Bắt đầu từ đâu?</h2>
+                </header>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+                    <a href="san-deal.html" class="quick-nav-card">
+                        <div class="quick-nav-card-bg" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=1200&auto=format&fit=crop')"></div>
+                        <div class="quick-nav-card-body">
+                            <div class="quick-nav-card-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-white/70 mb-2">Ưu đãi</p>
+                            <h3 class="font-display text-3xl font-medium text-white">Săn Deal</h3>
+                        </div>
+                    </a>
+                    <a href="doc-tin-ma-tuc.html" class="quick-nav-card">
+                        <div class="quick-nav-card-bg" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop')"></div>
+                        <div class="quick-nav-card-body">
+                            <div class="quick-nav-card-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-white/70 mb-2">Giải trí</p>
+                            <h3 class="font-display text-3xl font-medium text-white">Đọc tin mà tức</h3>
+                        </div>
+                    </a>
+                    <a href="an-pham.html" class="quick-nav-card">
+                        <div class="quick-nav-card-bg" style="background-image:url('https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1200&auto=format&fit=crop')"></div>
+                        <div class="quick-nav-card-body">
+                            <div class="quick-nav-card-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-white/70 mb-2">Tạp chí số</p>
+                            <h3 class="font-display text-3xl font-medium text-white">Ấn phẩm</h3>
+                        </div>
+                    </a>
+                    <a href="du-lich-dung-de-chat-chem.html#cam-nang" class="quick-nav-card">
+                        <div class="quick-nav-card-bg" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop')"></div>
+                        <div class="quick-nav-card-body">
+                            <div class="quick-nav-card-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-white/70 mb-2">Tri thức</p>
+                            <h3 class="font-display text-3xl font-medium text-white">Cẩm nang</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 — DU LỊCH ĐỪNG ĐỂ CHẶT CHÉM -->
+        <section id="chat-chem" class="py-20 md:py-32 bg-gradient-to-b from-white to-canvas border-b border-line">
+            <div class="max-w-[1440px] mx-auto px-6">
+                <header class="mb-12 md:mb-20 max-w-[900px]">
+                    <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand mb-4 section-label">Chuyên mục chủ lực</p>
+                    <h2 class="font-display text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[0.95] font-medium text-dark tracking-[-0.03em] mb-6">
+                        Du lịch đừng để <span class="text-brand">chặt chém</span>
+                    </h2>
+                    <p class="text-lg md:text-xl leading-relaxed text-muted max-w-[640px]">Điểm nhận diện thương hiệu mạnh nhất của one2FLY! — nơi du khách tìm thấy mọi thứ cần biết trước mỗi chuyến đi.</p>
+                </header>
+
+                <!-- 4 Pillar Cards -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-5 mb-20 md:mb-28">
+                    <a href="#kham-pha" class="pillar-card md:col-span-1">
+                        <div class="pillar-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1400&auto=format&fit=crop')"></div>
+                        <span class="pillar-card-num">01</span>
+                        <div class="pillar-card-body">
+                            <p class="text-[10px] uppercase tracking-[0.22em] text-brand mb-3">Khám phá</p>
+                            <h3 class="font-display text-4xl md:text-5xl font-medium">Điểm mới · Trải nghiệm</h3>
+                        </div>
+                    </a>
+                    <a href="#diem-den" class="pillar-card">
+                        <div class="pillar-card-bg" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1400&auto=format&fit=crop')"></div>
+                        <span class="pillar-card-num">02</span>
+                        <div class="pillar-card-body">
+                            <p class="text-[10px] uppercase tracking-[0.22em] text-brand mb-3">Điểm đến</p>
+                            <h3 class="font-display text-4xl md:text-5xl font-medium">Bốn miền · Quốc tế</h3>
+                        </div>
+                    </a>
+                    <a href="#am-thuc" class="pillar-card">
+                        <div class="pillar-card-bg" style="background-image:url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=1400&auto=format&fit=crop')"></div>
+                        <span class="pillar-card-num">03</span>
+                        <div class="pillar-card-body">
+                            <p class="text-[10px] uppercase tracking-[0.22em] text-brand mb-3">Ẩm thực</p>
+                            <h3 class="font-display text-4xl md:text-5xl font-medium">Video Recipes</h3>
+                        </div>
+                    </a>
+                    <a href="#cam-nang" class="pillar-card">
+                        <div class="pillar-card-bg" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1400&auto=format&fit=crop')"></div>
+                        <span class="pillar-card-num">04</span>
+                        <div class="pillar-card-body">
+                            <p class="text-[10px] uppercase tracking-[0.22em] text-brand mb-3">Cẩm nang</p>
+                            <h3 class="font-display text-4xl md:text-5xl font-medium">Knowledge Center</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- KHÁM PHÁ -->
+                <div id="kham-pha" class="mb-20 md:mb-28">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                        <div>
+                            <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3">Khám phá</p>
+                            <h3 class="font-display text-[2.5rem] md:text-[3.25rem] leading-tight font-medium text-dark">Layout magazine · Điểm mới &amp; trải nghiệm</h3>
+                        </div>
+                        <a href="du-lich-dung-de-chat-chem.html#kham-pha" class="text-[11px] uppercase tracking-[0.18em] font-semibold text-dark border-b border-dark pb-1 hover:text-brand hover:border-brand transition">Xem tất cả →</a>
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-5">
+                        <article class="mag-grid-item lg:col-span-7">
+                            <img class="w-full h-[400px] md:h-[520px] object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" alt="Điểm mới" loading="lazy">
+                            <div class="p-6 md:p-8">
+                                <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-3">Điểm mới</p>
+                                <h4 class="font-display text-3xl md:text-4xl font-medium text-dark leading-tight">Côn Đảo 2026: lộ trình 3 ngày không bị hét giá</h4>
+                            </div>
+                        </article>
+                        <div class="lg:col-span-5 grid gap-5">
+                            <article class="mag-grid-item">
+                                <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=900&auto=format&fit=crop" alt="Địa phương" loading="lazy">
+                                <div class="p-5">
+                                    <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Địa phương nổi bật</p>
+                                    <h4 class="font-display text-2xl font-medium text-dark">Lào Cai: homestay giá chuẩn mùa lễ</h4>
+                                </div>
+                            </article>
+                            <article class="mag-grid-item">
+                                <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1476514525535-07fa9f4a963b?q=80&w=900&auto=format&fit=crop" alt="Lịch trình" loading="lazy">
+                                <div class="p-5">
+                                    <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Lịch trình</p>
+                                    <h4 class="font-display text-2xl font-medium text-dark">48 giờ ở Huế: ăn, đi, nghỉ đúng giá</h4>
+                                </div>
+                            </article>
+                            <article class="mag-grid-item bg-dark text-white p-6 flex flex-col justify-center">
+                                <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-3">Trải nghiệm</p>
+                                <h4 class="font-display text-2xl font-medium leading-tight">Trekking Tà Năng — Phan Dũng: checklist chi phí thực tế</h4>
+                                <a href="#" class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand font-semibold">Đọc tiếp →</a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ĐIỂM ĐẾN -->
+                <div id="diem-den" class="mb-20 md:mb-28">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                        <div>
+                            <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3">Điểm đến</p>
+                            <h3 class="font-display text-[2.5rem] md:text-[3.25rem] leading-tight font-medium text-dark">Card ảnh lớn · Bốn miền</h3>
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+                        <a href="#" class="region-card">
+                            <div class="region-card-bg" style="background-image:url('https://images.unsplash.com/photo-1559592413-7cec4b0c0ef8?q=80&w=900&auto=format&fit=crop')"></div>
+                            <div class="region-card-body">
+                                <p class="text-[10px] uppercase tracking-[0.2em] text-brand mb-2">01</p>
+                                <h4 class="font-display text-3xl font-medium">Miền Bắc</h4>
+                                <p class="text-sm text-white/70 mt-2">Hà Nội · Sapa · Hạ Long</p>
+                            </div>
+                        </a>
+                        <a href="#" class="region-card">
+                            <div class="region-card-bg" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=900&auto=format&fit=crop')"></div>
+                            <div class="region-card-body">
+                                <p class="text-[10px] uppercase tracking-[0.2em] text-brand mb-2">02</p>
+                                <h4 class="font-display text-3xl font-medium">Miền Trung</h4>
+                                <p class="text-sm text-white/70 mt-2">Huế · Đà Nẵng · Hội An</p>
+                            </div>
+                        </a>
+                        <a href="#" class="region-card">
+                            <div class="region-card-bg" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=900&auto=format&fit=crop')"></div>
+                            <div class="region-card-body">
+                                <p class="text-[10px] uppercase tracking-[0.2em] text-brand mb-2">03</p>
+                                <h4 class="font-display text-3xl font-medium">Miền Nam</h4>
+                                <p class="text-sm text-white/70 mt-2">Sài Gòn · Phú Quốc · Cần Thơ</p>
+                            </div>
+                        </a>
+                        <a href="#" class="region-card">
+                            <div class="region-card-bg" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=900&auto=format&fit=crop')"></div>
+                            <div class="region-card-body">
+                                <p class="text-[10px] uppercase tracking-[0.2em] text-brand mb-2">04</p>
+                                <h4 class="font-display text-3xl font-medium">Quốc tế</h4>
+                                <p class="text-sm text-white/70 mt-2">Châu Á · Châu Âu · Châu Mỹ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ẨM THỰC — Video Recipes -->
+                <div id="am-thuc" class="mb-20 md:mb-28">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                        <div>
+                            <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3">Ẩm thực</p>
+                            <h3 class="font-display text-[2.5rem] md:text-[3.25rem] leading-tight font-medium text-dark">Video Recipes · Premium Shorts</h3>
+                        </div>
+                        <p class="text-sm text-muted">Vuốt ngang để xem thêm →</p>
+                    </div>
+                    <div class="video-reel-track">
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">0:58</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Hà Nội</p>
+                                <h4 class="font-display text-xl font-medium">Phở bò tái nạm</h4>
+                            </div>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">1:12</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Huế</p>
+                                <h4 class="font-display text-xl font-medium">Bún bò Huế</h4>
+                            </div>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">0:45</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Hội An</p>
+                                <h4 class="font-display text-xl font-medium">Cao lầu</h4>
+                            </div>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1604908176997-4314e0cbb144?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">1:05</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Sài Gòn</p>
+                                <h4 class="font-display text-xl font-medium">Bánh mì Sài Gòn</h4>
+                            </div>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1555126634-323283e090e0?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">0:52</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Đà Nẵng</p>
+                                <h4 class="font-display text-xl font-medium">Mì Quảng</h4>
+                            </div>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">1:20</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Nha Trang</p>
+                                <h4 class="font-display text-xl font-medium">Bún cá Nha Trang</h4>
+                            </div>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=600&auto=format&fit=crop')"></div>
+                            <span class="video-reel-duration">0:38</span>
+                            <div class="video-reel-play"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                            <div class="video-reel-meta">
+                                <p class="text-[10px] uppercase tracking-[0.16em] text-brand mb-1">Phú Quốc</p>
+                                <h4 class="font-display text-xl font-medium">Gỏi cá trích</h4>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- CẨM NANG — Knowledge Center -->
+                <div id="cam-nang">
+                    <div class="mb-10">
+                        <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3">Cẩm nang</p>
+                        <h3 class="font-display text-[2.5rem] md:text-[3.25rem] leading-tight font-medium text-dark">Knowledge Center · Landing SEO</h3>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <a href="#" class="knowledge-tile"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Di chuyển</p><h4 class="font-display text-2xl font-medium text-dark">Taxi</h4><p class="text-sm mt-2 text-muted">Giá chuẩn · App uy tín · Tránh phụ phí</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Xem →</span></a>
+                        <a href="#" class="knowledge-tile"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Lưu trú</p><h4 class="font-display text-2xl font-medium text-dark">Khách sạn</h4><p class="text-sm mt-2 text-muted">Đặt phòng · So giá · Review thật</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Xem →</span></a>
+                        <a href="#" class="knowledge-tile"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Ẩm thực</p><h4 class="font-display text-2xl font-medium text-dark">Ăn uống</h4><p class="text-sm mt-2 text-muted">Menu · Hóa đơn · Quán uy tín</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Xem →</span></a>
+                        <a href="#" class="knowledge-tile"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Chuẩn bị</p><h4 class="font-display text-2xl font-medium text-dark">Checklist</h4><p class="text-sm mt-2 text-muted">Trước · Trong · Sau chuyến đi</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Xem →</span></a>
+                        <a href="#" class="knowledge-tile"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Tham khảo</p><h4 class="font-display text-2xl font-medium text-dark">Giá tham khảo</h4><p class="text-sm mt-2 text-muted">Bảng giá cập nhật theo vùng</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Xem →</span></a>
+                        <a href="#" class="knowledge-tile knowledge-tile--alert"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Cảnh báo</p><h4 class="font-display text-2xl font-medium text-white">Cảnh báo</h4><p class="text-sm mt-2 text-white/65">Điểm nóng · Mùa cao điểm · Rủi ro</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-brand">Xem →</span></a>
+                        <a href="#" class="knowledge-tile knowledge-tile--alert"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">An toàn</p><h4 class="font-display text-2xl font-medium text-white">Lừa đảo</h4><p class="text-sm mt-2 text-white/65">Nhận diện · Phòng tránh · Báo cáo</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-brand">Xem →</span></a>
+                        <a href="#" class="knowledge-tile"><div><p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-2">Hỏi đáp</p><h4 class="font-display text-2xl font-medium text-dark">FAQ</h4><p class="text-sm mt-2 text-muted">Câu hỏi thường gặp nhất</p></div><span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Xem →</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 — SĂN DEAL -->
+        <section id="san-deal" class="py-20 md:py-32 bg-white">
+            <div class="max-w-[1440px] mx-auto px-6">
+                <header class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
+                    <div>
+                        <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3 section-label">Ưu đãi</p>
+                        <h2 class="font-display text-[2.5rem] md:text-[3.5rem] leading-tight font-medium text-dark tracking-[-0.02em]">Săn Deal</h2>
+                    </div>
+                    <a href="san-deal.html" class="text-[11px] uppercase tracking-[0.18em] font-semibold text-dark border-b border-dark pb-1 hover:text-brand transition">Tất cả deal →</a>
+                </header>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    <article class="deal-card">
+                        <span class="deal-badge">Flash Deal · -45%</span>
+                        <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=800&auto=format&fit=crop" alt="Vé máy bay" loading="lazy">
+                        <div class="p-5">
+                            <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Máy bay</p>
+                            <h3 class="font-display text-2xl font-medium text-dark mb-3">Hà Nội → Đà Nẵng</h3>
+                            <p class="text-sm text-muted mb-1"><s>2.400.000đ</s> → <strong class="text-dark text-lg">1.320.000đ</strong></p>
+                            <div class="deal-countdown" data-countdown="2026-07-20T23:59:59">
+                                <div class="deal-countdown-unit"><b>00</b><span>Giờ</span></div>
+                                <div class="deal-countdown-unit"><b>00</b><span>Phút</span></div>
+                                <div class="deal-countdown-unit"><b>00</b><span>Giây</span></div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="deal-card">
+                        <span class="deal-badge">Voucher · -30%</span>
+                        <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Khách sạn" loading="lazy">
+                        <div class="p-5">
+                            <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Khách sạn</p>
+                            <h3 class="font-display text-2xl font-medium text-dark mb-3">Resort Phú Quốc 3N2Đ</h3>
+                            <p class="text-sm text-muted"><s>5.500.000đ</s> → <strong class="text-dark text-lg">3.850.000đ</strong></p>
+                        </div>
+                    </article>
+                    <article class="deal-card">
+                        <span class="deal-badge">Combo · -25%</span>
+                        <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop" alt="Tour" loading="lazy">
+                        <div class="p-5">
+                            <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Tour</p>
+                            <h3 class="font-display text-2xl font-medium text-dark mb-3">Sapa mây + Homestay</h3>
+                            <p class="text-sm text-muted"><s>3.200.000đ</s> → <strong class="text-dark text-lg">2.400.000đ</strong></p>
+                        </div>
+                    </article>
+                    <article class="deal-card">
+                        <span class="deal-badge">Nhà hàng · -20%</span>
+                        <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Nhà hàng" loading="lazy">
+                        <div class="p-5">
+                            <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Nhà hàng</p>
+                            <h3 class="font-display text-2xl font-medium text-dark mb-3">Set hải sản Hội An</h3>
+                            <p class="text-sm text-muted"><s>850.000đ</s> → <strong class="text-dark text-lg">680.000đ</strong></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — ĐỌC TIN MÀ TỨC -->
+        <section id="doc-tin" class="py-20 md:py-32 bg-canvas border-t border-line">
+            <div class="max-w-[1440px] mx-auto px-6">
+                <header class="mb-12 md:mb-16">
+                    <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-3 section-label">Giải trí · Đọc vui · Đọc để biết · Đọc để tránh</p>
+                    <h2 class="font-display text-[2.5rem] md:text-[3.5rem] leading-tight font-medium text-dark tracking-[-0.02em]">Đọc tin mà tức</h2>
+                </header>
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+                    <article class="ent-hero-article lg:col-span-7 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1400&auto=format&fit=crop')">
+                        <div class="ent-hero-article-body">
+                            <span class="ent-tag ent-tag--hot mb-4">Tin nóng</span>
+                            <h3 class="font-display text-4xl md:text-5xl font-medium leading-tight mb-4">Khách du lịch bị tính 18 triệu tiền taxi 8km — câu chuyện đang viral</h3>
+                            <p class="text-white/75 text-sm max-w-lg">Đọc để biết · Đọc để tránh · Biên tập one2FLY! phân tích chi tiết</p>
+                        </div>
+                    </article>
+                    <div class="lg:col-span-5">
+                        <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-muted mb-4">8 bài nổi bật</p>
+                        <article class="ent-mini-article">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy">
+                            <div><span class="ent-tag ent-tag--drama mb-2">Bóc phốt</span><h4 class="font-display text-xl font-medium text-dark leading-snug">Resort 5 sao quảng cáo ảo — thực tế như thế nào?</h4></div>
+                        </article>
+                        <article class="ent-mini-article">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy">
+                            <div><span class="ent-tag ent-tag--weird mb-2">Chuyện lạ</span><h4 class="font-display text-xl font-medium text-dark leading-snug">Du khách mang theo cả... gà mái lên máy bay</h4></div>
+                        </article>
+                        <article class="ent-mini-article">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy">
+                            <div><span class="ent-tag ent-tag--review mb-2">Review</span><h4 class="font-display text-xl font-medium text-dark leading-snug">Homestay Đà Lạt: ảnh đẹp nhưng phòng thực tế ra sao?</h4></div>
+                        </article>
+                        <article class="ent-mini-article">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy">
+                            <div><span class="ent-tag ent-tag--hot mb-2">Lừa đảo</span><h4 class="font-display text-xl font-medium text-dark leading-snug">5 dấu hiệu tour giá rẻ trên Facebook là lừa đảo</h4></div>
+                        </article>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mt-12 pt-12 border-t border-line">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-5">Trending</p>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4 items-start"><span class="font-display text-3xl text-brand/40 leading-none">01</span><a href="#" class="font-display text-2xl text-dark hover:text-brand transition leading-snug">Drama check-in: chen chúc 3 tiếng chụp 1 bức ảnh</a></li>
+                            <li class="flex gap-4 items-start"><span class="font-display text-3xl text-brand/40 leading-none">02</span><a href="#" class="font-display text-2xl text-dark hover:text-brand transition leading-snug">Bóc phốt quán cà phê view đẹp nhưng đồ uống...</a></li>
+                            <li class="flex gap-4 items-start"><span class="font-display text-3xl text-brand/40 leading-none">03</span><a href="#" class="font-display text-2xl text-dark hover:text-brand transition leading-snug">Taxi sân bay Nội Bài: giá thật vs giá hét</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark text-white rounded-2xl p-8 md:p-10">
+                        <p class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-5">Editor's Pick</p>
+                        <h4 class="font-display text-3xl md:text-4xl font-medium leading-tight mb-4">"Đọc vui nhưng phải đúng" — triết lý biên tập của one2FLY!</h4>
+                        <p class="text-white/65 leading-relaxed mb-6">Chuyên mục giải trí không phải báo điện tử. Mỗi bài đều có giá trị tham khảo thực tế.</p>
+                        <a href="doc-tin-ma-tuc.html" class="text-[11px] uppercase tracking-[0.16em] font-semibold text-brand">Khám phá chuyên mục →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — ẤN PHẨM -->
+        <section id="an-pham" class="py-20 md:py-32 bg-dark text-white">
+            <div class="max-w-[1440px] mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="mag-cover-3d relative w-[280px] md:w-[360px] aspect-[3/4] bg-white shadow-2xl p-4">
+                            <div class="relative h-full bg-dark overflow-hidden">
+                                <img class="absolute inset-0 w-full h-full object-cover opacity-80" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1000&auto=format&fit=crop" alt="Bìa ấn phẩm">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark/90"></div>
+                                <div class="absolute inset-x-0 bottom-6 px-6">
+                                    <p class="text-[10px] uppercase tracking-[0.24em] text-brand mb-2">Số mới nhất · 07/2026</p>
+                                    <h3 class="font-display text-4xl leading-tight font-medium">Du lịch thông minh Việt Nam</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand mb-4 section-label">Thư viện magazine</p>
+                        <h2 class="font-display text-[2.5rem] md:text-[4rem] leading-tight font-medium tracking-[-0.02em] mb-6">Ấn phẩm</h2>
+                        <p class="text-white/70 text-lg leading-relaxed mb-8 max-w-lg">Số mới nhất, đọc online, tải PDF và kho lưu trữ ấn phẩm — thiết kế như thư viện tạp chí cao cấp.</p>
+                        <div class="flex flex-wrap gap-4 mb-10">
+                            <a href="an-pham.html" class="inline-flex items-center gap-2 bg-white text-dark px-6 py-3.5 text-[11px] uppercase tracking-[0.18em] font-bold rounded-full hover:bg-brand hover:text-white transition">Read Online</a>
+                            <a href="#" class="inline-flex items-center gap-2 border border-white/30 px-6 py-3.5 text-[11px] uppercase tracking-[0.18em] font-bold rounded-full hover:bg-white hover:text-dark transition">Download PDF</a>
+                        </div>
+                        <div class="border-t border-white/10 pt-8">
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-white/50 mb-4">Archive</p>
+                            <div class="mag-archive-item"><span class="font-display text-2xl text-brand w-12">08</span><div><p class="text-sm text-white/50">06/2026</p><p class="font-display text-xl text-white">Hè rực rỡ — 50 điểm đến mát mẻ</p></div></div>
+                            <div class="mag-archive-item"><span class="font-display text-2xl text-brand w-12">07</span><div><p class="text-sm text-white/50">05/2026</p><p class="font-display text-xl text-white">Ẩm thực đường phố Việt Nam</p></div></div>
+                            <div class="mag-archive-item"><span class="font-display text-2xl text-brand w-12">06</span><div><p class="text-sm text-white/50">04/2026</p><p class="font-display text-xl text-white">Miền Trung — Di sản &amp; Biển</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6 — GIỚI THIỆU -->
+        <section id="gioi-thieu" class="py-20 md:py-32 bg-white">
+            <div class="max-w-[1440px] mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div>
+                        <p class="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted mb-4 section-label">Về chúng tôi</p>
+                        <h2 class="font-display text-[2.5rem] md:text-[4rem] leading-tight font-medium text-dark tracking-[-0.02em] mb-6">Giới thiệu</h2>
+                        <p class="text-lg leading-relaxed text-muted mb-6">one2FLY! là Digital Travel Magazine + Travel Guide + Travel Lifestyle Platform — không phải website doanh nghiệp, không phải báo điện tử.</p>
+                        <p class="text-lg leading-relaxed text-muted mb-8">Chúng tôi xuất bản nội dung du lịch cao cấp, giúp du khách Việt đi thông minh hơn, tránh bị chặt chém và tận hưởng hành trình an toàn.</p>
+                        <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                            <div class="border border-line rounded-xl p-5">
+                                <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Lĩnh vực</p>
+                                <p class="text-dark font-medium">Tạp chí du lịch số · Cẩm nang · Săn deal · Ấn phẩm</p>
+                            </div>
+                            <div class="border border-line rounded-xl p-5">
+                                <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Đối tác</p>
+                                <p class="text-dark font-medium">Hãng hàng không · Resort · Địa phương · Thương hiệu</p>
+                            </div>
+                        </div>
+                        <a href="gioi-thieu.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] font-bold text-dark border-b-2 border-brand pb-1 hover:text-brand transition">Liên hệ hợp tác →</a>
+                    </div>
+                    <div class="relative">
+                        <img class="w-full h-[480px] md:h-[560px] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1400&auto=format&fit=crop" alt="one2FLY team" loading="lazy">
+                        <div class="absolute -bottom-6 -left-6 bg-brand text-white p-6 rounded-xl hidden md:block max-w-[240px]">
+                            <p class="font-display text-4xl font-medium leading-none mb-1">2026</p>
+                            <p class="text-sm text-white/80">Tạp chí du lịch số hàng đầu Việt Nam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#111111] text-white pt-16 md:pt-20 pb-8">
+        <div class="max-w-[1200px] mx-auto px-6">
+            <div class="mb-14 pb-14 border-b border-white/10">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-brand mb-4">Newsletter</p>
+                <h3 class="font-display text-3xl md:text-4xl font-medium mb-6">Nhận deal &amp; cảnh báo du lịch mỗi tuần</h3>
+                <form class="flex flex-col sm:flex-row gap-3 max-w-lg" onsubmit="return false">
+                    <input type="email" class="newsletter-input" placeholder="Email của bạn">
+                    <button type="submit" class="shrink-0 bg-brand text-white px-8 py-3.5 text-[11px] uppercase tracking-[0.18em] font-bold rounded-full hover:bg-white hover:text-dark transition">Đăng ký</button>
+                </form>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+                <div>
+                    <img src="assets/logo.png" class="h-8 w-auto brightness-0 invert mb-5" alt="one2FLY!">
+                    <p class="text-white/55 text-sm leading-relaxed">Digital Travel Magazine · Du lịch thông minh, không bị chặt chém.</p>
+                </div>
+                <div>
+                    <p class="uppercase tracking-[0.16em] text-white/40 text-xs mb-4">Menu</p>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="san-deal.html" class="site-footer-link">Săn Deal</a></li>
+                        <li><a href="doc-tin-ma-tuc.html" class="site-footer-link">Đọc tin mà tức</a></li>
+                        <li><a href="du-lich-dung-de-chat-chem.html" class="site-footer-link">Du lịch đừng để chặt chém</a></li>
+                        <li><a href="an-pham.html" class="site-footer-link">Ấn phẩm</a></li>
+                        <li><a href="gioi-thieu.html" class="site-footer-link">Giới thiệu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="uppercase tracking-[0.16em] text-white/40 text-xs mb-4">Thông tin</p>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="#" class="site-footer-link">Giá tham khảo</a></li>
+                        <li><a href="#" class="site-footer-link">Cảnh báo</a></li>
+                        <li><a href="#" class="site-footer-link">FAQ</a></li>
+                        <li><a href="#" class="site-footer-link">Chính sách</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="uppercase tracking-[0.16em] text-white/40 text-xs mb-4">Liên hệ</p>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li>hello@one2fly.vn</li>
+                        <li>+84 000 000 000</li>
+                        <li>Hà Nội, Việt Nam</li>
+                    </ul>
+                    <div class="flex gap-4 mt-5">
+                        <a href="#" class="site-footer-link text-xs uppercase tracking-widest">Instagram</a>
+                        <a href="#" class="site-footer-link text-xs uppercase tracking-widest">Facebook</a>
+                        <a href="#" class="site-footer-link text-xs uppercase tracking-widest">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-[11px] text-white/40 flex flex-col sm:flex-row justify-between gap-4">
+                <p>© 2026 one2FLY!. Bảo lưu mọi quyền.</p>
+                <p>Concept Design · New Architecture 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/concept.js"></script>
+</body>
+</html>

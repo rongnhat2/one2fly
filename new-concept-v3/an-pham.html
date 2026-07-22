@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ấn phẩm — one2FLY!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[900px] mx-auto px-6 h-[88px] flex items-center justify-between">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt=""></a>
+        <nav class="site-header-nav hidden xl:flex gap-8 text-[11px] uppercase tracking-widest"><a href="an-pham.html" class="is-active">Ấn phẩm</a></nav>
+    </div>
+</header>
+<section class="page-hero"><div class="max-w-[900px] mx-auto px-6"><h1 class="font-display text-5xl md:text-6xl font-medium">Ấn phẩm</h1></div></section>
+<main class="py-14 max-w-[900px] mx-auto px-6">
+    <article class="issue-row"><img class="issue-cover" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=300&auto=format&fit=crop" alt=""><div>
+        <p class="text-[10px] uppercase text-brand mb-1">Số 09 · 07/2026</p>
+        <h2 class="font-display text-2xl text-dark mb-2">Du lịch thông minh Việt Nam</h2>
+        <p class="text-sm text-muted mb-3">Bao gồm chuyên đề Đà Lạt, Đà Nẵng, Phú Quốc.</p>
+        <div class="flex flex-wrap gap-2"><a href="destinations/da-lat.html" class="dest-badge">Đà Lạt</a><a href="destinations/da-nang.html" class="dest-badge">Đà Nẵng</a></div>
+    </div><div class="flex flex-col gap-2"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">PDF</a></div></article>
+    <article class="issue-row"><img class="issue-cover" src="https://images.unsplash.com/photo-1559592413-7cec4b0c0ef8?q=80&w=300&auto=format&fit=crop" alt=""><div>
+        <p class="text-[10px] uppercase text-brand mb-1">Số 08 · 06/2026</p>
+        <h2 class="font-display text-2xl text-dark mb-2">Hà Giang Loop — Cung đường đèo</h2>
+        <a href="destinations/ha-giang.html" class="dest-badge">Hà Giang</a>
+    </div><div class="flex flex-col gap-2"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">PDF</a></div></article>
+    <article class="issue-row border-b-0"><img class="issue-cover" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=300&auto=format&fit=crop" alt=""><div>
+        <p class="text-[10px] uppercase text-brand mb-1">Số 07 · 05/2026</p>
+        <h2 class="font-display text-2xl text-dark mb-2">Hội An &amp; Miền Trung</h2>
+        <a href="destinations/hoi-an.html" class="dest-badge">Hội An</a>
+    </div><div class="flex flex-col gap-2"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">PDF</a></div></article>
+</main>
+<footer class="bg-[#111] text-white py-10 text-center text-sm"><a href="index.html" class="site-footer-link">← Trang chủ</a></footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch - Chặt chém — one2FLY!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt=""></a>
+        <nav class="site-header-nav hidden xl:flex gap-8 text-[11px] uppercase tracking-widest font-medium">
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a><a href="san-deal.html">Săn Deal</a><a href="an-pham.html">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html" class="is-active">Du lịch - Chặt chém</a><a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+    </div>
+</header>
+<section class="page-hero"><div class="max-w-[1440px] mx-auto px-6">
+    <p class="text-[11px] uppercase tracking-widest text-brand mb-2">USP · Hệ thống kiến thức</p>
+    <h1 class="font-display text-5xl md:text-7xl font-medium mb-3">Du lịch - Chặt chém</h1>
+    <p class="text-white/70 max-w-xl">Thời trang · Điểm đến · Ẩm thực · Cẩm nang — mỗi bài liên kết Destination Hub.</p>
+</div></section>
+<main class="py-14 max-w-[1440px] mx-auto px-6 space-y-16">
+    <section><h2 class="hub-section-title mb-8">Thời trang</h2>
+        <article class="content-row border-t-0 max-w-3xl"><img src="https://images.unsplash.com/photo-1483985988355-763728fb7873?q=80&w=400&auto=format&fit=crop" alt=""><div><h3 class="font-display text-2xl text-dark">Cách mặc đẹp khi đi Hà Giang</h3><a href="destinations/ha-giang.html" class="dest-badge mt-2">Hà Giang</a></div></article>
+        <article class="content-row max-w-3xl"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=400&auto=format&fit=crop" alt=""><div><h3 class="font-display text-2xl text-dark">Outfit Đà Lạt — layering mùa lạnh</h3><a href="destinations/da-lat.html" class="dest-badge mt-2">Đà Lạt</a></div></article>
+    </section>
+    <section><h2 class="hub-section-title mb-8">Điểm đến &amp; Cẩm nang</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="destinations/da-lat.html" class="knowledge-tile"><h3 class="font-display text-2xl text-dark">Đà Lạt</h3><span class="text-[11px] uppercase font-semibold text-brand mt-4">Vào Hub →</span></a>
+            <a href="destinations/da-nang.html" class="knowledge-tile"><h3 class="font-display text-2xl text-dark">Đà Nẵng</h3><span class="text-[11px] uppercase font-semibold text-brand mt-4">Vào Hub →</span></a>
+            <a href="destinations/phu-quoc.html" class="knowledge-tile"><h3 class="font-display text-2xl text-dark">Phú Quốc</h3><span class="text-[11px] uppercase font-semibold text-brand mt-4">Vào Hub →</span></a>
+            <a href="destinations/hoi-an.html" class="knowledge-tile"><h3 class="font-display text-2xl text-dark">Hội An</h3><span class="text-[11px] uppercase font-semibold text-brand mt-4">Vào Hub →</span></a>
+        </div>
+    </section>
+    <section><h2 class="hub-section-title mb-6">Ẩm thực · Video</h2>
+        <div class="video-reel-track">
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">0:58</span><div class="video-reel-meta"><p class="font-display text-lg">Bánh căn Đà Lạt</p><a href="destinations/da-lat.html" class="dest-badge mt-2 !text-white !border-white/40">Đà Lạt</a></div></article>
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">0:45</span><div class="video-reel-meta"><p class="font-display text-lg">Cao lầu Hội An</p><a href="destinations/hoi-an.html" class="dest-badge mt-2 !text-white !border-white/40">Hội An</a></div></article>
+        </div>
+    </section>
+</main>
+<footer class="bg-[#111] text-white py-10 text-center text-sm"><a href="index.html" class="site-footer-link">← Trang chủ</a></footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

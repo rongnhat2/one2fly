@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DisplayController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,16 @@ Route::get('/am-thuc/{region}', [DisplayController::class, 'foodRegion'])->name(
 Route::get('/an-pham', [DisplayController::class, 'issue'])->name('issue');
 Route::get('/an-pham/chi-tiet', [DisplayController::class, 'issueDetail'])->name('issue.detail');
 Route::get('/an-pham/doc', [DisplayController::class, 'issueRead'])->name('issue.read');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/destinations', [AdminController::class, 'destinations'])->name('destinations');
+    Route::get('/explore', [AdminController::class, 'explore'])->name('explore');
+    Route::get('/issues', [AdminController::class, 'issues'])->name('issues');
+    Route::get('/food-regions', [AdminController::class, 'foodRegions'])->name('food-regions');
+    Route::get('/articles', [AdminController::class, 'articles'])->name('articles');
+    Route::get('/offers', [AdminController::class, 'offers'])->name('offers');
+});
 
 // Chuyển hướng URL tiếng Anh cũ
 Route::redirect('/about', '/gioi-thieu', 301);

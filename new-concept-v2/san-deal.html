@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Săn Deal — one2FLY!</title>
+    <meta name="description" content="Tổng hợp deal du lịch: voucher, combo, vé máy bay, khách sạn, tour, nhà hàng. Landing page deal cao cấp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-9 text-[11px] uppercase tracking-[0.2em] font-medium">
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="san-deal.html" class="is-active">Săn Deal</a>
+            <a href="an-pham.html">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a><a href="san-deal.html">Săn Deal</a><a href="an-pham.html">Ấn phẩm</a>
+    <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a><a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<section class="page-hero text-white">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-3">Tổng hợp ưu đãi</p>
+        <h1 class="font-display text-[3rem] md:text-[5rem] leading-[0.95] font-medium mb-4">Săn Deal</h1>
+        <p class="text-lg text-white/72 max-w-xl">Không đặt hàng · Không thanh toán — chỉ hiển thị deal và link xem chi tiết.</p>
+    </div>
+</section>
+
+<main class="py-14 md:py-20">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="flex flex-wrap gap-2 mb-12">
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-bold bg-dark text-white rounded-full">Tất cả</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Deal nổi bật</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Voucher</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Combo</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Vé máy bay</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Khách sạn</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Tour</span>
+            <span class="px-4 py-2 text-[10px] uppercase tracking-[0.14em] font-semibold border border-line text-dark rounded-full">Nhà hàng</span>
+        </div>
+
+        <!-- Deal nổi bật -->
+        <article class="deal-card mb-10 grid md:grid-cols-2">
+            <img class="w-full h-[280px] md:h-full min-h-[280px] object-cover" src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=1200&auto=format&fit=crop" alt="">
+            <div class="p-8 md:p-10 flex flex-col justify-center">
+                <span class="deal-discount w-fit mb-4">Deal nổi bật · -50%</span>
+                <p class="text-[10px] uppercase tracking-[0.14em] text-brand mb-2">Vé máy bay</p>
+                <h2 class="font-display text-3xl md:text-4xl font-medium text-dark mb-4">Vietnam Airlines: Hà Nội ↔ Phú Quốc khứ hồi</h2>
+                <p class="text-muted mb-2"><s>4.800.000đ</s></p>
+                <p class="font-display text-4xl text-dark mb-6">2.400.000đ</p>
+                <a href="#" class="deal-btn w-fit">Xem chi tiết</a>
+            </div>
+        </article>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="deal-card"><img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><span class="deal-discount">-30%</span><p class="text-[10px] uppercase tracking-[0.14em] text-brand mt-3 mb-1">Khách sạn</p><h3 class="font-display text-2xl font-medium text-dark mb-2">Vinpearl Nha Trang</h3><p class="text-sm"><s class="text-muted">3.200.000đ</s> <strong class="text-dark text-lg">2.240.000đ</strong></p><a href="#" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="deal-card"><img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><span class="deal-discount">-25%</span><p class="text-[10px] uppercase tracking-[0.14em] text-brand mt-3 mb-1">Combo</p><h3 class="font-display text-2xl font-medium text-dark mb-2">Sapa 2N1Đ + Homestay</h3><p class="text-sm"><s class="text-muted">2.800.000đ</s> <strong class="text-dark text-lg">2.100.000đ</strong></p><a href="#" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="deal-card"><img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><span class="deal-discount">-20%</span><p class="text-[10px] uppercase tracking-[0.14em] text-brand mt-3 mb-1">Nhà hàng</p><h3 class="font-display text-2xl font-medium text-dark mb-2">Buffet hải sản Hội An</h3><p class="text-sm"><s class="text-muted">650.000đ</s> <strong class="text-dark text-lg">520.000đ</strong></p><a href="#" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="deal-card"><img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><span class="deal-discount">-35%</span><p class="text-[10px] uppercase tracking-[0.14em] text-brand mt-3 mb-1">Voucher</p><h3 class="font-display text-2xl font-medium text-dark mb-2">Spa resort Phú Quốc</h3><p class="text-sm"><s class="text-muted">1.200.000đ</s> <strong class="text-dark text-lg">780.000đ</strong></p><a href="#" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="deal-card"><img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><span class="deal-discount">-22%</span><p class="text-[10px] uppercase tracking-[0.14em] text-brand mt-3 mb-1">Tour</p><h3 class="font-display text-2xl font-medium text-dark mb-2">Lặn biển Nha Trang</h3><p class="text-sm"><s class="text-muted">1.800.000đ</s> <strong class="text-dark text-lg">1.404.000đ</strong></p><a href="#" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="deal-card"><img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><span class="deal-discount">-40%</span><p class="text-[10px] uppercase tracking-[0.14em] text-brand mt-3 mb-1">Vé máy bay</p><h3 class="font-display text-2xl font-medium text-dark mb-2">SGN → Bangkok</h3><p class="text-sm"><s class="text-muted">3.500.000đ</s> <strong class="text-dark text-lg">2.100.000đ</strong></p><a href="#" class="deal-btn">Xem chi tiết</a></div></article>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#111111] text-white py-10">
+    <div class="max-w-[1200px] mx-auto px-6 flex justify-between text-sm text-white/50">
+        <a href="index.html" class="site-footer-link">← Trang chủ</a>
+        <p>© 2026 one2FLY!</p>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

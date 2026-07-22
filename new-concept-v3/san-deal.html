@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Săn Deal — Discover Your Next Journey · one2FLY!</title>
+    <meta name="description" content="Khám phá chuyến đi tiếp theo. Deal kết nối điểm đến, ẩm thực, cẩm nang và kinh nghiệm thực tế — không phải danh sách khuyến mãi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header has-hero-header">
+
+<header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-8 text-[11px] uppercase tracking-[0.18em] font-medium">
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="san-deal.html" class="is-active">Săn Deal</a>
+            <a href="an-pham.html">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.18em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+    <a href="san-deal.html">Săn Deal</a>
+    <a href="an-pham.html">Ấn phẩm</a>
+    <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<!-- HERO -->
+<section class="discover-hero text-white">
+    <div class="max-w-[1440px] mx-auto px-6 w-full pt-[100px] pb-20">
+        <div class="max-w-[820px]">
+            <p class="text-[11px] uppercase tracking-[0.26em] text-white/55 mb-6">Discover Your Next Journey</p>
+            <h1 class="font-display text-[2.75rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-6">
+                Khám phá chuyến đi<br>tiếp theo của bạn.
+            </h1>
+            <p class="text-lg md:text-xl text-white/75 leading-relaxed max-w-xl mb-10">
+                Hàng trăm Deal được kết nối với điểm đến, ẩm thực, cẩm nang và kinh nghiệm thực tế.
+            </p>
+            <a href="#mood" class="deal-cta">Khám phá ngay</a>
+        </div>
+    </div>
+</section>
+
+<main>
+
+<!-- 1. DISCOVER BY MOOD -->
+<section id="mood" class="section-pad bg-white border-b border-line">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-10 md:mb-14 max-w-2xl">
+            <p class="hub-section-label">Bắt đầu bằng cảm xúc</p>
+            <h2 class="hub-section-title">Discover by Mood</h2>
+            <p class="text-muted text-lg">Không lọc tỉnh thành trước. Bạn muốn cảm giác gì từ chuyến đi này?</p>
+        </header>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4" id="mood-grid">
+            <button type="button" class="mood-card" data-mood="bien" data-dests="Phú Quốc,Đà Nẵng,Hội An">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">🌊</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn đi biển</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="may" data-dests="Đà Lạt,Sapa,Hà Giang">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">⛰</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn săn mây</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="nghi" data-dests="Phú Quốc,Đà Lạt,Đà Nẵng">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">🍃</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn nghỉ dưỡng</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="checkin" data-dests="Hội An,Đà Lạt,Hà Giang">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">📸</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn sống ảo</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="an" data-dests="Hội An,Đà Nẵng,Đà Lạt">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">🍜</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn ăn ngon</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="tietkiem" data-dests="Đà Lạt,Hội An,Hà Giang">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">💰</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn tiết kiệm</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="couple" data-dests="Đà Lạt,Hội An,Phú Quốc">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">❤️</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn đi cùng người yêu</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="family" data-dests="Đà Nẵng,Phú Quốc,Đà Lạt">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">👨‍👩‍👧</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn đi gia đình</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="phuot" data-dests="Hà Giang,Sapa,Đà Lạt">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1559592413-7cec4b0c0ef8?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">🎒</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn phượt</h3>
+            </button>
+            <button type="button" class="mood-card" data-mood="khampha" data-dests="Hà Giang,Hội An,Phú Quốc">
+                <div class="mood-card-bg" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fa9f4a963b?q=80&w=800&auto=format&fit=crop')"></div>
+                <span class="mood-icon" aria-hidden="true">🎉</span>
+                <h3 class="font-display text-xl md:text-2xl font-medium">Muốn khám phá</h3>
+            </button>
+        </div>
+        <div id="mood-panel" class="mood-panel" aria-live="polite">
+            <p class="text-[10px] uppercase tracking-widest text-brand font-bold mb-3">Điểm đến gợi ý</p>
+            <p class="font-display text-2xl text-dark mb-4" id="mood-title"></p>
+            <div class="mood-suggest" id="mood-suggest"></div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. DISCOVER BY DESTINATION -->
+<section id="destinations" class="section-pad">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-10 md:mb-14">
+            <p class="hub-section-label">Destination First</p>
+            <h2 class="hub-section-title">Discover by Destination</h2>
+            <p class="text-muted text-lg max-w-xl">Chọn địa phương trước — Deal nằm bên trong Destination Hub.</p>
+        </header>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+            <a href="destinations/da-lat.html" class="dest-stat-card">
+                <div class="dest-stat-bg" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop')"></div>
+                <div class="dest-stat-body">
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-1">Tây Nguyên · Săn mây</p>
+                    <h3 class="font-display text-4xl font-medium">Đà Lạt</h3>
+                    <div class="dest-stat-grid">
+                        <span><b>38</b>Deal</span>
+                        <span><b>126</b>Bài viết</span>
+                        <span><b>24</b>Địa điểm</span>
+                        <span><b>42</b>Món ăn</span>
+                        <span><b>16</b>Video</span>
+                        <span><b>★</b>Hub</span>
+                    </div>
+                </div>
+            </a>
+            <a href="destinations/ha-giang.html" class="dest-stat-card">
+                <div class="dest-stat-bg" style="background-image:url('https://images.unsplash.com/photo-1559592413-7cec4b0c0ef8?q=80&w=1200&auto=format&fit=crop')"></div>
+                <div class="dest-stat-body">
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-1">Miền Bắc · Phượt</p>
+                    <h3 class="font-display text-4xl font-medium">Hà Giang</h3>
+                    <div class="dest-stat-grid">
+                        <span><b>22</b>Deal</span>
+                        <span><b>84</b>Bài viết</span>
+                        <span><b>18</b>Địa điểm</span>
+                        <span><b>20</b>Món ăn</span>
+                        <span><b>12</b>Video</span>
+                        <span><b>★</b>Hub</span>
+                    </div>
+                </div>
+            </a>
+            <a href="destinations/phu-quoc.html" class="dest-stat-card">
+                <div class="dest-stat-bg" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=1200&auto=format&fit=crop')"></div>
+                <div class="dest-stat-body">
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-1">Biển đảo · Nghỉ dưỡng</p>
+                    <h3 class="font-display text-4xl font-medium">Phú Quốc</h3>
+                    <div class="dest-stat-grid">
+                        <span><b>45</b>Deal</span>
+                        <span><b>98</b>Bài viết</span>
+                        <span><b>30</b>Địa điểm</span>
+                        <span><b>36</b>Món ăn</span>
+                        <span><b>20</b>Video</span>
+                        <span><b>★</b>Hub</span>
+                    </div>
+                </div>
+            </a>
+            <a href="destinations/da-nang.html" class="dest-stat-card">
+                <div class="dest-stat-bg" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop')"></div>
+                <div class="dest-stat-body">
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-1">Miền Trung · Gia đình</p>
+                    <h3 class="font-display text-4xl font-medium">Đà Nẵng</h3>
+                    <div class="dest-stat-grid">
+                        <span><b>52</b>Deal</span>
+                        <span><b>140</b>Bài viết</span>
+                        <span><b>28</b>Địa điểm</span>
+                        <span><b>48</b>Món ăn</span>
+                        <span><b>22</b>Video</span>
+                        <span><b>★</b>Hub</span>
+                    </div>
+                </div>
+            </a>
+            <a href="destinations/hoi-an.html" class="dest-stat-card">
+                <div class="dest-stat-bg" style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1200&auto=format&fit=crop')"></div>
+                <div class="dest-stat-body">
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-1">Di sản · Couple</p>
+                    <h3 class="font-display text-4xl font-medium">Hội An</h3>
+                    <div class="dest-stat-grid">
+                        <span><b>31</b>Deal</span>
+                        <span><b>110</b>Bài viết</span>
+                        <span><b>22</b>Địa điểm</span>
+                        <span><b>40</b>Món ăn</span>
+                        <span><b>14</b>Video</span>
+                        <span><b>★</b>Hub</span>
+                    </div>
+                </div>
+            </a>
+            <a href="destinations/ha-giang.html" class="dest-stat-card">
+                <div class="dest-stat-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop')"></div>
+                <div class="dest-stat-body">
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-1">Núi · Săn mây</p>
+                    <h3 class="font-display text-4xl font-medium">Sa Pa</h3>
+                    <div class="dest-stat-grid">
+                        <span><b>27</b>Deal</span>
+                        <span><b>76</b>Bài viết</span>
+                        <span><b>16</b>Địa điểm</span>
+                        <span><b>22</b>Món ăn</span>
+                        <span><b>10</b>Video</span>
+                        <span><b>★</b>Hub</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 3. HOT DEALS -->
+<section id="hot-deals" class="section-pad bg-white border-y border-line">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-10">
+            <p class="hub-section-label">Sau cảm hứng</p>
+            <h2 class="hub-section-title">Hot Deals</h2>
+            <p class="text-muted">Click mở Travel Hub của Deal — không mở booking trực tiếp.</p>
+        </header>
+        <div class="space-y-5 max-w-5xl">
+            <a href="deal-detail.html" class="hot-deal-row">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=900&auto=format&fit=crop" alt="">
+                <div class="p-6 md:p-8 flex flex-col justify-center">
+                    <div class="deal-badge-row mb-3">
+                        <span class="deal-pill deal-pill--flash">Flash Sale</span>
+                        <span class="deal-pill deal-pill--editor">Editor's Choice</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-2">Đà Lạt · 3N2Đ</p>
+                    <h3 class="font-display text-3xl text-dark mb-3">Resort Đà Lạt view đồi thông</h3>
+                    <p class="text-sm mb-2"><s class="text-muted">2.500.000đ</s> <strong class="text-dark text-2xl font-display">1.750.000đ</strong> <span class="text-brand font-bold text-sm">−30%</span></p>
+                    <p class="text-sm text-muted">★ 4.8 · Áp dụng đến 31/08/2026</p>
+                    <span class="deal-btn w-fit mt-4">Mở Travel Hub →</span>
+                </div>
+            </a>
+            <a href="deal-detail.html" class="hot-deal-row">
+                <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=900&auto=format&fit=crop" alt="">
+                <div class="p-6 md:p-8 flex flex-col justify-center">
+                    <div class="deal-badge-row mb-3">
+                        <span class="deal-pill deal-pill--best">Best Seller</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-2">Phú Quốc · 4N3Đ</p>
+                    <h3 class="font-display text-3xl text-dark mb-3">Resort biển Phú Quốc all-day pool</h3>
+                    <p class="text-sm mb-2"><s class="text-muted">6.000.000đ</s> <strong class="text-dark text-2xl font-display">3.900.000đ</strong> <span class="text-brand font-bold text-sm">−35%</span></p>
+                    <p class="text-sm text-muted">★ 4.7 · Cuối tuần còn chỗ</p>
+                    <span class="deal-btn w-fit mt-4">Mở Travel Hub →</span>
+                </div>
+            </a>
+            <a href="deal-detail.html" class="hot-deal-row">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=900&auto=format&fit=crop" alt="">
+                <div class="p-6 md:p-8 flex flex-col justify-center">
+                    <div class="deal-badge-row mb-3">
+                        <span class="deal-pill deal-pill--flash">Flash Sale</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-brand mb-2">Đà Nẵng · Máy bay</p>
+                    <h3 class="font-display text-3xl text-dark mb-3">HAN → DAD khứ hồi</h3>
+                    <p class="text-sm mb-2"><s class="text-muted">2.400.000đ</s> <strong class="text-dark text-2xl font-display">1.440.000đ</strong> <span class="text-brand font-bold text-sm">−40%</span></p>
+                    <p class="text-sm text-muted">★ 4.6 · Bay trong tuần</p>
+                    <span class="deal-btn w-fit mt-4">Mở Travel Hub →</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 4. DEAL COLLECTIONS -->
+<section class="section-pad">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <p class="hub-section-label">Netflix-style</p>
+                <h2 class="hub-section-title mb-0">Deal Collections</h2>
+            </div>
+            <p class="text-sm text-muted">Vuốt ngang để khám phá →</p>
+        </header>
+        <div class="collection-track">
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Ngân sách</p><h3 class="font-display text-3xl font-medium">Deal dưới 2 triệu</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Thời gian</p><h3 class="font-display text-3xl font-medium">Deal cuối tuần</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Mùa</p><h3 class="font-display text-3xl font-medium">Deal mùa hè</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Đối tượng</p><h3 class="font-display text-3xl font-medium">Deal cho gia đình</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Đối tượng</p><h3 class="font-display text-3xl font-medium">Deal cặp đôi</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Trải nghiệm</p><h3 class="font-display text-3xl font-medium">Deal nghỉ dưỡng</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Mood</p><h3 class="font-display text-3xl font-medium">Deal săn mây</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Mood</p><h3 class="font-display text-3xl font-medium">Deal biển</h3></div></a>
+            <a href="#hot-deals" class="collection-card"><div class="collection-card-bg" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop')"></div><div class="collection-card-body"><p class="text-[10px] uppercase tracking-widest text-brand mb-2">Quốc tế</p><h3 class="font-display text-3xl font-medium">Deal nước ngoài</h3></div></a>
+        </div>
+    </div>
+</section>
+
+<!-- 5. TRENDING DESTINATIONS -->
+<section class="section-pad bg-white border-y border-line">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-10">
+            <p class="hub-section-label">Đang quan tâm</p>
+            <h2 class="hub-section-title">Trending Destinations</h2>
+        </header>
+        <div class="trend-dash">
+            <article class="trend-panel">
+                <div class="trend-panel-hero">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Đà Lạt">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-6 text-white">
+                        <p class="text-[10px] uppercase tracking-widest text-brand mb-1">#1 Trending</p>
+                        <h3 class="font-display text-4xl font-medium">Đà Lạt</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="trend-chips mb-4">
+                        <a href="deal-detail.html" class="trend-chip">38 Deal</a>
+                        <a href="doc-tin-ma-tuc.html" class="trend-chip">Tin tức</a>
+                        <a href="destinations/da-lat.html#am-thuc" class="trend-chip">Ẩm thực</a>
+                        <a href="destinations/da-lat.html" class="trend-chip">Video</a>
+                        <a href="destinations/da-lat.html#checklist" class="trend-chip">Checklist</a>
+                        <a href="destinations/da-lat.html#canh-bao" class="trend-chip">Mẹo</a>
+                    </div>
+                    <a href="destinations/da-lat.html" class="dest-badge">Mở Destination Hub →</a>
+                </div>
+            </article>
+            <div class="grid gap-4">
+                <article class="trend-panel p-5 flex gap-4 items-center">
+                    <img class="w-28 h-28 object-cover rounded-xl shrink-0" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400&auto=format&fit=crop" alt="">
+                    <div>
+                        <h3 class="font-display text-2xl text-dark mb-2">Đà Nẵng</h3>
+                        <div class="trend-chips">
+                            <span class="trend-chip">52 Deal</span>
+                            <span class="trend-chip">Ẩm thực</span>
+                            <span class="trend-chip">Mẹo taxi</span>
+                        </div>
+                        <a href="destinations/da-nang.html" class="text-[11px] uppercase tracking-wider font-bold text-brand mt-3 inline-block">Hub →</a>
+                    </div>
+                </article>
+                <article class="trend-panel p-5 flex gap-4 items-center">
+                    <img class="w-28 h-28 object-cover rounded-xl shrink-0" src="https://images.unsplash.com/photo-1559592413-7cec4b0c0ef8?q=80&w=400&auto=format&fit=crop" alt="">
+                    <div>
+                        <h3 class="font-display text-2xl text-dark mb-2">Hà Giang</h3>
+                        <div class="trend-chips">
+                            <span class="trend-chip">22 Deal</span>
+                            <span class="trend-chip">Video</span>
+                            <span class="trend-chip">Checklist</span>
+                        </div>
+                        <a href="destinations/ha-giang.html" class="text-[11px] uppercase tracking-wider font-bold text-brand mt-3 inline-block">Hub →</a>
+                    </div>
+                </article>
+                <article class="trend-panel p-5 flex gap-4 items-center">
+                    <img class="w-28 h-28 object-cover rounded-xl shrink-0" src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=400&auto=format&fit=crop" alt="">
+                    <div>
+                        <h3 class="font-display text-2xl text-dark mb-2">Phú Quốc</h3>
+                        <div class="trend-chips">
+                            <span class="trend-chip">45 Deal</span>
+                            <span class="trend-chip">Tin tức</span>
+                            <span class="trend-chip">Ẩm thực</span>
+                        </div>
+                        <a href="destinations/phu-quoc.html" class="text-[11px] uppercase tracking-wider font-bold text-brand mt-3 inline-block">Hub →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. TRAVEL INSPIRATION -->
+<section class="section-pad">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-10">
+            <p class="hub-section-label">Không phải Deal</p>
+            <h2 class="hub-section-title">Travel Inspiration</h2>
+        </header>
+        <div class="inspire-grid">
+            <a href="doc-tin-ma-tuc.html" class="inspire-item inspire-item--lg">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop" alt=""><span>Story · Hành trình</span>
+            </a>
+            <a href="doc-tin-ma-tuc.html" class="inspire-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt=""><span>Album</span>
+            </a>
+            <a href="doc-tin-ma-tuc.html" class="inspire-item">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt=""><span>Review</span>
+            </a>
+            <a href="#food-videos" class="inspire-item">
+                <img src="https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=800&auto=format&fit=crop" alt=""><span>Video</span>
+            </a>
+            <a href="doc-tin-ma-tuc.html" class="inspire-item">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" alt=""><span>Bài nổi bật</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 7. ẨM THỰC VIDEO -->
+<section id="food-videos" class="section-pad bg-white border-y border-line">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-8">
+            <p class="hub-section-label">Ăn ngon trước khi đi</p>
+            <h2 class="hub-section-title">Ẩm thực · Shorts</h2>
+        </header>
+        <div class="video-reel-track">
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">0:58</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Top 10 món Đà Lạt</p></div></article>
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">1:05</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Cao lầu Hội An</p></div></article>
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">0:45</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Hải sản Phú Quốc</p></div></article>
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop')"></div><span class="video-reel-duration">0:52</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Cafe view đẹp</p></div></article>
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1604908176997-4314e0cbb144?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">1:12</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Street food Đà Nẵng</p></div></article>
+            <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">0:40</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Review quán nổi</p></div></article>
+        </div>
+    </div>
+</section>
+
+<!-- 8. ĐỪNG ĐỂ BỊ CHẶT CHÉM -->
+<section class="section-pad">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="mb-10">
+            <p class="hub-section-label">USP one2FLY!</p>
+            <h2 class="hub-section-title">Đừng để bị chặt chém</h2>
+        </header>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <a href="du-lich-chat-chem.html" class="anti-cheat-card">
+                <div><div class="anti-cheat-icon">🚕</div><h3 class="font-display text-xl text-dark mb-2">Taxi</h3><p class="text-sm text-muted">Giá chuẩn · App uy tín · Tránh phụ phí</p></div>
+                <span class="text-[11px] uppercase tracking-wider font-bold text-brand mt-4">Xem →</span>
+            </a>
+            <a href="du-lich-chat-chem.html" class="anti-cheat-card">
+                <div><div class="anti-cheat-icon">🏨</div><h3 class="font-display text-xl text-dark mb-2">Khách sạn</h3><p class="text-sm text-muted">Ảnh vs thực tế · Review gần đây</p></div>
+                <span class="text-[11px] uppercase tracking-wider font-bold text-brand mt-4">Xem →</span>
+            </a>
+            <a href="du-lich-chat-chem.html" class="anti-cheat-card">
+                <div><div class="anti-cheat-icon">🍜</div><h3 class="font-display text-xl text-dark mb-2">Ăn uống</h3><p class="text-sm text-muted">Hỏi giá · Hóa đơn · Niêm yết</p></div>
+                <span class="text-[11px] uppercase tracking-wider font-bold text-brand mt-4">Xem →</span>
+            </a>
+            <a href="du-lich-chat-chem.html" class="anti-cheat-card">
+                <div><div class="anti-cheat-icon">🎁</div><h3 class="font-display text-xl text-dark mb-2">Đặc sản</h3><p class="text-sm text-muted">Cân công khai · Không ép mua</p></div>
+                <span class="text-[11px] uppercase tracking-wider font-bold text-brand mt-4">Xem →</span>
+            </a>
+            <a href="du-lich-chat-chem.html" class="anti-cheat-card">
+                <div><div class="anti-cheat-icon">🛵</div><h3 class="font-display text-xl text-dark mb-2">Thuê xe</h3><p class="text-sm text-muted">Phí giao xe · Bảo hiểm · Kiểm tra</p></div>
+                <span class="text-[11px] uppercase tracking-wider font-bold text-brand mt-4">Xem →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 9. TIN ĐỌC MÀ TỨC -->
+<section class="section-pad bg-white border-y border-line">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <header class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+                <p class="hub-section-label">SEO · Social</p>
+                <h2 class="hub-section-title mb-0">Tin đọc mà tức</h2>
+            </div>
+            <a href="doc-tin-ma-tuc.html" class="text-[11px] uppercase tracking-wider font-bold text-dark hover:text-brand">Xem chuyên mục →</a>
+        </header>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl">
+            <article>
+                <img class="w-full h-[200px] object-cover rounded-xl mb-4" src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" alt="">
+                <span class="article-tag article-tag--hot mb-2">Tin nóng</span>
+                <h3 class="font-display text-2xl text-dark mt-2"><a href="doc-tin-ma-tuc.html" class="hover:text-brand">Đà Nẵng chặt chém khách — case đầy đủ</a></h3>
+                <a href="destinations/da-nang.html" class="dest-badge mt-3">Đà Nẵng</a>
+            </article>
+            <article>
+                <img class="w-full h-[200px] object-cover rounded-xl mb-4" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="">
+                <span class="article-tag article-tag--review mb-2">Review</span>
+                <h3 class="font-display text-2xl text-dark mt-2"><a href="doc-tin-ma-tuc.html" class="hover:text-brand">Homestay Đà Lạt: ảnh vs thực tế</a></h3>
+                <a href="destinations/da-lat.html" class="dest-badge mt-3">Đà Lạt</a>
+            </article>
+            <article>
+                <img class="w-full h-[200px] object-cover rounded-xl mb-4" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="">
+                <span class="article-tag article-tag--warn mb-2">Cảnh báo</span>
+                <h3 class="font-display text-2xl text-dark mt-2"><a href="doc-tin-ma-tuc.html" class="hover:text-brand">Hải sản Phú Quốc tính kg — cần biết</a></h3>
+                <a href="destinations/phu-quoc.html" class="dest-badge mt-3">Phú Quốc</a>
+            </article>
+            <article class="sm:col-span-2 lg:col-span-1">
+                <img class="w-full h-[200px] object-cover rounded-xl mb-4" src="https://images.unsplash.com/photo-1483985988355-763728fb7873?q=80&w=800&auto=format&fit=crop" alt="">
+                <span class="article-tag article-tag--view mb-2">Góc nhìn</span>
+                <h3 class="font-display text-2xl text-dark mt-2"><a href="doc-tin-ma-tuc.html" class="hover:text-brand">Hà Giang Loop: chuyến đi đáng từng đồng</a></h3>
+                <a href="destinations/ha-giang.html" class="dest-badge mt-3">Hà Giang</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 10. CTA -->
+<section class="section-pad">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="discover-cta" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fa9f4a963b?q=80&w=2000&auto=format&fit=crop')">
+            <div class="discover-cta-body">
+                <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-4">Discover Your Next Journey</p>
+                <h2 class="font-display text-4xl md:text-5xl font-medium mb-4">Đã chọn được chuyến đi chưa?</h2>
+                <p class="text-white/75 mb-8">Deal chỉ là cánh cửa. Điểm đến mới là hành trình.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#destinations" class="deal-cta">Khám phá Destination</a>
+                    <a href="#hot-deals" class="deal-cta deal-cta--ghost">Xem Deal mới</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-[#111111] text-white py-14">
+    <div class="max-w-[1200px] mx-auto px-6">
+        <div class="flex flex-col sm:flex-row justify-between gap-6 text-sm text-white/50">
+            <a href="index.html" class="site-footer-link">← Trang chủ</a>
+            <p>© 2026 one2FLY! · Trip Discovery · Săn Deal</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/concept.js"></script>
+<script>
+(function () {
+    var panel = document.getElementById('mood-panel');
+    var title = document.getElementById('mood-title');
+    var suggest = document.getElementById('mood-suggest');
+    var map = {
+        'Đà Lạt': 'destinations/da-lat.html',
+        'Đà Nẵng': 'destinations/da-nang.html',
+        'Phú Quốc': 'destinations/phu-quoc.html',
+        'Hội An': 'destinations/hoi-an.html',
+        'Hà Giang': 'destinations/ha-giang.html',
+        'Sapa': 'destinations/ha-giang.html'
+    };
+    document.querySelectorAll('#mood-grid .mood-card').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var label = btn.querySelector('h3').textContent;
+            var dests = (btn.getAttribute('data-dests') || '').split(',');
+            title.textContent = label;
+            suggest.innerHTML = '';
+            dests.forEach(function (d) {
+                d = d.trim();
+                var a = document.createElement('a');
+                a.href = map[d] || '#destinations';
+                a.className = 'dest-badge';
+                a.textContent = d + ' → Hub';
+                suggest.appendChild(a);
+            });
+            panel.classList.add('is-open');
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    });
+})();
+</script>
+</body>
+</html>

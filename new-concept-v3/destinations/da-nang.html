@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đà Nẵng — Destination Hub · one2FLY!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="../assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted">
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between">
+        <a href="../index.html"><img src="../assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-8 text-[11px] uppercase tracking-[0.18em] font-medium">
+            <a href="../doc-tin-ma-tuc.html">Đọc tin mà tức</a><a href="../san-deal.html">Săn Deal</a><a href="../an-pham.html">Ấn phẩm</a>
+            <a href="../du-lich-chat-chem.html">Du lịch - Chặt chém</a><a href="../gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button id="menu-toggle" class="site-header-menu text-[11px] uppercase xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu"><button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm">Đóng</button><a href="../index.html">Trang chủ</a></div>
+
+<section class="hub-hero pt-[88px] text-white" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2400&auto=format&fit=crop')">
+    <div class="hub-hero-content max-w-[1440px] mx-auto px-6 pb-12">
+        <a href="../index.html" class="text-[11px] uppercase tracking-widest text-white/60 hover:text-white mb-4 inline-block">← Điểm đến</a>
+        <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-2">Destination Hub</p>
+        <h1 class="font-display text-[4rem] md:text-[6rem] leading-none font-medium mb-4">Đà Nẵng</h1>
+        <p class="text-lg text-white/75 max-w-xl">Biển, Bà Nà, Hội An gần — toàn bộ thông tin chuyến đi một chỗ.</p>
+    </div>
+</section>
+
+<nav class="hub-nav"><div class="hub-nav-inner max-w-[1440px] mx-auto">
+    <a href="#deal">Deal</a><a href="#canh-bao">Cảnh báo</a><a href="#gia">Giá tham khảo</a><a href="#tin-tuc">Tin tức</a>
+</div></nav>
+
+<main class="max-w-[1440px] mx-auto px-6 py-12 space-y-16">
+    <section id="deal"><p class="hub-section-label">Deal</p><h2 class="hub-section-title">Deal tại Đà Nẵng</h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+            <article class="hub-deal-card"><img class="w-full h-[140px] object-cover" src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">-40%</span><h3 class="font-display text-xl text-dark mt-2">HAN → DAD</h3><p class="text-sm"><s>2.4tr</s> <strong>1.44tr</strong></p></div></article>
+            <article class="hub-deal-card"><img class="w-full h-[140px] object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">-25%</span><h3 class="font-display text-xl text-dark mt-2">Resort Mỹ Khê</h3><p class="text-sm"><s>3tr</s> <strong>2.25tr</strong></p></div></article>
+            <article class="hub-deal-card"><img class="w-full h-[140px] object-cover" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">Combo</span><h3 class="font-display text-xl text-dark mt-2">Bà Nà Hills</h3><p class="text-sm"><s>900k</s> <strong>720k</strong></p></div></article>
+        </div>
+    </section>
+    <section id="canh-bao" class="hub-section--alt -mx-6 px-6 py-12"><p class="hub-section-label">Chặt chém</p><h2 class="hub-section-title">Cảnh báo phổ biến</h2>
+        <div class="hub-warning mb-4"><h3 class="font-display text-xl text-dark mb-2">Taxi sân bay hét giá</h3><p class="text-sm">Dùng Grab hoặc taxi Mai Linh, thống nhất giá trước. Giá tham khảo: 250–350k.</p></div>
+        <div class="hub-warning"><h3 class="font-display text-xl text-dark mb-2">Hải sản tính theo kg</h3><p class="text-sm">Hỏi giá từng loại, cân trước mắt. Tránh quán không niêm yết.</p></div>
+    </section>
+    <section id="gia"><p class="hub-section-label">Giá tham khảo</p><h2 class="hub-section-title">Taxi &amp; Ăn uống</h2>
+        <table class="hub-price-table bg-white border border-line rounded-xl overflow-hidden"><tbody>
+            <tr><td class="text-dark font-medium p-4">Taxi trung tâm 5km</td><td class="p-4">60.000 – 90.000đ</td></tr>
+            <tr><td class="text-dark font-medium p-4">Bún chả cá</td><td class="p-4">35.000 – 50.000đ</td></tr>
+            <tr><td class="text-dark font-medium p-4">Vé Bà Nà (cơ bản)</td><td class="p-4">750.000 – 900.000đ</td></tr>
+        </tbody></table>
+    </section>
+    <section id="tin-tuc"><p class="hub-section-label">Tin tức</p><h2 class="hub-section-title">Bài viết liên quan</h2>
+        <article class="content-row border-t-0"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--hot mb-2">Tin nóng</span><h3 class="font-display text-2xl text-dark">Đà Nẵng chặt chém khách — case study đầy đủ</h3><a href="da-nang.html" class="dest-badge mt-2">Đà Nẵng</a></div></article>
+    </section>
+    <p class="text-center pb-12"><a href="da-lat.html" class="text-[11px] uppercase tracking-widest font-bold text-brand">Xem hub mẫu đầy đủ: Đà Lạt →</a></p>
+</main>
+<footer class="bg-dark text-white py-10 text-center text-sm text-white/50"><a href="../index.html" class="site-footer-link">← Trang chủ</a></footer>
+<script src="../assets/concept.js"></script>
+</body>
+</html>

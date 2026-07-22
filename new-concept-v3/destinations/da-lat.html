@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đà Lạt — Destination Hub · one2FLY!</title>
+    <meta name="description" content="Toàn bộ thông tin chuyến đi Đà Lạt: deal, khách sạn, ẩm thực, giá tham khảo, cảnh báo chặt chém, lịch trình và tin tức.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="../assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="../index.html"><img src="../assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-8 text-[11px] uppercase tracking-[0.18em] font-medium">
+            <a href="../doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="../san-deal.html">Săn Deal</a>
+            <a href="../an-pham.html">Ấn phẩm</a>
+            <a href="../du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="../gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.18em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="../index.html">Trang chủ</a>
+    <a href="../doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+    <a href="../san-deal.html">Săn Deal</a>
+</div>
+
+<!-- HERO -->
+<section class="hub-hero pt-[88px] text-white" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2400&auto=format&fit=crop')">
+    <div class="hub-hero-content max-w-[1440px] mx-auto px-6 pb-12 md:pb-16">
+        <a href="../index.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] text-white/60 hover:text-white mb-6">← Tất cả điểm đến</a>
+        <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-3">Destination Hub · Super Landing Page</p>
+        <h1 class="font-display text-[4rem] md:text-[6.5rem] lg:text-[7.5rem] leading-[0.9] font-medium tracking-[-0.03em] mb-4">Đà Lạt</h1>
+        <p class="text-xl text-white/78 max-w-2xl mb-6">Mọi thứ bạn cần biết cho chuyến đi — deal, ăn uống, giá tham khảo, cảnh báo và lịch trình trên một trang.</p>
+        <div class="flex flex-wrap gap-2">
+            <span class="dest-card-meta"><span class="!bg-brand/20 !text-brand border border-brand/40">12 Deal</span></span>
+            <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-white/10 rounded">24 Bài viết</span>
+            <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-white/10 rounded">Giá tham khảo</span>
+        </div>
+    </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="hub-nav">
+    <div class="hub-nav-inner max-w-[1440px] mx-auto">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#deal">Deal</a>
+        <a href="#checkin">Check-in</a>
+        <a href="#lich-trinh">Lịch trình</a>
+        <a href="#am-thuc">Ẩm thực</a>
+        <a href="#thoi-trang">Mặc gì</a>
+        <a href="#gia">Giá tham khảo</a>
+        <a href="#canh-bao">Cảnh báo</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#tin-tuc">Tin tức</a>
+        <a href="#an-pham">Ấn phẩm</a>
+        <a href="#faq">FAQ</a>
+        <a href="#ban-do">Bản đồ</a>
+    </div>
+</nav>
+
+<main class="max-w-[1440px] mx-auto px-6">
+
+    <!-- GIỚI THIỆU -->
+    <section id="gioi-thieu" class="hub-section">
+        <p class="hub-section-label">01 · Tổng quan</p>
+        <h2 class="hub-section-title">Giới thiệu Đà Lạt</h2>
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <p class="text-lg leading-relaxed">Thành phố ngàn hoa, khí hậu mát mẻ quanh năm — điểm đến lý tưởng cho couple trip, phượt cuối tuần và trải nghiệm ẩm thực địa phương. Hub này tổng hợp dữ liệu từ deal, tin tức, ẩm thực, cẩm nang và ấn phẩm — tất cả gắn với Đà Lạt.</p>
+            <div class="grid grid-cols-3 gap-4 text-center">
+                <div class="bg-white border border-line rounded-xl p-5"><p class="font-display text-3xl text-brand">22°C</p><p class="text-[10px] uppercase tracking-wider text-muted mt-1">Nhiệt độ TB</p></div>
+                <div class="bg-white border border-line rounded-xl p-5"><p class="font-display text-3xl text-brand">3N2Đ</p><p class="text-[10px] uppercase tracking-wider text-muted mt-1">Lịch trình phổ biến</p></div>
+                <div class="bg-white border border-line rounded-xl p-5"><p class="font-display text-3xl text-brand">★4.2</p><p class="text-[10px] uppercase tracking-wider text-muted mt-1">Minh bạch giá</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEAL -->
+    <section id="deal" class="hub-section hub-section--alt -mx-6 px-6">
+        <p class="hub-section-label">02 · Ưu đãi</p>
+        <h2 class="hub-section-title">Deal nổi bật tại Đà Lạt</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <article class="hub-deal-card"><img class="w-full h-[160px] object-cover" src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">-35%</span><p class="text-[10px] uppercase text-brand mt-2 mb-1">Máy bay</p><h3 class="font-display text-xl text-dark">SGN → DLI</h3><p class="text-sm mt-1"><s>1.8tr</s> <strong>1.17tr</strong></p><a href="../san-deal.html" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="hub-deal-card"><img class="w-full h-[160px] object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">-28%</span><p class="text-[10px] uppercase text-brand mt-2 mb-1">Khách sạn</p><h3 class="font-display text-xl text-dark">Resort Đà Lạt</h3><p class="text-sm mt-1"><s>2.5tr</s> <strong>1.8tr</strong></p><a href="../san-deal.html" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="hub-deal-card"><img class="w-full h-[160px] object-cover" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">-20%</span><p class="text-[10px] uppercase text-brand mt-2 mb-1">Tour</p><h3 class="font-display text-xl text-dark">Săn mây + Cafe</h3><p class="text-sm mt-1"><s>800k</s> <strong>640k</strong></p><a href="../san-deal.html" class="deal-btn">Xem chi tiết</a></div></article>
+            <article class="hub-deal-card"><img class="w-full h-[160px] object-cover" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt=""><div class="p-4"><span class="deal-discount">Voucher</span><p class="text-[10px] uppercase text-brand mt-2 mb-1">Nhà hàng</p><h3 class="font-display text-xl text-dark">Lẩu gà lá é</h3><p class="text-sm mt-1"><s>450k</s> <strong>360k</strong></p><a href="../san-deal.html" class="deal-btn">Xem chi tiết</a></div></article>
+        </div>
+    </section>
+
+    <!-- CHECK-IN -->
+    <section id="checkin" class="hub-section">
+        <p class="hub-section-label">03 · Trải nghiệm</p>
+        <h2 class="hub-section-title">Điểm check-in</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <article class="mag-grid-item"><img class="w-full h-[220px] object-cover" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><h3 class="font-display text-2xl text-dark">Đồi chè Cầu Đất</h3><p class="text-sm text-muted mt-2">Miễn phí · Sáng sớm đẹp nhất</p></div></article>
+            <article class="mag-grid-item"><img class="w-full h-[220px] object-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><h3 class="font-display text-2xl text-dark">Hồ Tuyền Lâm</h3><p class="text-sm text-muted mt-2">Vé tham quan ~50.000đ</p></div></article>
+            <article class="mag-grid-item"><img class="w-full h-[220px] object-cover" src="https://images.unsplash.com/photo-1476514525535-07fa9f4a963b?q=80&w=800&auto=format&fit=crop" alt=""><div class="p-5"><h3 class="font-display text-2xl text-dark">Ga Đà Lạt</h3><p class="text-sm text-muted mt-2">Di tích · Chụp ảnh miễn phí</p></div></article>
+        </div>
+    </section>
+
+    <!-- LỊCH TRÌNH -->
+    <section id="lich-trinh" class="hub-section hub-section--alt -mx-6 px-6">
+        <p class="hub-section-label">04 · Gợi ý</p>
+        <h2 class="hub-section-title">Lịch trình 3 ngày 2 đêm</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white border border-line rounded-xl p-6"><p class="text-brand font-bold text-sm mb-2">Ngày 1</p><h3 class="font-display text-2xl text-dark mb-3">Trung tâm &amp; Đồi chè</h3><ul class="text-sm space-y-2 text-muted"><li>• Chợ Đà Lạt buổi sáng</li><li>• Đồi chè Cầu Đất</li><li>• Cafe view hoàng hôn</li></ul></div>
+            <div class="bg-white border border-line rounded-xl p-6"><p class="text-brand font-bold text-sm mb-2">Ngày 2</p><h3 class="font-display text-2xl text-dark mb-3">Thác &amp; Rừng thông</h3><ul class="text-sm space-y-2 text-muted"><li>• Thác Datanla</li><li>• Langbiang (tuỳ chọn)</li><li>• Ăn tối lẩu gà lá é</li></ul></div>
+            <div class="bg-white border border-line rounded-xl p-6"><p class="text-brand font-bold text-sm mb-2">Ngày 3</p><h3 class="font-display text-2xl text-dark mb-3">Chill &amp; Về</h3><ul class="text-sm space-y-2 text-muted"><li>• Hồ Tuyền Lâm</li><li>• Mua đặc sản</li><li>• Bay về / xe về</li></ul></div>
+        </div>
+    </section>
+
+    <!-- ẨM THỰC + VIDEO -->
+    <section id="am-thuc" class="hub-section">
+        <p class="hub-section-label">05 · Ẩm thực</p>
+        <h2 class="hub-section-title">Ẩm thực địa phương &amp; Video Recipes</h2>
+        <div class="grid lg:grid-cols-2 gap-8 mb-10">
+            <div><h3 class="font-display text-2xl text-dark mb-4">Món nên thử</h3><ul class="space-y-3"><li class="flex justify-between border-b border-line pb-2"><span class="text-dark font-medium">Bánh căn</span><span class="text-muted">~25.000đ/phần</span></li><li class="flex justify-between border-b border-line pb-2"><span class="text-dark font-medium">Lẩu gà lá é</span><span class="text-muted">~120.000đ/người</span></li><li class="flex justify-between border-b border-line pb-2"><span class="text-dark font-medium">Bánh mì xíu mại</span><span class="text-muted">~20.000đ</span></li><li class="flex justify-between border-b border-line pb-2"><span class="text-dark font-medium">Kem bơ</span><span class="text-muted">~15.000đ</span></li></ul></div>
+            <div class="video-reel-track lg:flex-wrap lg:overflow-visible">
+                <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">0:52</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Bánh căn Đà Lạt</p></div></article>
+                <article class="video-reel-card"><div class="video-reel-thumb" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500&auto=format&fit=crop')"></div><span class="video-reel-duration">1:08</span><div class="video-reel-play"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="video-reel-meta"><p class="font-display text-lg">Lẩu gà lá é</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- THỜI TRANG -->
+    <section id="thoi-trang" class="hub-section hub-section--alt -mx-6 px-6">
+        <p class="hub-section-label">06 · Thời trang</p>
+        <h2 class="hub-section-title">Mặc gì khi đi Đà Lạt</h2>
+        <div class="fashion-grid">
+            <article class="fashion-main"><img src="https://images.unsplash.com/photo-1483985988355-763728fb7873?q=80&w=1200&auto=format&fit=crop" alt=""><div class="fashion-main-body"><h3 class="font-display text-3xl font-medium">Layering là chìa khóa — sáng lạnh, trưa ấm</h3></div></article>
+            <div class="grid gap-4">
+                <div class="bg-white border border-line rounded-xl p-5"><p class="text-[10px] uppercase text-brand mb-2">Phụ kiện</p><p class="text-dark">Áo khoác mỏng, mũ len, giày chống trượt</p></div>
+                <div class="bg-white border border-line rounded-xl p-5"><p class="text-[10px] uppercase text-brand mb-2">Tránh</p><p class="text-dark">Quần short mỏng — tối dễ lạnh</p></div>
+            </div>
+        </div>
+        <p class="mt-4"><a href="../du-lich-chat-chem.html" class="dest-badge">Xem thêm trong Du lịch - Chặt chém →</a></p>
+    </section>
+
+    <!-- GIÁ THAM KHẢO -->
+    <section id="gia" class="hub-section">
+        <p class="hub-section-label">07 · Cẩm nang</p>
+        <h2 class="hub-section-title">Giá tham khảo &amp; Taxi</h2>
+        <div class="overflow-x-auto bg-white border border-line rounded-xl">
+            <table class="hub-price-table">
+                <thead><tr><th>Dịch vụ</th><th>Giá tham khảo</th><th>Ghi chú</th></tr></thead>
+                <tbody>
+                    <tr><td class="text-dark font-medium">Taxi sân bay Liên Khương → TP</td><td>250.000 – 350.000đ</td><td>Grab thường rẻ hơn 10–15%</td></tr>
+                    <tr><td class="text-dark font-medium">Homestay trung bình</td><td>400.000 – 800.000đ/đêm</td><td>Mùa lễ +30–50%</td></tr>
+                    <tr><td class="text-dark font-medium">Thuê xe máy</td><td>120.000 – 180.000đ/ngày</td><td>Hỏi trước phí giao xe</td></tr>
+                    <tr><td class="text-dark font-medium">Ăn trưa bình dân</td><td>50.000 – 80.000đ</td><td>Nhà hàng view: 150.000đ+</td></tr>
+                    <tr><td class="text-dark font-medium">Vé tham quan điểm phổ biến</td><td>30.000 – 150.000đ</td><td>Combo tour có thể đắt hơn</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CẢNH BÁO -->
+    <section id="canh-bao" class="hub-section hub-section--alt -mx-6 px-6">
+        <p class="hub-section-label">08 · Chặt chém</p>
+        <h2 class="hub-section-title">Nơi cần tránh &amp; Chiêu trò thường gặp</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="hub-warning"><h3 class="font-display text-xl text-dark mb-2">Dưa hấu / Đặc sản trên đường</h3><p class="text-sm">Hét giá theo kg, không niêm yết. Hỏi giá trước, cân công khai.</p></div>
+            <div class="hub-warning"><h3 class="font-display text-xl text-dark mb-2">Tour 0 đồng</h3><p class="text-sm">Ép mua hàng tại điểm dừng. Đọc kỹ lịch trình trước khi đi.</p></div>
+            <div class="hub-warning"><h3 class="font-display text-xl text-dark mb-2">Homestay ảo</h3><p class="text-sm">Ảnh đẹp nhưng phòng khác thực tế. Xem review gần đây.</p></div>
+            <div class="hub-warning"><h3 class="font-display text-xl text-dark mb-2">Taxi không đồng hồ</h3><p class="text-sm">Thống nhất giá hoặc dùng app. Tránh xe dùm.</p></div>
+        </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section id="checklist" class="hub-section">
+        <p class="hub-section-label">09 · Chuẩn bị</p>
+        <h2 class="hub-section-title">Checklist trước chuyến đi</h2>
+        <ul class="hub-checklist max-w-xl">
+            <li>Đặt phòng trước nếu đi cuối tuần / lễ</li>
+            <li>Tải Grab, kiểm tra sim 4G</li>
+            <li>Mang áo khoác mỏng — ban đêm lạnh</li>
+            <li>Đổi tiền mặt nhỏ cho quán vỉa hè</li>
+            <li>Lưu bảng giá tham khảo (phía trên)</li>
+            <li>Chụp ảnh biển giá trước khi dùng dịch vụ</li>
+        </ul>
+    </section>
+
+    <!-- TIN TỨC -->
+    <section id="tin-tuc" class="hub-section hub-section--alt -mx-6 px-6">
+        <p class="hub-section-label">10 · Đọc tin mà tức</p>
+        <h2 class="hub-section-title">Tin tức liên quan Đà Lạt</h2>
+        <article class="content-row border-t-0"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--review mb-2">Review</span><h3 class="font-display text-2xl text-dark"><a href="../doc-tin-ma-tuc.html" class="hover:text-brand">Homestay Đà Lạt: ảnh đẹp vs thực tế</a></h3><a href="da-lat.html" class="dest-badge mt-2">Đà Lạt</a></div></article>
+        <article class="content-row"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--hot mb-2">Tin nóng</span><h3 class="font-display text-2xl text-dark"><a href="../doc-tin-ma-tuc.html" class="hover:text-brand">Đà Lạt mùa lễ: giá phòng tăng bao nhiêu là hợp lý?</a></h3><a href="da-lat.html" class="dest-badge mt-2">Đà Lạt</a></div></article>
+        <article class="content-row"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--warn mb-2">Cảnh báo</span><h3 class="font-display text-2xl text-dark"><a href="../doc-tin-ma-tuc.html" class="hover:text-brand">Dưa hấu Đà Lạt: câu chuyện hét giá kinh điển</a></h3><a href="da-lat.html" class="dest-badge mt-2">Đà Lạt</a></div></article>
+    </section>
+
+    <!-- ẤN PHẨM -->
+    <section id="an-pham" class="hub-section">
+        <p class="hub-section-label">11 · Ấn phẩm</p>
+        <h2 class="hub-section-title">Ấn phẩm liên quan</h2>
+        <article class="issue-row border-t border-line">
+            <img class="issue-cover" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=300&auto=format&fit=crop" alt="">
+            <div><p class="text-[10px] uppercase text-brand mb-1">Số 07 · 05/2026</p><h3 class="font-display text-2xl text-dark">Chuyên đề Tây Nguyên — có mục Đà Lạt chi tiết</h3></div>
+            <div class="flex flex-col gap-2"><a href="../an-pham.html" class="issue-link">Đọc online</a><a href="#" class="issue-link">PDF</a></div>
+        </article>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="hub-section hub-section--alt -mx-6 px-6">
+        <p class="hub-section-label">12 · FAQ</p>
+        <h2 class="hub-section-title">Câu hỏi thường gặp</h2>
+        <div class="space-y-4 max-w-3xl">
+            <details class="bg-white border border-line rounded-xl p-5"><summary class="font-medium text-dark cursor-pointer">Đà Lạt đi mấy ngày là đủ?</summary><p class="text-sm text-muted mt-3">3 ngày 2 đêm là phổ biến nhất — đủ tham quan mà không quá vội.</p></details>
+            <details class="bg-white border border-line rounded-xl p-5"><summary class="font-medium text-dark cursor-pointer">Nên bay hay đi xe?</summary><p class="text-sm text-muted mt-3">Bay nhanh (~1h từ SGN). Xe tiết kiệm hơn nhưng mất 6–8h, đường đèo cần cẩn thận.</p></details>
+            <details class="bg-white border border-line rounded-xl p-5"><summary class="font-medium text-dark cursor-pointer">Mùa nào đẹp nhất?</summary><p class="text-sm text-muted mt-3">Tháng 11–3 mát, ít mưa. Mùa hoa dã quỳ: cuối 10 – đầu 11.</p></details>
+        </div>
+    </section>
+
+    <!-- BẢN ĐỒ -->
+    <section id="ban-do" class="hub-section pb-24">
+        <p class="hub-section-label">13 · Bản đồ</p>
+        <h2 class="hub-section-title">Bản đồ Đà Lạt</h2>
+        <div class="hub-map">
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1400&auto=format&fit=crop" alt="Bản đồ Đà Lạt">
+        </div>
+        <p class="text-sm text-muted mt-4">Gợi ý: lưu offline trên Google Maps trước khi lên đường.</p>
+    </section>
+
+</main>
+
+<footer class="bg-dark text-white py-12">
+    <div class="max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+        <div>
+            <p class="font-display text-2xl mb-2">Đà Lạt</p>
+            <p class="text-white/55 text-sm">Destination Hub · one2FLY! Concept V3</p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+            <a href="../index.html" class="site-footer-link text-sm">← Trang chủ</a>
+            <a href="da-nang.html" class="site-footer-link text-sm">Đà Nẵng</a>
+            <a href="phu-quoc.html" class="site-footer-link text-sm">Phú Quốc</a>
+            <a href="hoi-an.html" class="site-footer-link text-sm">Hội An</a>
+        </div>
+    </div>
+</footer>
+<script src="../assets/concept.js"></script>
+</body>
+</html>

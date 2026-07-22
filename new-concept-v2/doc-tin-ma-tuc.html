@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc tin mà tức — one2FLY! · Chuyên mục SEO</title>
+    <meta name="description" content="Tin tức du lịch, chuyện lạ, cảnh báo, review — đọc vui, đọc để biết, đọc để tránh. Magazine style, không báo điện tử.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-9 text-[11px] uppercase tracking-[0.2em] font-medium">
+            <a href="doc-tin-ma-tuc.html" class="is-active">Đọc tin mà tức</a>
+            <a href="san-deal.html">Săn Deal</a>
+            <a href="an-pham.html">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a><a href="san-deal.html">Săn Deal</a><a href="an-pham.html">Ấn phẩm</a>
+    <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a><a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<section class="page-hero text-white">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-3">Chuyên mục SEO</p>
+        <h1 class="font-display text-[3rem] md:text-[5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-4">Đọc tin mà tức</h1>
+        <p class="text-lg text-white/72 max-w-xl">Đọc vui · Đọc để biết · Đọc để tránh — magazine, không portal tin tức.</p>
+    </div>
+</section>
+
+<main class="py-14 md:py-20">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <!-- Hero bài nổi bật -->
+        <article class="article-hero mb-14 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1600&auto=format&fit=crop'); min-height:520px">
+            <div class="article-hero-body">
+                <span class="article-tag article-tag--hot mb-3">Tin nóng · Hero</span>
+                <h2 class="font-display text-4xl md:text-5xl font-medium leading-tight mb-4 max-w-3xl">Khách du lịch bị tính 18 triệu tiền taxi 8km — toàn bộ diễn biến</h2>
+                <p class="text-white/70">15/07/2026 · 8 phút đọc</p>
+            </div>
+        </article>
+
+        <div class="grid lg:grid-cols-12 gap-10">
+            <!-- Danh sách bài viết -->
+            <div class="lg:col-span-8">
+                <h2 class="font-display text-2xl font-medium text-dark mb-6 pb-4 border-b border-line">Danh sách bài viết</h2>
+                <article class="article-row"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--warn mb-2">Cảnh báo</span><h3 class="font-display text-2xl font-medium text-dark leading-snug">5 dấu hiệu tour giá rẻ trên Facebook là lừa đảo</h3><p class="text-sm text-muted mt-2">12/07/2026</p></div></article>
+                <article class="article-row"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--review mb-2">Review</span><h3 class="font-display text-2xl font-medium text-dark leading-snug">Homestay Đà Lạt: ảnh Instagram vs phòng thực tế</h3><p class="text-sm text-muted mt-2">10/07/2026</p></div></article>
+                <article class="article-row"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--view mb-2">Chuyện lạ</span><h3 class="font-display text-2xl font-medium text-dark leading-snug">Du khách mang gà mái lên máy bay, sân bay xử lý thế nào?</h3><p class="text-sm text-muted mt-2">08/07/2026</p></div></article>
+                <article class="article-row"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--hot mb-2">Góc nhìn</span><h3 class="font-display text-2xl font-medium text-dark leading-snug">Du lịch văn minh bắt đầu từ thông tin minh bạch</h3><p class="text-sm text-muted mt-2">05/07/2026</p></div></article>
+                <article class="article-row"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=400&auto=format&fit=crop" alt=""><div><span class="article-tag article-tag--warn mb-2">Tin tức</span><h3 class="font-display text-2xl font-medium text-dark leading-snug">Phú Quốc mùa cao điểm: giá dịch vụ tăng bao nhiêu là hợp lý?</h3><p class="text-sm text-muted mt-2">03/07/2026</p></div></article>
+            </div>
+
+            <aside class="lg:col-span-4 space-y-8">
+                <!-- Tin nổi bật -->
+                <div class="bg-white border border-line rounded-2xl p-6">
+                    <h3 class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-5">Tin nổi bật</h3>
+                    <ol class="space-y-4">
+                        <li><a href="#" class="font-display text-xl text-dark hover:text-brand transition leading-snug">Taxi sân bay Nội Bài: giá thật vs giá hét</a></li>
+                        <li><a href="#" class="font-display text-xl text-dark hover:text-brand transition leading-snug">Resort 5 sao quảng cáo ảo — thực tế ra sao?</a></li>
+                        <li><a href="#" class="font-display text-xl text-dark hover:text-brand transition leading-snug">Check-in chen chúc 3 tiếng chụp 1 bức ảnh</a></li>
+                    </ol>
+                </div>
+                <!-- Tin xem nhiều -->
+                <div class="bg-dark text-white rounded-2xl p-6">
+                    <h3 class="text-[10px] uppercase tracking-[0.18em] font-semibold text-brand mb-5">Tin xem nhiều</h3>
+                    <ol class="space-y-4">
+                        <li class="flex gap-3"><span class="font-display text-2xl text-brand/60">1</span><a href="#" class="font-display text-lg hover:text-brand transition">Bóc phốt quán view đẹp nhưng đồ uống...</a></li>
+                        <li class="flex gap-3"><span class="font-display text-2xl text-brand/60">2</span><a href="#" class="font-display text-lg hover:text-brand transition">KOL review resort nhận bao nhiêu tiền?</a></li>
+                        <li class="flex gap-3"><span class="font-display text-2xl text-brand/60">3</span><a href="#" class="font-display text-lg hover:text-brand transition">Đi biển mùa lễ: khoản phí nên hỏi trước</a></li>
+                    </ol>
+                </div>
+                <!-- Bài viết liên quan -->
+                <div class="bg-white border border-line rounded-2xl p-6">
+                    <h3 class="text-[10px] uppercase tracking-[0.18em] font-semibold text-muted mb-5">Bài viết liên quan</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-dark hover:text-brand transition">Cách nhận biết taxi dùm / taxi ảo</a></li>
+                        <li><a href="#" class="text-dark hover:text-brand transition">Menu hải sản: hỏi giá trước khi gọi món</a></li>
+                        <li><a href="#" class="text-dark hover:text-brand transition">Tour 0 đồng — cái bẫy quen thuộc</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#111111] text-white py-10">
+    <div class="max-w-[1200px] mx-auto px-6 flex justify-between text-sm text-white/50">
+        <a href="index.html" class="site-footer-link">← Trang chủ</a>
+        <p>© 2026 one2FLY!</p>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

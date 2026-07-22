@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard/get', [AdminApiController::class, 'dashboard']);
+    Route::get('/destination/get', [AdminApiController::class, 'destinations']);
+    Route::get('/explore/get', [AdminApiController::class, 'explore']);
+    Route::get('/issue/get', [AdminApiController::class, 'issues']);
+    Route::get('/food-region/get', [AdminApiController::class, 'foodRegions']);
+    Route::get('/article/get', [AdminApiController::class, 'articles']);
+    Route::get('/offer/get', [AdminApiController::class, 'offers']);
 });

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ấn phẩm — one2FLY!</title>
+    <meta name="description" content="Ấn phẩm số one2FLY! — Đọc online, tải PDF, thư viện magazine du lịch cao cấp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-dark text-white has-fixed-header">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50" style="background:rgba(8,26,42,0.95);border-bottom-color:rgba(255,255,255,0.1)">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="h-8 w-auto brightness-0 invert" alt="one2FLY!"></a>
+        <nav class="hidden xl:flex items-center gap-10 text-[11px] uppercase tracking-[0.2em] font-medium text-white/70">
+            <a href="san-deal.html" class="hover:text-white transition">Săn Deal</a>
+            <a href="doc-tin-ma-tuc.html" class="hover:text-white transition">Đọc tin mà tức</a>
+            <a href="du-lich-dung-de-chat-chem.html" class="hover:text-white transition">Du lịch đừng để chặt chém</a>
+            <a href="an-pham.html" class="text-white">Ấn phẩm</a>
+            <a href="gioi-thieu.html" class="hover:text-white transition">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium text-white xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="san-deal.html">Săn Deal</a><a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+    <a href="du-lich-dung-de-chat-chem.html">Du lịch đừng để chặt chém</a>
+    <a href="an-pham.html">Ấn phẩm</a><a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<main class="pt-[88px]">
+    <section class="py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[.06]" style="background-image:radial-gradient(#fff 1px,transparent 1px);background-size:18px 18px"></div>
+        <div class="relative max-w-[1440px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="flex justify-center">
+                <div class="mag-cover-3d relative w-[300px] md:w-[400px] aspect-[3/4] bg-white shadow-2xl p-5">
+                    <div class="relative h-full overflow-hidden bg-dark">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-80" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1000&auto=format&fit=crop" alt="Bìa số mới">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark/90"></div>
+                        <div class="absolute inset-x-0 top-0 p-6 flex justify-between text-[10px] uppercase tracking-[0.24em] text-white/70"><span>Số 09</span><span>07/2026</span></div>
+                        <div class="absolute inset-x-0 bottom-8 px-8">
+                            <p class="text-[10px] uppercase tracking-[0.28em] text-brand mb-3">Số mới nhất</p>
+                            <h1 class="font-display text-[2.75rem] md:text-[3.25rem] leading-[0.95] font-medium">Du lịch thông minh Việt Nam</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="text-[11px] uppercase tracking-[0.24em] text-brand mb-4 section-label">Thư viện magazine</p>
+                <h2 class="font-display text-[3rem] md:text-[4.5rem] leading-tight font-medium mb-6">Ấn phẩm</h2>
+                <p class="text-white/65 text-lg leading-relaxed mb-8 max-w-lg">120 trang · 18 bài viết · PDF cao cấp. Thiết kế như tạp chí in, trải nghiệm như thư viện số.</p>
+                <div class="grid grid-cols-3 gap-4 mb-10 max-w-md">
+                    <div class="border border-white/15 p-4 text-center"><p class="font-display text-3xl text-brand">120</p><p class="text-[10px] uppercase tracking-[0.18em] text-white/50 mt-1">Trang</p></div>
+                    <div class="border border-white/15 p-4 text-center"><p class="font-display text-3xl text-brand">18</p><p class="text-[10px] uppercase tracking-[0.18em] text-white/50 mt-1">Bài viết</p></div>
+                    <div class="border border-white/15 p-4 text-center"><p class="font-display text-3xl text-brand">PDF</p><p class="text-[10px] uppercase tracking-[0.18em] text-white/50 mt-1">Format</p></div>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-white text-dark px-8 py-4 text-[11px] uppercase tracking-[0.2em] font-bold rounded-full hover:bg-brand hover:text-white transition">Read Online</a>
+                    <a href="#" class="border border-white/35 px-8 py-4 text-[11px] uppercase tracking-[0.2em] font-bold rounded-full hover:bg-white hover:text-dark transition">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-canvas text-muted">
+        <div class="max-w-[1440px] mx-auto px-6">
+            <h2 class="font-display text-[2.5rem] md:text-[3.5rem] font-medium text-dark mb-12">Archive</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white border border-line rounded-2xl overflow-hidden group">
+                    <img class="w-full h-[320px] object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="">
+                    <div class="p-6"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Số 08 · 06/2026</p><h3 class="font-display text-2xl font-medium text-dark mb-4">Hè rực rỡ — 50 điểm đến mát mẻ</h3><div class="flex gap-3"><a href="#" class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Đọc online</a><a href="#" class="text-[11px] uppercase tracking-[0.14em] font-semibold text-brand">PDF ↓</a></div></div>
+                </article>
+                <article class="bg-white border border-line rounded-2xl overflow-hidden group">
+                    <img class="w-full h-[320px] object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=800&auto=format&fit=crop" alt="">
+                    <div class="p-6"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Số 07 · 05/2026</p><h3 class="font-display text-2xl font-medium text-dark mb-4">Ẩm thực đường phố Việt Nam</h3><div class="flex gap-3"><a href="#" class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Đọc online</a><a href="#" class="text-[11px] uppercase tracking-[0.14em] font-semibold text-brand">PDF ↓</a></div></div>
+                </article>
+                <article class="bg-white border border-line rounded-2xl overflow-hidden group">
+                    <img class="w-full h-[320px] object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop" alt="">
+                    <div class="p-6"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Số 06 · 04/2026</p><h3 class="font-display text-2xl font-medium text-dark mb-4">Miền Trung — Di sản &amp; Biển</h3><div class="flex gap-3"><a href="#" class="text-[11px] uppercase tracking-[0.14em] font-semibold text-dark">Đọc online</a><a href="#" class="text-[11px] uppercase tracking-[0.14em] font-semibold text-brand">PDF ↓</a></div></div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-[#111111] text-white py-12">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/50">
+        <a href="index.html" class="site-footer-link">← Về trang chủ</a>
+        <p>© 2026 one2FLY!</p>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

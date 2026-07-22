@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ấn phẩm — one2FLY!</title>
+    <meta name="description" content="Danh sách ấn phẩm số one2FLY! — Đọc online, tải PDF.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-9 text-[11px] uppercase tracking-[0.2em] font-medium">
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="san-deal.html">Săn Deal</a>
+            <a href="an-pham.html" class="is-active">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a><a href="san-deal.html">Săn Deal</a><a href="an-pham.html">Ấn phẩm</a>
+    <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a><a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<section class="page-hero text-white">
+    <div class="max-w-[900px] mx-auto px-6">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-3">Tạp chí số</p>
+        <h1 class="font-display text-[3rem] md:text-[4.5rem] leading-[0.95] font-medium mb-4">Ấn phẩm</h1>
+        <p class="text-lg text-white/72">Danh sách ấn phẩm — đọc online hoặc tải PDF.</p>
+    </div>
+</section>
+
+<main class="py-14 md:py-20">
+    <div class="max-w-[900px] mx-auto px-6">
+        <article class="issue-row">
+            <img class="issue-row-cover" src="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=400&auto=format&fit=crop" alt="Số 09">
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.14em] font-semibold text-brand mb-1">Số 09 · 07/2026</p>
+                <h2 class="font-display text-2xl md:text-3xl font-medium text-dark mb-2">Du lịch thông minh Việt Nam</h2>
+                <p class="text-sm text-muted leading-relaxed">120 trang cẩm nang, giá tham khảo và kinh nghiệm chống chặt chém từ ban biên tập.</p>
+            </div>
+            <div class="flex flex-col gap-2 sm:items-end"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">Download PDF</a></div>
+        </article>
+        <article class="issue-row">
+            <img class="issue-row-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" alt="Số 08">
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.14em] font-semibold text-brand mb-1">Số 08 · 06/2026</p>
+                <h2 class="font-display text-2xl md:text-3xl font-medium text-dark mb-2">Hè rực rỡ — 50 điểm đến mát mẻ</h2>
+                <p class="text-sm text-muted leading-relaxed">Chuyên đề mùa hè: biển, núi, thành phố mát và lịch trình gợi ý.</p>
+            </div>
+            <div class="flex flex-col gap-2 sm:items-end"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">Download PDF</a></div>
+        </article>
+        <article class="issue-row">
+            <img class="issue-row-cover" src="https://images.unsplash.com/photo-1569054775813-fa922baee591?q=80&w=400&auto=format&fit=crop" alt="Số 07">
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.14em] font-semibold text-brand mb-1">Số 07 · 05/2026</p>
+                <h2 class="font-display text-2xl md:text-3xl font-medium text-dark mb-2">Ẩm thực đường phố Việt Nam</h2>
+                <p class="text-sm text-muted leading-relaxed">Hành trình ẩm thực từ Bắc vào Nam — món ngon và giá tham khảo.</p>
+            </div>
+            <div class="flex flex-col gap-2 sm:items-end"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">Download PDF</a></div>
+        </article>
+        <article class="issue-row">
+            <img class="issue-row-cover" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400&auto=format&fit=crop" alt="Số 06">
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.14em] font-semibold text-brand mb-1">Số 06 · 04/2026</p>
+                <h2 class="font-display text-2xl md:text-3xl font-medium text-dark mb-2">Miền Trung — Di sản &amp; Biển</h2>
+                <p class="text-sm text-muted leading-relaxed">Huế, Đà Nẵng, Hội An và những trải nghiệm đáng nhớ.</p>
+            </div>
+            <div class="flex flex-col gap-2 sm:items-end"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">Download PDF</a></div>
+        </article>
+        <article class="issue-row border-b-0">
+            <img class="issue-row-cover" src="https://images.unsplash.com/photo-1483985988355-763728fb7873?q=80&w=400&auto=format&fit=crop" alt="Số 05">
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.14em] font-semibold text-brand mb-1">Số 05 · 03/2026</p>
+                <h2 class="font-display text-2xl md:text-3xl font-medium text-dark mb-2">Thời trang du lịch — Phong cách &amp; Tiện ích</h2>
+                <p class="text-sm text-muted leading-relaxed">Outfit theo vùng miền, phụ kiện và xu hướng du lịch 2026.</p>
+            </div>
+            <div class="flex flex-col gap-2 sm:items-end"><a href="#" class="issue-link">Đọc online</a><a href="#" class="issue-link">Download PDF</a></div>
+        </article>
+    </div>
+</main>
+
+<footer class="bg-[#111111] text-white py-10">
+    <div class="max-w-[1200px] mx-auto px-6 flex justify-between text-sm text-white/50">
+        <a href="index.html" class="site-footer-link">← Trang chủ</a>
+        <p>© 2026 one2FLY!</p>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

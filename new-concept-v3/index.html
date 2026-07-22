@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one2FLY! — Travel Journey Platform · Bạn muốn đi đâu?</title>
+    <meta name="description" content="Chọn điểm đến — nhận toàn bộ thông tin chuyến đi: deal, ẩm thực, cẩm nang, giá tham khảo, tin tức và ấn phẩm.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header has-hero-header">
+
+<header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-8 text-[11px] uppercase tracking-[0.18em] font-medium">
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="san-deal.html">Săn Deal</a>
+            <a href="an-pham.html">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.18em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+    <a href="san-deal.html">Săn Deal</a>
+    <a href="an-pham.html">Ấn phẩm</a>
+    <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<!-- HERO + SEARCH -->
+<section class="journey-hero text-white flex items-center">
+    <div class="max-w-[1440px] mx-auto px-6 w-full pt-[100px] pb-20 md:pb-28">
+        <div class="max-w-[820px] mx-auto text-center lg:text-left lg:mx-0">
+            <p class="text-[11px] uppercase tracking-[0.24em] text-white/60 mb-5">Travel Journey Platform · Destination First</p>
+            <h1 class="font-display text-[52px] md:text-[88px] lg:text-[104px] leading-[0.92] font-medium tracking-[-0.03em] mb-2">Du lịch thông minh</h1>
+            <p class="font-display text-[24px] md:text-[36px] text-brand font-medium mb-10">Đừng để bị chặt chém</p>
+            <p class="text-lg text-white/75 mb-8 max-w-lg mx-auto lg:mx-0">Chọn một điểm đến — nhận mọi thứ bạn cần biết trên một trang duy nhất.</p>
+            <form class="journey-search mx-auto lg:mx-0" action="destinations/da-lat.html">
+                <svg width="22" height="22" fill="none" stroke="#61758a" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input type="search" name="q" placeholder="Bạn muốn đi đâu?" autocomplete="off" list="dest-suggestions">
+                <button type="submit" class="journey-search-btn">Khám phá</button>
+            </form>
+            <datalist id="dest-suggestions">
+                <option value="Đà Lạt"><option value="Đà Nẵng"><option value="Phú Quốc"><option value="Hội An"><option value="Hà Giang">
+            </datalist>
+            <div class="journey-suggest justify-center lg:justify-start">
+                <a href="destinations/da-lat.html">Đà Lạt</a>
+                <a href="destinations/da-nang.html">Đà Nẵng</a>
+                <a href="destinations/phu-quoc.html">Phú Quốc</a>
+                <a href="destinations/hoi-an.html">Hội An</a>
+                <a href="destinations/ha-giang.html">Hà Giang</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- DESTINATION NỔI BẬT -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-[1440px] mx-auto px-6">
+            <header class="mb-12 md:mb-16">
+                <p class="hub-section-label">Trung tâm hệ thống</p>
+                <h2 class="font-display text-[2.75rem] md:text-[4rem] font-medium text-dark leading-[0.95] tracking-[-0.02em]">Destination nổi bật</h2>
+                <p class="text-lg text-muted mt-4 max-w-2xl">Mỗi địa phương là một Destination Hub — super landing page tổng hợp deal, ẩm thực, cẩm nang, tin tức và ấn phẩm.</p>
+            </header>
+            <div class="grid lg:grid-cols-12 gap-4 md:gap-5">
+                <a href="destinations/da-lat.html" class="dest-card dest-card--featured lg:col-span-7">
+                    <div class="dest-card-bg" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop')"></div>
+                    <div class="dest-card-body">
+                        <p class="dest-card-region">Tây Nguyên · Destination Hub</p>
+                        <h3 class="dest-card-title">Đà Lạt</h3>
+                        <div class="dest-card-meta"><span>Deal</span><span>Ẩm thực</span><span>Cẩm nang</span><span>Giá tham khảo</span></div>
+                    </div>
+                </a>
+                <div class="lg:col-span-5 grid gap-4 md:gap-5">
+                    <a href="destinations/da-nang.html" class="dest-card min-h-[300px]">
+                        <div class="dest-card-bg" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1200&auto=format&fit=crop')"></div>
+                        <div class="dest-card-body"><p class="dest-card-region">Miền Trung</p><h3 class="dest-card-title">Đà Nẵng</h3></div>
+                    </a>
+                    <a href="destinations/phu-quoc.html" class="dest-card min-h-[300px]">
+                        <div class="dest-card-bg" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=1200&auto=format&fit=crop')"></div>
+                        <div class="dest-card-body"><p class="dest-card-region">Biển đảo</p><h3 class="dest-card-title">Phú Quốc</h3></div>
+                    </a>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-4 md:mt-5">
+                <a href="destinations/hoi-an.html" class="dest-card min-h-[360px]">
+                    <div class="dest-card-bg" style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1200&auto=format&fit=crop')"></div>
+                    <div class="dest-card-body"><p class="dest-card-region">Di sản</p><h3 class="dest-card-title">Hội An</h3></div>
+                </a>
+                <a href="destinations/ha-giang.html" class="dest-card min-h-[360px]">
+                    <div class="dest-card-bg" style="background-image:url('https://images.unsplash.com/photo-1559592413-7cec4b0c0ef8?q=80&w=1200&auto=format&fit=crop')"></div>
+                    <div class="dest-card-body"><p class="dest-card-region">Miền Bắc</p><h3 class="dest-card-title">Hà Giang</h3></div>
+                </a>
+                <a href="destinations/da-lat.html" class="dest-card min-h-[360px] border-2 border-brand/30">
+                    <div class="dest-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop')"></div>
+                    <div class="dest-card-body">
+                        <p class="dest-card-region">Khám phá thêm</p>
+                        <h3 class="dest-card-title text-2xl">Xem tất cả hub →</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cửa vào nội dung -->
+    <section class="py-16 md:py-20 bg-canvas border-t border-line">
+        <div class="max-w-[1440px] mx-auto px-6">
+            <p class="text-center text-[11px] uppercase tracking-[0.2em] text-muted mb-8">Các cửa vào khác của cùng hệ sinh thái dữ liệu</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="doc-tin-ma-tuc.html" class="px-6 py-3 text-[11px] uppercase tracking-[0.14em] font-semibold border border-line rounded-full text-dark hover:bg-dark hover:text-white hover:border-dark transition">Đọc tin mà tức</a>
+                <a href="san-deal.html" class="px-6 py-3 text-[11px] uppercase tracking-[0.14em] font-semibold border border-line rounded-full text-dark hover:bg-dark hover:text-white hover:border-dark transition">Săn Deal</a>
+                <a href="an-pham.html" class="px-6 py-3 text-[11px] uppercase tracking-[0.14em] font-semibold border border-line rounded-full text-dark hover:bg-dark hover:text-white hover:border-dark transition">Ấn phẩm</a>
+                <a href="du-lich-chat-chem.html" class="px-6 py-3 text-[11px] uppercase tracking-[0.14em] font-semibold bg-brand text-white rounded-full hover:bg-dark transition">Du lịch - Chặt chém</a>
+                <a href="gioi-thieu.html" class="px-6 py-3 text-[11px] uppercase tracking-[0.14em] font-semibold border border-line rounded-full text-dark hover:bg-dark hover:text-white hover:border-dark transition">Giới thiệu</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-[#111111] text-white py-14">
+    <div class="max-w-[1200px] mx-auto px-6">
+        <div class="mb-10 pb-10 border-b border-white/10">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-brand mb-3">Newsletter</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md" onsubmit="return false">
+                <input type="email" class="newsletter-input" placeholder="Email">
+                <button class="shrink-0 bg-brand text-white px-6 py-3 text-[11px] uppercase tracking-[0.14em] font-bold rounded-full">Đăng ký</button>
+            </form>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/45">
+            <p>© 2026 one2FLY! · Destination First · Concept V3</p>
+            <div class="flex gap-5"><a href="#" class="site-footer-link">Instagram</a><a href="#" class="site-footer-link">Facebook</a><a href="#" class="site-footer-link">YouTube</a></div>
+        </div>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

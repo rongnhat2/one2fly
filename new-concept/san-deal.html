@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Săn Deal — one2FLY!</title>
+    <meta name="description" content="Flash deal, voucher, combo du lịch — săn ưu đãi máy bay, khách sạn, tour và nhà hàng trên one2FLY!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-10 text-[11px] uppercase tracking-[0.2em] font-medium">
+            <a href="san-deal.html" class="is-active">Săn Deal</a>
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="du-lich-dung-de-chat-chem.html">Du lịch đừng để chặt chém</a>
+            <a href="an-pham.html">Ấn phẩm</a>
+            <a href="gioi-thieu.html">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="san-deal.html">Săn Deal</a><a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+    <a href="du-lich-dung-de-chat-chem.html">Du lịch đừng để chặt chém</a>
+    <a href="an-pham.html">Ấn phẩm</a><a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<section class="page-hero text-white">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-brand mb-4">Ưu đãi du lịch</p>
+        <h1 class="font-display text-[3.5rem] md:text-[5.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-6">Săn Deal</h1>
+        <p class="text-lg text-white/75 max-w-xl">Flash deal, voucher, combo — máy bay, khách sạn, tour, nhà hàng. Có countdown, có badge giảm giá.</p>
+    </div>
+</section>
+
+<main class="py-16 md:py-24">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="flex flex-wrap gap-3 mb-12">
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold bg-dark text-white rounded-full">Tất cả</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Flash Deal</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Voucher</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Combo</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Khách sạn</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Máy bay</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Tour</button>
+            <button class="px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] font-semibold border border-line text-dark rounded-full hover:bg-brand hover:text-white hover:border-brand transition">Nhà hàng</button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="deal-card lg:col-span-2">
+                <span class="deal-badge">Flash Deal · -50%</span>
+                <img class="w-full h-[280px] object-cover" src="https://images.unsplash.com/photo-1436491865332-7a61a388cc05?q=80&w=1200&auto=format&fit=crop" alt="">
+                <div class="p-6 md:p-8">
+                    <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Máy bay · Flash Deal</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-medium text-dark mb-4">Vietnam Airlines: Hà Nội ↔ Phú Quốc khứ hồi</h2>
+                    <p class="text-muted mb-4"><s>4.800.000đ</s> → <strong class="text-dark text-2xl">2.400.000đ</strong></p>
+                    <div class="deal-countdown" data-countdown="2026-07-18T23:59:59">
+                        <div class="deal-countdown-unit"><b>00</b><span>Giờ</span></div>
+                        <div class="deal-countdown-unit"><b>00</b><span>Phút</span></div>
+                        <div class="deal-countdown-unit"><b>00</b><span>Giây</span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="deal-card">
+                <span class="deal-badge">Voucher · -35%</span>
+                <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="">
+                <div class="p-5"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Khách sạn</p><h3 class="font-display text-2xl font-medium text-dark">Vinpearl Nha Trang</h3><p class="text-sm mt-2"><s>3.200.000đ</s> → <strong class="text-dark">2.080.000đ</strong></p></div>
+            </article>
+            <article class="deal-card">
+                <span class="deal-badge">Combo · -28%</span>
+                <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop" alt="">
+                <div class="p-5"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Tour</p><h3 class="font-display text-2xl font-medium text-dark">Hạ Long 2N1Đ + Kayak</h3><p class="text-sm mt-2"><s>2.800.000đ</s> → <strong class="text-dark">2.016.000đ</strong></p></div>
+            </article>
+            <article class="deal-card">
+                <span class="deal-badge">Nhà hàng · -20%</span>
+                <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="">
+                <div class="p-5"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Nhà hàng</p><h3 class="font-display text-2xl font-medium text-dark">Buffet hải sản Đà Nẵng</h3><p class="text-sm mt-2"><s>650.000đ</s> → <strong class="text-dark">520.000đ</strong></p></div>
+            </article>
+            <article class="deal-card">
+                <span class="deal-badge">Flash · -40%</span>
+                <img class="w-full h-[200px] object-cover" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" alt="">
+                <div class="p-5"><p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-brand mb-2">Máy bay</p><h3 class="font-display text-2xl font-medium text-dark">SGN → Bangkok</h3><p class="text-sm mt-2"><s>3.500.000đ</s> → <strong class="text-dark">2.100.000đ</strong></p></div>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#111111] text-white py-12">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/50">
+        <a href="index.html" class="site-footer-link">← Về trang chủ</a>
+        <p>© 2026 one2FLY!</p>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

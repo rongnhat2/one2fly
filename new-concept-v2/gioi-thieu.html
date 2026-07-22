@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu — one2FLY!</title>
+    <meta name="description" content="Giới thiệu one2FLY! — Sứ mệnh, đối tác, liên hệ và quảng cáo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']},colors:{brand:'#00C1F4',dark:'#081A2A',canvas:'#F8FBFD',muted:'#61758A',line:'#E7EEF4'}}}}</script>
+    <link rel="stylesheet" href="assets/concept.css">
+</head>
+<body class="font-sans antialiased bg-canvas text-muted has-fixed-header">
+
+<header id="site-header" class="site-header is-scrolled fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-6 h-[88px] flex items-center justify-between gap-6">
+        <a href="index.html"><img src="assets/logo.png" class="site-header-logo-img h-8 w-auto" alt="one2FLY!"></a>
+        <nav class="site-header-nav hidden xl:flex items-center gap-9 text-[11px] uppercase tracking-[0.2em] font-medium">
+            <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a>
+            <a href="san-deal.html">Săn Deal</a>
+            <a href="an-pham.html">Ấn phẩm</a>
+            <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a>
+            <a href="gioi-thieu.html" class="is-active">Giới thiệu</a>
+        </nav>
+        <button type="button" id="menu-toggle" class="site-header-menu text-[11px] uppercase tracking-[0.2em] font-medium xl:hidden">Menu</button>
+    </div>
+</header>
+<div id="mobile-menu" class="mobile-menu">
+    <button id="menu-close" class="absolute top-8 right-8 text-white/60 text-sm uppercase tracking-widest">Đóng</button>
+    <a href="doc-tin-ma-tuc.html">Đọc tin mà tức</a><a href="san-deal.html">Săn Deal</a><a href="an-pham.html">Ấn phẩm</a>
+    <a href="du-lich-chat-chem.html">Du lịch - Chặt chém</a><a href="gioi-thieu.html">Giới thiệu</a>
+</div>
+
+<section class="page-hero text-white">
+    <div class="max-w-[900px] mx-auto px-6">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-brand mb-3">Về chúng tôi</p>
+        <h1 class="font-display text-[3rem] md:text-[4.5rem] leading-[0.95] font-medium mb-4">Giới thiệu</h1>
+        <p class="text-lg text-white/72">one2FLY! — Digital Travel Magazine + Travel Guide.</p>
+    </div>
+</section>
+
+<main class="py-14 md:py-20">
+    <div class="max-w-[900px] mx-auto px-6 space-y-16 md:space-y-20">
+        <!-- Giới thiệu -->
+        <section>
+            <h2 class="font-display text-3xl font-medium text-dark mb-5">one2FLY! là gì?</h2>
+            <p class="text-lg leading-relaxed mb-4">one2FLY! là tạp chí du lịch số cao cấp — không phải website doanh nghiệp, không phải báo điện tử. Chúng tôi xuất bản nội dung có giá trị thực cho du khách Việt Nam.</p>
+            <p class="text-lg leading-relaxed">Phong cách thiết kế lấy cảm hứng từ Heritage Vietnam Airlines, National Geographic và Condé Nast Traveler — nhưng có bản sắc riêng.</p>
+        </section>
+
+        <!-- Sứ mệnh -->
+        <section class="border-t border-line pt-12">
+            <h2 class="font-display text-3xl font-medium text-dark mb-5">Sứ mệnh</h2>
+            <p class="text-lg leading-relaxed">Giúp du khách <strong class="text-dark">đi thông minh hơn</strong> — lựa chọn dịch vụ uy tín, tham khảo giá đúng, tránh bị chặt chém và tận hưởng hành trình an toàn.</p>
+            <ul class="mt-6 space-y-3 text-muted">
+                <li class="flex gap-3"><span class="text-brand font-bold">→</span> <strong class="text-dark">Đọc tin mà tức</strong> — kéo SEO, thu hút traffic</li>
+                <li class="flex gap-3"><span class="text-brand font-bold">→</span> <strong class="text-dark">Du lịch - Chặt chém</strong> — USP, điểm khác biệt lớn nhất</li>
+                <li class="flex gap-3"><span class="text-brand font-bold">→</span> <strong class="text-dark">Săn Deal</strong> — giá trị sử dụng thực tế</li>
+                <li class="flex gap-3"><span class="text-brand font-bold">→</span> <strong class="text-dark">Ấn phẩm</strong> — hỗ trợ thương hiệu</li>
+            </ul>
+        </section>
+
+        <!-- Đối tác -->
+        <section class="border-t border-line pt-12">
+            <h2 class="font-display text-3xl font-medium text-dark mb-8">Đối tác</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="border border-line rounded-xl p-6 text-center"><p class="font-display text-xl text-dark/50">Hãng hàng không</p></div>
+                <div class="border border-line rounded-xl p-6 text-center"><p class="font-display text-xl text-dark/50">Resort &amp; Hotel</p></div>
+                <div class="border border-line rounded-xl p-6 text-center"><p class="font-display text-xl text-dark/50">Địa phương</p></div>
+                <div class="border border-line rounded-xl p-6 text-center"><p class="font-display text-xl text-dark/50">Thương hiệu</p></div>
+            </div>
+        </section>
+
+        <!-- Liên hệ -->
+        <section id="lien-he" class="border-t border-line pt-12">
+            <h2 class="font-display text-3xl font-medium text-dark mb-6">Liên hệ</h2>
+            <div class="grid sm:grid-cols-3 gap-6 mb-10">
+                <div><p class="text-sm text-muted mb-1">Email</p><p class="font-display text-xl text-dark">hello@one2fly.vn</p></div>
+                <div><p class="text-sm text-muted mb-1">Hotline</p><p class="font-display text-xl text-dark">+84 000 000 000</p></div>
+                <div><p class="text-sm text-muted mb-1">Địa chỉ</p><p class="font-display text-xl text-dark">Hà Nội, Việt Nam</p></div>
+            </div>
+            <form onsubmit="return false" class="space-y-4 max-w-lg">
+                <input class="w-full border border-line rounded-xl px-4 py-3 outline-none focus:border-brand" placeholder="Họ tên">
+                <input class="w-full border border-line rounded-xl px-4 py-3 outline-none focus:border-brand" placeholder="Email">
+                <textarea class="w-full h-28 border border-line rounded-xl px-4 py-3 outline-none focus:border-brand resize-none" placeholder="Nội dung"></textarea>
+                <button class="bg-dark text-white px-6 py-3 text-[11px] uppercase tracking-[0.16em] font-bold rounded-full hover:bg-brand transition">Gửi</button>
+            </form>
+        </section>
+
+        <!-- Quảng cáo -->
+        <section class="border-t border-line pt-12">
+            <h2 class="font-display text-3xl font-medium text-dark mb-5">Quảng cáo</h2>
+            <p class="text-lg leading-relaxed mb-4">Hợp tác nội dung, quảng cáo trong ấn phẩm, bài tài trợ và landing campaign.</p>
+            <a href="mailto:hello@one2fly.vn" class="text-[11px] uppercase tracking-[0.16em] font-bold text-brand border-b border-brand pb-1">Liên hệ hợp tác quảng cáo →</a>
+        </section>
+    </div>
+</main>
+
+<footer class="bg-[#111111] text-white py-10">
+    <div class="max-w-[1200px] mx-auto px-6 flex justify-between text-sm text-white/50">
+        <a href="index.html" class="site-footer-link">← Trang chủ</a>
+        <p>© 2026 one2FLY!</p>
+    </div>
+</footer>
+<script src="assets/concept.js"></script>
+</body>
+</html>

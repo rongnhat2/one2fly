@@ -1006,12 +1006,12 @@ body.issue-reader-panel-open {
     );
 }
 .dest-cinema-nav a {
-    color: rgba(255, 255, 255, 0.82);
+    color: #081a2a;
     transition: color 0.25s ease;
 }
 .dest-cinema-nav a:hover,
 .dest-cinema-nav a.is-active {
-    color: #fff;
+    color: #081a2a;
 }
 .site-header {
     transition:
@@ -1024,7 +1024,8 @@ body.issue-reader-panel-open {
     transition: filter 0.35s ease;
 }
 .site-header .site-header-nav a,
-.site-header .site-header-menu {
+.site-header .site-header-menu,
+.site-header .site-header-lang {
     transition: color 0.25s ease;
 }
 body.has-hero-header .site-header:not(.is-scrolled) {
@@ -1033,14 +1034,16 @@ body.has-hero-header .site-header:not(.is-scrolled) {
 body.has-hero-header .site-header:not(.is-scrolled) .site-header-logo-img {
     filter: brightness(0) invert(1);
 }
-body.has-hero-header .site-header:not(.is-scrolled) .site-header-nav a {
+body.has-hero-header .site-header:not(.is-scrolled) .site-header-nav a,
+body.has-hero-header .site-header:not(.is-scrolled) .site-header-lang {
     color: rgba(255, 255, 255, 0.82);
 }
 body.has-hero-header .site-header:not(.is-scrolled) .site-header-nav a:hover,
 body.has-hero-header
     .site-header:not(.is-scrolled)
     .site-header-nav
-    a.is-active {
+    a.is-active,
+body.has-hero-header .site-header:not(.is-scrolled) .site-header-lang:hover {
     color: #fff;
 }
 body.has-hero-header .site-header:not(.is-scrolled) .site-header-menu {
@@ -1054,11 +1057,13 @@ body.has-hero-header .site-header:not(.is-scrolled) .site-header-menu:hover {
     border-bottom-color: #e7eef4;
     backdrop-filter: blur(8px);
 }
-.site-header.is-scrolled .site-header-nav a {
+.site-header.is-scrolled .site-header-nav a,
+.site-header.is-scrolled .site-header-lang {
     color: #61758a;
 }
 .site-header.is-scrolled .site-header-nav a:hover,
-.site-header.is-scrolled .site-header-nav a.is-active {
+.site-header.is-scrolled .site-header-nav a.is-active,
+.site-header.is-scrolled .site-header-lang:hover {
     color: #081a2a;
 }
 .site-header.is-scrolled .site-header-menu {
@@ -2145,7 +2150,7 @@ a:hover .dest-detail-cta-arrow {
     transition: color 0.3s ease;
 }
 .site-footer-link:hover {
-    color: #00C1F4;
+    color: #00c1f4;
 }
 .site-footer-link--muted {
     color: rgba(255, 255, 255, 0.4);
