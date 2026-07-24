@@ -1,0 +1,29 @@
+<div class="layout-tab-create">
+    <input type="hidden" class="form-control data-id">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="error-log"> </div>
+                    <div class="form-group row">
+                        <label class="col-sm-12 col-form-label control-label">Tên vai trò *</label>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control data-name" placeholder="Nhập tên vai trò">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-12 col-form-label control-label">Quyền hạn *</label>
+                        <div class="col-md-12">
+                            <div id="permissions-list" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-right">
+                        <button class="btn btn-defauld mr-2 tab-action" atr="Table">Hủy</button>
+                        <button class="btn btn-primary full-tab-action" atr="Confirm">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
